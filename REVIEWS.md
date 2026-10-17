@@ -2,7 +2,7 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
-## 2026-10-17 — 21 reviewed · 2 ADD · 6 WATCH · 13 SKIP
+## 2026-10-17 — 22 reviewed · 3 ADD · 6 WATCH · 13 SKIP
 
 ### ADD — Video Editor Assistant
 https://github.com/edunascimentt/video-editor-assistant · lane: Post-production · F/L/C/O = 5/5/5/4 (19)
@@ -12,6 +12,15 @@ https://github.com/edunascimentt/video-editor-assistant · lane: Post-production
 **Why it's worth it for you:** briefing-cut is literally your agency job — rushes plus a brief in, ordered selects under a cap out — and rough-cut-premiere lands a new sequence without touching the original. Scripts decide where splices land to the frame; Claude only decides what deserves cutting, and a report proves no word was clipped.
 
 **Watch out for:** Filler-word rules are written for Brazilian Portuguese; you'd retune them for English and Hindi. Expects the open-source davinci-resolve-mcp repo installed alongside.
+
+### ADD — Hairline
+https://github.com/lucasmarkes/hairline · lane: Building tools & sites · F/L/C/O = 3/3/5/5 (16)
+
+**What it does:** Two skills that make isometric single-stroke line figures that react to the pointer, shipped as one dependency-free HTML file. hairline-create builds a figure from an idea; hairline-adopt rebuilds an SVG (icon, logo) as one.
+
+**Why it's worth it for you:** Each buildlog project could get a living figure instead of a screenshot — Delivery Spec Validator as a sieve that lets the clean files through. And the skill itself is a lesson in pipeline-TD thinking: a fixed engine Claude may not touch, ten hard rules, a validator that rejects the page, and a look-check that screenshots eight poses before handing over.
+
+**Watch out for:** Web interaction, not film motion graphics: it answers a mouse, it doesn't render to a timeline (you'd screen-record it). One visual language, so it suits a site that commits to that look. The look-check installs playwright-core once via npm.
 
 ### ADD — Better Writing
 https://github.com/forjd/better-writing · lane: Business & outreach · F/L/C/O = 4/4/5/3 (16)
