@@ -94,32 +94,39 @@ Verdict:
   would make it an ADD.
 - **SKIP** — everything else.
 
-## Report format
+## Recording verdicts
 
-Prepend one section to `REVIEWS.md` (newest at top):
+`reviews.json` is the single source of truth — the ledger of everything ever
+reviewed (skip anything whose `id` is already there, except WATCH items whose repo
+has new commits: re-review those and replace the entry). Append one object per
+skill reviewed:
 
+```json
+{
+  "id": "owner/repo" (or "owner/repo#skill-name" for one skill in a collection),
+  "name": "Human name", "url": "https://github.com/...", "commit": "short sha",
+  "date": "YYYY-MM-DD", "verdict": "ADD|WATCH|SKIP",
+  "lane": "Post-production|AI filmmaking|Building tools & sites|Business & outreach|Wildcard",
+  "fit": 1-5, "leverage": 1-5, "craft": 1-5, "originality": 1-5,
+  "flag": "safety concern in one line, or empty",
+  "summary": "what it does, one or two sentences (for SKIPs: the reason)",
+  "why": "ADD/WATCH: the concrete task it changes in Parth's work; SKIP: empty",
+  "caveat": "ADD: limits/overlap/setup; WATCH: what would make it an ADD; SKIP: empty"
+}
 ```
-## <YYYY-MM-DD> — <n> reviewed · <a> ADD · <w> WATCH · <s> SKIP
 
-### ADD — <skill name>
-<source link> · lane: <lane> · score F/L/C/O = x/x/x/x
-**What it does:** one or two sentences.
-**Why it's worth it for you:** the concrete task it changes, in Parth's work.
-**Watch out for:** limits, overlap, setup cost.
+Write in plain, specific sentences — name the task it changes, not adjectives.
+If nothing clears ADD or WATCH, that's a fine run; don't pad.
 
-### WATCH — <skill name>
-<source link> · lane · scores
-One paragraph: what's promising, what's missing.
+Then:
 
-### Skipped
-- <name> (<link>) — one-line reason. (⚠️ for safety fails)
-```
-
-If nothing clears ADD or WATCH, say so in one line at the top of the section —
-an honest empty run is better than a padded one.
-
-Then add every reviewed skill to `seen.json`:
-`{"url": "...", "name": "...", "verdict": "ADD|WATCH|SKIP", "date": "YYYY-MM-DD", "commit": "<sha if known>"}`.
-WATCH items may be re-reviewed when their repo has new commits.
-
-Commit with message `scout: <date> — <a> ADD, <w> WATCH, <s> SKIP` and push to `main`.
+1. Run `python3 tools/render.py` to rebuild `REVIEWS.md`.
+2. Refresh the dashboard at https://claude.ai/artifact/1kMEr4ieeJ723KPhuUieAu:
+   upload `reviews.json` to it as an asset (Artifact tool, publish with that
+   `url`, `file_path: reviews.json`, `asset: true`), then with the ArtifactData
+   tool `update` collection `datasets`, doc `reviews`, setting
+   `source.url` to the upload's url, `source.name` to `reviews.json`, and
+   `updated` to `{at: <ISO now>, by: "Skill scout"}`. Don't touch the page itself.
+   If either step is refused, say so in the run summary and carry on.
+3. Commit with message `scout: <date> — <a> ADD, <w> WATCH, <s> SKIP` and push to `main`.
+4. End with a two-line summary: the counts, and the name of any ADD.
