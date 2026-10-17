@@ -29,11 +29,13 @@
 
   // aisle centres in world units, around your bench; Building is the big one
   const AISLES = {
-    'Post-production': [300, -40], 'AI filmmaking': [-40, 300], 'Building tools & sites': [430, 430],
-    'Business & outreach': [-430, 60], 'Wildcard': [60, -430],
+    'Post-production': [190, -20], 'AI filmmaking': [-20, 190], 'Building tools & sites': [250, 250],
+    'Business & outreach': [-250, 30], 'Wildcard': [30, -250],
   };
+  const TINT = { 'Post-production': '#2dd4bf', 'AI filmmaking': '#e879f9', 'Building tools & sites': '#60a5fa', 'Business & outreach': '#fb923c', 'Wildcard': '#a3e635' };
+  const FLOORS = 12, FLOOR_H = 6, TW = 14;
   const AISLE_NO = { 'Post-production': 1, 'AI filmmaking': 2, 'Building tools & sites': 3, 'Business & outreach': 4, 'Wildcard': 5 };
-  const BOUND = 760, COURSE = 9.6, GLYPHS = '░▒▓#%&@*+=';
+  const BOUND = 520, COURSE = 9.6, GLYPHS = '░▒▓#%&@*+=';
 
   const world = $('world'), svg = $('map'), camG = $('cam'), floorG = $('floor'), entsG = $('ents');
   let ents = [], built = false, installed = [], player, bot, targetMark = null;
@@ -63,7 +65,8 @@
     sv('polygon', { points: pts([P(x, y1, 0), P(x1, y1, 0), P(x1, y1, h), P(x, y1, h)]), class: 'ff ' + col }, g);
     sv('polygon', { points: pts([P(x, y, h), P(x1, y, h), P(x1, y1, h), P(x, y1, h)]), class: 'ft ' + col + ' lid' }, g);
     let seams = '', his = '';
-    for (let z = COURSE; z < h - 1; z += COURSE) {
+    const course = opts.course || COURSE;
+    for (let z = course; z < h - 1; z += course) {
       seams += line([P(x, y1, z), P(x1, y1, z), P(x1, y, z)]);
       his += line([P(x, y1, z + 0.7), P(x1, y1, z + 0.7), P(x1, y, z + 0.7)]);
     }
@@ -137,6 +140,30 @@
     });
     return { kind: 'home', data: { id: 'bench', name: 'your bench' }, g, x0: x0 - 6, y0: y0 - 6, x1: x0 + w + 6, y1: y0 + d + 6, h, key: x0 + w + y0 + d + 12, cx: 0, cy: 0 };
   }
+  // a tower of unopened skills: one floor per skill, glass tinted by its district
+  function towerEnt(lane, items, x0, y0, no) {
+    const h = items.length * FLOOR_H + 2, x1 = x0 + TW, y1 = y0 + TW;
+    const g = sv('g', { class: 'unit toweru', 'data-ent': '' });
+    g.style.color = TINT[lane];
+    brick(g, x0 - 2, y0 - 2, TW + 4, TW + 4, 2, 'lobby', { noStuds: true });
+    const b = sv('g', {}, g);
+    brick(b, x0, y0, TW, TW, h, 'glass', { nx: 2, ny: 2, course: FLOOR_H });
+    // a lit window band on every floor, front and side
+    let wf = '', ws = '';
+    for (let i = 0; i < items.length; i++) {
+      const z0 = 2 + i * FLOOR_H + 1.6, z1 = z0 + 2.6;
+      wf += 'M' + pts([P(x0 + 1.5, y1 + 0.05, z0), P(x1 - 1.5, y1 + 0.05, z0), P(x1 - 1.5, y1 + 0.05, z1), P(x0 + 1.5, y1 + 0.05, z1)]).replace(/ /g, 'L') + 'Z';
+      ws += 'M' + pts([P(x1 + 0.05, y0 + 1.5, z0), P(x1 + 0.05, y1 - 1.5, z0), P(x1 + 0.05, y1 - 1.5, z1), P(x1 + 0.05, y0 + 1.5, z1)]).replace(/ /g, 'L') + 'Z';
+    }
+    sv('path', { d: wf, class: 'win' }, g);
+    sv('path', { d: ws, class: 'win side' }, g);
+    return { kind: 'tower', lane, no, items, g, x0: x0 - 2, y0: y0 - 2, x1: x1 + 2, y1: y1 + 2, h, key: x1 + y1 + 4, cx: x0 + TW / 2, cy: y0 + TW / 2 };
+  }
+  function road(xa, ya, xb, yb, w) {
+    const dx = xb - xa, dy = yb - ya, L = Math.hypot(dx, dy), nx = (-dy / L) * w / 2, ny = (dx / L) * w / 2;
+    sv('polygon', { points: pts([P(xa + nx, ya + ny, 0.3), P(xb + nx, yb + ny, 0.3), P(xb - nx, yb - ny, 0.3), P(xa - nx, ya - ny, 0.3)]), class: 'road' }, floorG);
+    sv('path', { d: line([P(xa, ya, 0.4), P(xb, yb, 0.4)]), class: 'lane-line' }, floorG);
+  }
   function scramble(e) {
     if (!e.rows) return;
     let n = 0;
@@ -151,21 +178,32 @@
     floorText(`YOUR BENCH · ${inst.length} PIECES BUILT IN`, -50, 34, 7, 'big');
     ents.push(benchEnt());
     const takeOf = new Map(reviews.slice().sort((a, b) => tot(b) - tot(a)).map((r, i) => [r.id, i + 1]));
+    // the plaza, and a road from it to every district
+    sv('polygon', { points: pts([P(-62, -40, 0.25), P(62, -40, 0.25), P(62, 44, 0.25), P(-62, 44, 0.25)]), class: 'plaza' }, floorG);
+    for (const [lx, ly] of Object.values(AISLES)) road(0, 0, lx * 0.82, ly * 0.82, 18);
     for (const lane of Object.keys(AISLES)) {
       const scanned = reviews.filter((r) => r.lane === lane).sort((a, b) => tot(b) - tot(a));
-      const unopened = frontier.filter((r) => (r.lane || 'Wildcard') === lane);
+      const unopened = frontier.filter((r) => (r.lane || 'Wildcard') === lane).sort((a, b) => String(a.name).localeCompare(String(b.name)));
       const [cxw, cyw] = AISLES[lane];
-      // unopened bricks in a dense grid at the back of the aisle
-      const cols = Math.max(6, Math.min(26, Math.ceil(Math.sqrt(unopened.length * 2.2)))), rows = Math.ceil(unopened.length / cols);
-      const PX = 18, PY = 14, gw = cols * PX, gh = rows * PY;
+      // floors per tower vary, so the district reads as a skyline, not a car park
+      const SKY = [9, 14, 11, 16, 8, 12, 15, 10, 13, 7];
+      const towers = [];
+      for (let i = 0, k = hash(lane) % SKY.length; i < unopened.length; k++) { const n = SKY[k % SKY.length]; towers.push(unopened.slice(i, i + n)); i += n; }
+      const cols = Math.max(2, Math.ceil(Math.sqrt(towers.length))), rows = Math.ceil(towers.length / cols);
+      const PITCH = 26, gw = cols * PITCH, gh = rows * PITCH;
       const bx0 = cxw - gw / 2, by0 = cyw - gh / 2;
-      // scanned bricks in a row along the front, nearest the viewer
-      const sy = by0 + gh + 14, scols = Math.max(1, scanned.length), sx0 = cxw - (scols * 24) / 2;
-      const x0a = Math.min(bx0, sx0) - 10, x1a = Math.max(bx0 + gw, sx0 + scols * 24) + 4, y0a = by0 - 10, y1a = sy + 22;
-      sv('polygon', { points: pts([P(x0a, y0a, 0.2), P(x1a, y0a, 0.2), P(x1a, y1a, 0.2), P(x0a, y1a, 0.2)]), class: 'aisle' }, floorG);
-      floorText(`AISLE ${AISLE_NO[lane]} · ${lane.toUpperCase()} · ${scanned.length} INSPECTED · ${unopened.length} UNOPENED`, x0a + 2, y1a + 12, 7, 'big');
-      unopened.forEach((it, i) => { const e = rawEnt(it, bx0 + (i % cols) * PX, by0 + Math.floor(i / cols) * PY); e.aisle = lane; ents.push(e); });
-      scanned.forEach((it, i) => { const e = shelfEnt(it, sx0 + i * 24, sy, takeOf.get(it.id)); e.aisle = lane; ents.push(e); });
+      // shops: the inspected skills along the district's front street
+      const sy = by0 + gh + 8, sx0 = cxw - (Math.max(1, scanned.length) * 22) / 2;
+      const x0a = Math.min(bx0, sx0) - 12, x1a = Math.max(bx0 + gw, sx0 + scanned.length * 22) + 6, y0a = by0 - 12, y1a = sy + 22;
+      const plate = sv('polygon', { points: pts([P(x0a, y0a, 0.5), P(x1a, y0a, 0.5), P(x1a, y1a, 0.5), P(x0a, y1a, 0.5)]), class: 'district' }, floorG);
+      plate.style.color = TINT[lane];
+      floorText(`${lane.toUpperCase()} · ${scanned.length} SHOPS · ${towers.length} TOWERS · ${unopened.length} SKILLS`, x0a + 2, y1a + 12, 7, 'big');
+      towers.forEach((floors, i) => {
+        // taller towers toward the middle of the block, like a skyline
+        const e = towerEnt(lane, floors, bx0 + (i % cols) * PITCH, by0 + Math.floor(i / cols) * PITCH, i + 1);
+        e.aisle = lane; ents.push(e);
+      });
+      scanned.forEach((it, i) => { const e = shelfEnt(it, sx0 + i * 22, sy, takeOf.get(it.id)); e.aisle = lane; ents.push(e); });
     }
     ents.sort((a, b) => a.key - b.key);
     ents.forEach((e, i) => { e.g.dataset.ent = i; entsG.appendChild(e.g); e.sc = P(e.cx, e.cy, e.h / 2); e.shown = true; });
@@ -229,10 +267,10 @@
     focus = f;
     if (f) {
       f.g.classList.add('focus');
-      if (f.kind === 'frontier') scramble(f);
+
       if (f.kind === 'home') quest.home = true;
       else if (!visited.has(f)) { visited.add(f); f.g.classList.add('visited'); }
-      const verb = f.kind === 'home' ? 'open your bench' : f.kind === 'frontier' ? `open · ${f.data.name}` : `pick up · ${f.data.name}`;
+      const verb = f.kind === 'home' ? 'open your bench' : f.kind === 'tower' ? `enter tower ${f.no} · ${f.lane} · ${f.items.length} floors` : `pick up · ${f.data.name}`;
       prompt.replaceChildren(ce('kbd', null, 'E'), document.createTextNode(verb));
       prompt.classList.add('on');
       if (pendingOpen === f) { pendingOpen = null; openPanel(f); }
@@ -283,6 +321,8 @@
       if (r.caveat) kids.push(ce('p', 'cav', r.caveat));
       if (r.flag) kids.push(ce('div', 'flag', 'Cracked piece — never used · ' + r.flag));
       kids.push(addBtn(r), link(r.url, r.id));
+    } else if (e.kind === 'tower') {
+      return openTower(e);
     } else {
       const r = e.data;
       const raw = ce('pre', 'rawbox'), rand = rng(hash(r.id) + 3);
@@ -290,6 +330,39 @@
       const head = ce('div', 'phead'); head.append(tile('?', 'raw'), ce('span', 'pmeta', `UNOPENED · ${(r.lane || 'Wildcard').toUpperCase()}`));
       kids.push(head, raw, ce('h3', null, r.name), ce('p', 'meta', `${r.owner} · listed on ${r.source}`), ce('p', null, r.summary),
         ce('p', 'cav', 'Unopened: nobody has checked this piece — not its code, not its claims. Adding it asks Claude to inspect it first.'), addBtn(r, true), link(r.url, r.id));
+    }
+    body.replaceChildren(...kids);
+    body.scrollTop = 0;
+    $('panel').classList.add('open');
+    updateHud();
+  }
+  // a tower's lobby directory: every floor, top down; open one to read it
+  function openTower(e, floorIdx) {
+    const body = $('pbody'), kids = [];
+    if (floorIdx == null) {
+      const head = ce('div', 'phead'); const tl = tile('▲' + e.no, 'raw'); tl.style.color = TINT[e.lane]; tl.style.borderColor = TINT[e.lane];
+      head.append(tl, ce('span', 'pmeta', `${e.lane.toUpperCase()} · LOBBY DIRECTORY`));
+      kids.push(head, ce('h3', null, `Tower ${e.no}`), ce('p', 'meta', `${e.items.length} unopened skills, one per floor · nothing here has been checked yet`));
+      const list = ce('div', 'floors');
+      e.items.map((r, i) => [r, i]).reverse().forEach(([r, i]) => {
+        const row = ce('div', 'floor');
+        const open = ce('button', 'floorbtn'); open.type = 'button';
+        open.append(ce('span', 'fl', 'F' + String(i + 1).padStart(2, '0')), ce('b', null, r.name), ce('span', 'd', r.summary));
+        open.addEventListener('click', () => openTower(e, i));
+        const add = ce('button', 'mini-add'); add.type = 'button'; add.textContent = '+ add';
+        add.addEventListener('click', () => window.skillAdd && window.skillAdd(r, true));
+        row.append(open, add); list.append(row);
+      });
+      kids.push(list);
+    } else {
+      const r = e.items[floorIdx];
+      const back = ce('button', 'backbtn', `← tower ${e.no} directory`); back.type = 'button';
+      back.addEventListener('click', () => openTower(e));
+      const raw = ce('pre', 'rawbox'), rand = rng(hash(r.id) + 3);
+      raw.textContent = Array.from({ length: 4 }, () => Array.from({ length: 30 }, () => GLYPHS[Math.floor(rand() * GLYPHS.length)]).join('')).join('\n');
+      const head = ce('div', 'phead'); head.append(tile('F' + (floorIdx + 1), 'raw'), ce('span', 'pmeta', `TOWER ${e.no} · ${e.lane.toUpperCase()}`));
+      kids.push(back, head, raw, ce('h3', null, r.name), ce('p', 'meta', `${r.owner} · listed on ${r.source}`), ce('p', null, r.summary),
+        ce('p', 'cav', 'Unopened: nobody has checked this skill — not its code, not its claims. Adding it asks Claude to inspect it first.'), addBtn(r, true), link(r.url, r.id));
     }
     body.replaceChildren(...kids);
     body.scrollTop = 0;
@@ -304,13 +377,13 @@
     if (Math.hypot(player.x, player.y) < 80) return 'your bench';
     let best = null, bd = 300;
     for (const [n, c] of Object.entries(AISLES)) { const d = Math.hypot(player.x - c[0], player.y - c[1]); if (d < bd) { bd = d; best = n; } }
-    return best ? `aisle ${AISLE_NO[best]} · ${best}` : 'the baseplate';
+    return best ? `${best} district` : 'the streets';
   }
   function updateHud() {
     if (!built) return;
-    const total = ents.length - 1, fv = [...visited].filter((e) => e.kind === 'frontier').length;
+    const total = ents.length - 1, fv = [...visited].filter((e) => e.kind === 'tower').length;
     const bar = '█'.repeat(Math.round((visited.size / total) * 18)).padEnd(18, '░');
-    const qs = [['walk to your bench', quest.home], ['open it, see what\'s built in', quest.openedHome], ['find a piece to snap on', quest.add], [`open 5 unopened bricks ${Math.min(fv, 5)}/5`, fv >= 5]];
+    const qs = [['walk to your bench', quest.home], ['open it, see what\'s built in', quest.openedHome], ['find a piece to snap on', quest.add], [`visit 5 towers ${Math.min(fv, 5)}/5`, fv >= 5]];
     $('hudlog').textContent = ['BUILD LOG', `zone  ${zoneName()}`, `seen  ${String(visited.size).padStart(2, '0')}/${total} ${bar}`, '',
       ...qs.map(([t, d]) => `[${d ? 'x' : ' '}] ${t}`), '[!] create the github repo', '    (outside the build)'].join('\n');
   }
@@ -326,7 +399,7 @@
     ents.forEach((e) => {
       const [c, r] = miniT(e.cx, e.cy);
       if (r < 0 || r >= MH || c < 0 || c >= MW) return;
-      const ch = e.kind === 'home' ? 'B' : e.kind === 'frontier' ? '░' : e.data.verdict === 'ADD' ? 'O' : e.data.verdict === 'WATCH' ? 's' : 'x';
+      const ch = e.kind === 'home' ? 'B' : e.kind === 'tower' ? '#' : e.data.verdict === 'ADD' ? 'O' : e.data.verdict === 'WATCH' ? 's' : 'x';
       if (miniBase[r][c] === '·' || ch === 'B' || ch === 'O') miniBase[r][c] = ch;
     });
     miniLast = '';
@@ -337,7 +410,7 @@
     miniLast = key;
     const g = miniBase.map((row) => row.slice());
     if (r >= 0 && r < MH && c >= 0 && c < MW) g[r][c] = '@';
-    $('mini').textContent = g.map((row) => row.join('')).join('\n') + '\n@ you B bench O snapped s aside ░ unopened';
+    $('mini').textContent = g.map((row) => row.join('')).join('\n') + '\n@ you B bench O snapped s aside # tower';
   }
 
   /* ---------- camera, input, full screen, loop ---------- */
@@ -392,8 +465,10 @@
     const g = ev.target.closest('[data-ent]');
     if (g) {
       const e = ents[Number(g.dataset.ent)];
-      if (focus === e) { openPanel(e); return; }
-      target = [e.cx, e.y1 + (e.kind === 'home' ? 14 : 10)]; pendingOpen = e;
+      // open it straight away (towers stand in tight blocks, so the walk there can get boxed in), and stroll over
+      openPanel(e);
+      if (e.kind !== 'home' && !visited.has(e)) { visited.add(e); e.g.classList.add('visited'); }
+      target = [e.cx, e.y1 + (e.kind === 'home' ? 14 : 10)]; pendingOpen = null;
     } else { target = screenToWorld(ev.clientX, ev.clientY); pendingOpen = null; }
     kick();
   });

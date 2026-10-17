@@ -102,15 +102,17 @@
 .hud { position: absolute; pointer-events: none; }
 .hud pre { margin: 0; font: 11px/1.4 var(--mono); color: #c4cad8; background: rgba(22,27,44,.94); border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; box-shadow: 0 4px 0 var(--lip); pointer-events: auto; }
 .hud-tl { top: 14px; left: 14px; }
-.hud-bl { left: 14px; bottom: 14px; }
+.hud-bl { left: 14px; bottom: 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .hud-bl pre { color: #7cc3ff; font-size: 10px; line-height: 1.2; }
+.hud-bl .legend { background: rgba(22,27,44,.94); border: 2px solid var(--line); border-radius: 10px; padding: 6px 9px; }
 .hud-tr { top: 14px; right: 14px; display: flex; gap: 8px; }
 .btn { pointer-events: auto; display: inline-flex; align-items: center; gap: 8px; font: 800 12px var(--round); letter-spacing: .06em; border: 0; border-radius: 10px; padding: 0 14px; height: 44px; cursor: pointer; color: #fff; }
 .btn:active { transform: translateY(2px); }
 .btn.green { background: linear-gradient(180deg, #3cc062, #2a9a4a); box-shadow: inset 0 -4px 0 var(--grnd), inset 0 1px 0 rgba(255,255,255,.35); }
 .btn.yellow { color: #3a2c00; background: linear-gradient(180deg, #ffd53d, #eebd10); box-shadow: inset 0 -4px 0 var(--yeld), inset 0 1px 0 rgba(255,255,255,.5); }
 .btn.grey { background: linear-gradient(180deg, #4a5270, #363d57); box-shadow: inset 0 -4px 0 #242a3e, inset 0 1px 0 rgba(255,255,255,.2); min-width: 44px; justify-content: center; padding: 0 10px; }
-.hud-b { left: 50%; bottom: 14px; transform: translateX(-50%); display: flex; flex-direction: column; gap: 8px; align-items: center; width: max-content; max-width: calc(100% - 28px); text-align: center; }
+.hud-b { right: 14px; bottom: 14px; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; width: max-content; max-width: calc(100% - 28px); text-align: right; }
+@media (max-width: 680px) { .hud-b { right: auto; left: 50%; transform: translateX(-50%); align-items: center; text-align: center; } }
 .prompt { pointer-events: auto; cursor: pointer; background: linear-gradient(180deg, #1a2034, #151a2b); border: 2px solid var(--line); border-radius: 12px; box-shadow: 0 4px 0 var(--lip); padding: 8px 14px; font: 600 13px var(--round); opacity: 0; transform: translateY(6px); transition: opacity .2s, transform .2s; }
 .prompt.on { opacity: 1; transform: none; }
 .prompt kbd { font: 800 11px var(--round); color: #3a2c00; background: linear-gradient(180deg, #ffd53d, #eebd10); box-shadow: inset 0 -2px 0 var(--yeld); border-radius: 5px; padding: 1px 7px; margin-right: 8px; }
@@ -173,6 +175,33 @@
 .fail { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: inherit; color: var(--mute); font-size: 11px; }
 .fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: #ff5f5f; }
 [data-dash-source-state=empty] { color: transparent; }
+/* the city */
+.w .ft.glass { fill: currentColor; fill-opacity: .42; stroke: currentColor; stroke-opacity: .9; }
+.w .ff.glass { fill: currentColor; fill-opacity: .22; stroke: currentColor; stroke-opacity: .7; }
+.w .fs.glass { fill: currentColor; fill-opacity: .12; stroke: currentColor; stroke-opacity: .55; }
+.w .st.glass { fill: currentColor; } .w .ss.glass { fill: currentColor; fill-opacity: .55; }
+.w .ft.lobby { fill: #232a40; stroke: #31395a; } .w .ff.lobby { fill: #1b2136; stroke: #31395a; } .w .fs.lobby { fill: #161b2c; stroke: #31395a; }
+.w .win { fill: currentColor; fill-opacity: .55; stroke: none; }
+.w .win.side { fill-opacity: .32; }
+.w .toweru .seam { stroke: currentColor; stroke-opacity: .35; }
+.w .toweru .seamhi { stroke-opacity: .06; }
+.w .toweru.focus .lid { stroke: #fff; }
+.w .toweru.focus .win { fill-opacity: .95; }
+.w .road { fill: #191e30; stroke: #252c45; stroke-width: 1; }
+.w .lane-line { fill: none; stroke: #f5c518; stroke-opacity: .45; stroke-width: 1; stroke-dasharray: 6 8; }
+.w .plaza { fill: #1d2440; stroke: #2c3557; stroke-width: 1.2; }
+.w .district { fill: currentColor; fill-opacity: .06; stroke: currentColor; stroke-opacity: .35; stroke-width: 1.2; }
+.floors { display: flex; flex-direction: column; gap: 6px; }
+.floor { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+.floorbtn { all: unset; cursor: pointer; display: grid; grid-template-columns: 38px 1fr; gap: 0 8px; padding: 8px 10px; border-radius: 10px; background: #12172a; border: 2px solid #1d2338; }
+.floorbtn:hover, .floorbtn:focus-visible { border-color: var(--faint); }
+.floorbtn .fl { grid-row: span 2; font-size: 10.5px; color: var(--mute); align-self: center; }
+.floorbtn b { font-size: 12.5px; color: var(--ink); }
+.floorbtn .d { font: 500 12px/1.4 var(--round); color: var(--mute); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.backbtn { all: unset; cursor: pointer; align-self: flex-start; font: 800 11px var(--round); letter-spacing: .06em; color: #c4cad8; padding: 6px 10px; border-radius: 8px; background: linear-gradient(180deg, #2a3148, #20263b); box-shadow: inset 0 -3px 0 #151a2b; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
 .addbtn { align-self: flex-start; height: 44px; }
 .addbtn:disabled { opacity: .55; cursor: default; }
 .mini-add { font: 800 10.5px var(--round); letter-spacing: .06em; color: #3a2c00; background: linear-gradient(180deg, #ffd53d, #eebd10); box-shadow: inset 0 -3px 0 var(--yeld); border: 0; border-radius: 7px; padding: 0 10px; height: 30px; cursor: pointer; white-space: nowrap; }
@@ -236,7 +265,7 @@
       <g class="w" id="cam"><g id="floor"></g><g id="ents"></g></g>
     </svg>
     <div class="hud hud-tl"><pre id="hudlog"></pre></div>
-    <div class="hud hud-bl"><pre id="mini"></pre></div>
+    <div class="hud hud-bl"><pre id="mini"></pre><div class="legend"><span><i style="background:#2dd4bf"></i>post</span><span><i style="background:#e879f9"></i>film &amp; writing</span><span><i style="background:#60a5fa"></i>building</span><span><i style="background:#fb923c"></i>business</span><span><i style="background:#a3e635"></i>wildcard</span></div></div>
     <div class="hud hud-tr">
       <button class="btn grey" id="zout" aria-label="Zoom out">−</button>
       <button class="btn grey" id="zin" aria-label="Zoom in">+</button>
@@ -245,12 +274,12 @@
     </div>
     <div class="hud hud-b">
       <div class="prompt" id="prompt"></div>
-      <div class="keys"><span class="kb">WASD / arrows walk · </span>click or tap to travel<span class="kb"> · E pick up · F full screen · Esc close · +/− zoom</span></div>
+      <div class="keys"><span class="kb">WASD / arrows walk · </span>click or tap to travel<span class="kb"> · E enter · F full screen · Esc close · +/− zoom</span></div>
     </div>
     <aside class="panel" id="panel" aria-live="polite"><div class="pbar"><button class="pclose" id="pclose" aria-label="Close">ESC ✕</button></div><div class="pb" id="pbody"></div></aside>
     <div class="start" id="start">
       <h2>Skill Vault</h2>
-      <p>Your bench is a green build, one stud for every skill you've installed. Around it, the pieces the scout has inspected — red ones snapped on, yellow set aside, grey rejected. Behind them in every aisle, clear bricks: GitHub skills nobody has opened yet.</p>
+      <p>Your bench is a green build, one stud for every skill you've installed. Around it, the pieces the scout has inspected — red ones snapped on, yellow set aside, grey rejected. Around it, five districts: coloured shops for the skills the scout has inspected, and glass towers of GitHub skills nobody has opened yet, one floor per skill.</p>
       <span class="go">START BUILDING</span>
     </div>
   </section>
