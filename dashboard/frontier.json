@@ -1,0 +1,274 @@
+[
+ {
+  "id": "testmu-ai/kanecli-skill",
+  "name": "kanecli-skill",
+  "owner": "testmu-ai",
+  "url": "https://github.com/LambdaTest/agent-skills/tree/main/kanecli-skill",
+  "summary": "Generate and run browser tests from natural-language objectives via kane-cli",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "vanshyadav1408/linkedin-outreach",
+  "name": "linkedin-outreach",
+  "owner": "vanshyadav1408",
+  "url": "https://github.com/vanshyadav1408/Omentir/tree/main/plugins/omentir/skills/linkedin-outreach",
+  "summary": "LinkedIn prospecting, scoring, and outreach drafts through Omentir MCP",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "socai-io/jev-social",
+  "name": "jev-social",
+  "owner": "socai-io",
+  "url": "https://github.com/socai-io/jev-social/tree/v0.1.10/skills/jev-social",
+  "summary": "Route local social research through Jev and socai CLI",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "explorium-ai/vibe-prospecting",
+  "name": "vibe-prospecting",
+  "owner": "explorium-ai",
+  "url": "https://github.com/explorium-ai/vibeprospecting-plugin/tree/main/skills/vibe-prospecting",
+  "summary": "B2B prospecting enrichment and GTM data workflows",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "nagameTW/formosa-humanizer",
+  "name": "formosa-humanizer",
+  "owner": "nagameTW",
+  "url": "https://github.com/nagameTW/formosa-humanizer",
+  "summary": "Removes AI-writing markers from Taiwan Traditional Chinese text",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "Upload-Post/upload-post-skill",
+  "name": "upload-post-skill",
+  "owner": "Upload-Post",
+  "url": "https://github.com/Upload-Post/upload-post-skill",
+  "summary": "Publish and schedule social media posts through one API",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "publora/skills",
+  "name": "skills",
+  "owner": "publora",
+  "url": "https://github.com/publora/skills",
+  "summary": "Draft, schedule and publish posts to ten social networks",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "sujunmin/agy-ppt",
+  "name": "agy-ppt",
+  "owner": "sujunmin",
+  "url": "https://github.com/sujunmin/agy-ppt",
+  "summary": "Generate PowerPoint decks without the AI-slop look, purpose-built for the Antigravity+Kiro+Codex pipeline; GPT image rendering handles dense Traditional Chinese slide text far better than Gemini",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "wgwtest/novel-writing",
+  "name": "novel-writing",
+  "owner": "wgwtest",
+  "url": "https://github.com/wgwtest/novel-writing",
+  "summary": "Plans and revises fiction with viewpoint, dialogue, and style checks.",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "Atomic-Mail/atomicmail",
+  "name": "atomicmail",
+  "owner": "Atomic-Mail",
+  "url": "https://github.com/Atomic-Mail/atomic-mail-agentic/tree/main/integrations/skill/atomicmail",
+  "summary": "Agent registers its own inbox, then sends and reads mail",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "GiaSip/giasip-research",
+  "name": "giasip-research",
+  "owner": "GiaSip",
+  "url": "https://github.com/GiaSip/giasip-skills/tree/main/skills/giasip-research",
+  "summary": "Source-linked research reports with explicit unresolved checks",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "squirrelscan/squirrelscan",
+  "name": "squirrelscan",
+  "owner": "squirrelscan",
+  "url": "https://github.com/squirrelscan/skills",
+  "summary": "Audits websites for SEO, performance, security, accessibility and returns fixes",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "kensaurus/skills",
+  "name": "skills",
+  "owner": "kensaurus",
+  "url": "https://github.com/kensaurus/skills",
+  "summary": "Ready-made playbooks your coding agent auto-triggers",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "fishzjp/qa-skills",
+  "name": "qa-skills",
+  "owner": "fishzjp",
+  "url": "https://github.com/fishzjp/qa-skills",
+  "summary": "QA engineering for AI coding agents: full lifecycle, measured gains",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "unbrowse-ai/unbrowse",
+  "name": "unbrowse",
+  "owner": "unbrowse-ai",
+  "url": "https://github.com/unbrowse-ai/unbrowse/tree/main/skill",
+  "summary": "Search, call, and read websites via hosted API or MCP",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "exadel-inc/agentic-readiness-assessment",
+  "name": "agentic-readiness-assessment",
+  "owner": "exadel-inc",
+  "url": "https://github.com/exadel-inc/agentic-readiness-assessment/tree/main/skills/agentic-readiness-assessment",
+  "summary": "Assess repository readiness for AI coding agents and prioritize fixes.",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "ollygarden/opentelemetry-agent-skills",
+  "name": "opentelemetry-agent-skills",
+  "owner": "ollygarden",
+  "url": "https://github.com/ollygarden/opentelemetry-agent-skills",
+  "summary": "Vendor-neutral OpenTelemetry skills: SDKs, Collector, OTTL, semantic conventions",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "szarkans/multi",
+  "name": "multi",
+  "owner": "szarkans",
+  "url": "https://github.com/szarkans/multi",
+  "summary": "several models review the same code, one merged report",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "gongdear/cline-pilot",
+  "name": "cline-pilot",
+  "owner": "gongdear",
+  "url": "https://github.com/gongdear/cline-pilot",
+  "summary": "Delegate coding tasks to Cline CLI with context management",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "allxsmith/bestax",
+  "name": "bestax",
+  "owner": "allxsmith",
+  "url": "https://github.com/allxsmith/bestax/tree/main/skills",
+  "summary": "Build Bulma React pages, forms, and themes with Bestax",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "half144/cutaway",
+  "name": "cutaway",
+  "owner": "half144",
+  "url": "https://github.com/half144/cutaway",
+  "summary": "Record polished demo videos of web flows with Playwright",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "kulchankas/paranoid",
+  "name": "paranoid",
+  "owner": "kulchankas",
+  "url": "https://github.com/kulchankas/paranoid",
+  "summary": "Pentests your running app: find, prove, patch, re-verify",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "gal-a/qikly",
+  "name": "qikly",
+  "owner": "gal-a",
+  "url": "https://github.com/gal-a/qikly/tree/main/.claude/skills/qikly",
+  "summary": "Writes pytest suites from criteria the coding agent never sees",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "prisma/skills",
+  "name": "skills",
+  "owner": "prisma",
+  "url": "https://github.com/prisma/skills",
+  "summary": "Official Prisma skills: ORM, Postgres, Compute and migrations",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "ruslanlap/cavemenko",
+  "name": "cavemenko",
+  "owner": "ruslanlap",
+  "url": "https://github.com/ruslanlap/cavemenko/tree/main/skills/cavemenko",
+  "summary": "Ukrainian pro-drop reply style, measured -49% tokens",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "archcore-ai/archcore",
+  "name": "archcore",
+  "owner": "archcore-ai",
+  "url": "https://github.com/archcore-ai/archcore",
+  "summary": "Spec-driven development and context engineering for AI coding agents",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "Qiuner/birdview",
+  "name": "birdview",
+  "owner": "Qiuner",
+  "url": "https://github.com/Qiuner/birdview",
+  "summary": "Put architecture and constraints at the center of AI coding",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "eatmoreduck/boss-zhipin-scraper",
+  "name": "boss-zhipin-scraper",
+  "owner": "eatmoreduck",
+  "url": "https://github.com/eatmoreduck/boss-zhipin-scraper",
+  "summary": "BOSS Zhipin (zhipin.com) job scraper via Chrome CDP, plaintext salaries",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "OptimNow/cloud-finops-skills",
+  "name": "cloud-finops-skills",
+  "owner": "OptimNow",
+  "url": "https://github.com/OptimNow/cloud-finops-skills/tree/main/skills/cloud-finops",
+  "summary": "FinOps knowledge: cloud billing mechanics, commitments, allocation, AI spend",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "elithril/blender-kiln",
+  "name": "blender-kiln",
+  "owner": "elithril",
+  "url": "https://github.com/elithril/blender-kiln/tree/main/plugin",
+  "summary": "Text or photo to game-ready GLB through Blender MCP",
+  "source": "VoltAgent/awesome-claude-skills"
+ },
+ {
+  "id": "bangtutorial/bang-motion",
+  "name": "bang-motion",
+  "owner": "bangtutorial",
+  "url": "https://github.com/bangtutorial/bang-motion",
+  "summary": "Browser motion graphics — openers, promos, kinetic type and explainers in one HTML file.",
+  "source": "web search"
+ },
+ {
+  "id": "fuuuuuuma/after-effects-agent",
+  "name": "after-effects-agent",
+  "owner": "fuuuuuuma",
+  "url": "https://github.com/fuuuuuuma/after-effects-agent",
+  "summary": "Editable After Effects motion graphics: native layers, JSX helpers, MOGRT and QA.",
+  "source": "web search"
+ },
+ {
+  "id": "Sunwood-ai-labs/hyperframes-motion-reel-skill",
+  "name": "hyperframes-motion-reel",
+  "owner": "Sunwood-ai-labs",
+  "url": "https://github.com/Sunwood-ai-labs/hyperframes-motion-reel-skill",
+  "summary": "Beat-synced showreel motion graphics with HyperFrames, rendered to MP4.",
+  "source": "web search"
+ },
+ {
+  "id": "lottiefiles/motion-design-skill",
+  "name": "motion-design",
+  "owner": "LottieFiles",
+  "url": "https://github.com/lottiefiles/motion-design-skill",
+  "summary": "Motion principles for agents — timing, easing, choreography, Disney principles for UI.",
+  "source": "web search"
+ }
+]

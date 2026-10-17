@@ -1,0 +1,156 @@
+[
+ {
+  "id": "hairline-adopt",
+  "name": "hairline-adopt",
+  "by": "you",
+  "summary": "Rebuilds an SVG as a Hairline line figure that answers the pointer.",
+  "via": "scout"
+ },
+ {
+  "id": "hairline-create",
+  "name": "hairline-create",
+  "by": "you",
+  "summary": "Draws one isometric Hairline line figure from an idea.",
+  "via": "scout"
+ },
+ {
+  "id": "image-to-code",
+  "name": "image-to-code",
+  "by": "you",
+  "summary": "Generates design images first, then builds the site to match them.",
+  "via": ""
+ },
+ {
+  "id": "replica-recon",
+  "name": "replica-recon",
+  "by": "you",
+  "summary": "Reverse-engineers an app into screens, flows, data model and feature matrix.",
+  "via": ""
+ },
+ {
+  "id": "replica-architect",
+  "name": "replica-architect",
+  "by": "you",
+  "summary": "Plans stack, schema and API for an app clone.",
+  "via": ""
+ },
+ {
+  "id": "replica-design",
+  "name": "replica-design",
+  "by": "you",
+  "summary": "Rebuilds an app's design system as tokens and component specs.",
+  "via": ""
+ },
+ {
+  "id": "replica-build",
+  "name": "replica-build",
+  "by": "you",
+  "summary": "Rebuilds an app screen by screen from the recon map.",
+  "via": ""
+ },
+ {
+  "id": "replica-backend",
+  "name": "replica-backend",
+  "by": "you",
+  "summary": "Auth, database, payments, email and jobs for a clone.",
+  "via": ""
+ },
+ {
+  "id": "replica-test",
+  "name": "replica-test",
+  "by": "you",
+  "summary": "Clicks through every flow and files bug reports.",
+  "via": ""
+ },
+ {
+  "id": "replica-diff",
+  "name": "replica-diff",
+  "by": "you",
+  "summary": "Scores feature parity and diffs screenshots against the original.",
+  "via": ""
+ },
+ {
+  "id": "replica-entrepreneur",
+  "name": "replica-entrepreneur",
+  "by": "you",
+  "summary": "Reads real user reviews and turns complaints into a fix plan.",
+  "via": ""
+ },
+ {
+  "id": "replica-brand",
+  "name": "replica-brand",
+  "by": "you",
+  "summary": "Names and rebrands a clone so it is your own.",
+  "via": ""
+ },
+ {
+  "id": "replica-launch",
+  "name": "replica-launch",
+  "by": "you",
+  "summary": "Landing page, pricing and store listings for a clone.",
+  "via": ""
+ },
+ {
+  "id": "replica-deploy",
+  "name": "replica-deploy",
+  "by": "you",
+  "summary": "Ships a clone live on your own domain.",
+  "via": ""
+ },
+ {
+  "id": "find-animation-opportunities",
+  "name": "find-animation-opportunities",
+  "by": "you",
+  "summary": "Finds what should animate and what shouldn't, with exact values.",
+  "via": ""
+ },
+ {
+  "id": "animation-vocabulary",
+  "name": "animation-vocabulary",
+  "by": "you",
+  "summary": "Names the motion effect you're describing.",
+  "via": ""
+ },
+ {
+  "id": "apple-design",
+  "name": "apple-design",
+  "by": "you",
+  "summary": "Apple's interface and fluid-motion principles for the web.",
+  "via": ""
+ },
+ {
+  "id": "google-workspace",
+  "name": "google-workspace",
+  "by": "Anthropic",
+  "summary": "Creates and edits Google Docs, Sheets and Slides.",
+  "via": ""
+ },
+ {
+  "id": "deep-research",
+  "name": "deep-research",
+  "by": "Anthropic",
+  "summary": "Multi-source research synthesised into a narrative report.",
+  "via": ""
+ },
+ {
+  "id": "import-memory",
+  "name": "import-memory",
+  "by": "Anthropic",
+  "summary": "Imports a memory export from another assistant.",
+  "via": ""
+ },
+ {
+  "id": "morning",
+  "name": "morning",
+  "by": "Anthropic",
+  "summary": "Your morning brief as a styled page.",
+  "via": ""
+ },
+ {
+  "id": "skill-creator",
+  "name": "skill-creator",
+  "by": "Anthropic",
+  "summary": "Creates, edits and evaluates skills.",
+  "via": ""
+ }
+]
