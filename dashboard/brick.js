@@ -27,12 +27,13 @@
   const onFront = (x, y, z) => { const [sx, sy] = P(x, y, z); return `matrix(0.7071 0.3536 0 0.866 ${f1(sx)} ${f1(sy)})`; };
   const flatRing = (cx, cy, z, r, n = 14) => Array.from({ length: n }, (_, i) => { const t = (i / n) * Math.PI * 2; return P(cx + r * Math.cos(t), cy + r * Math.sin(t), z); });
 
+  // aisle centres in world units, around your bench; Building is the big one
   const AISLES = {
-    'Post-production': [210, 40], 'AI filmmaking': [40, 210], 'Building tools & sites': [200, 200],
-    'Business & outreach': [-190, 130], 'Wildcard': [130, -190], 'Uncharted': [-280, -260],
+    'Post-production': [300, -40], 'AI filmmaking': [-40, 300], 'Building tools & sites': [430, 430],
+    'Business & outreach': [-430, 60], 'Wildcard': [60, -430],
   };
   const AISLE_NO = { 'Post-production': 1, 'AI filmmaking': 2, 'Building tools & sites': 3, 'Business & outreach': 4, 'Wildcard': 5 };
-  const BOUND = 540, COURSE = 9.6, GLYPHS = '░▒▓#%&@*+=';
+  const BOUND = 760, COURSE = 9.6, GLYPHS = '░▒▓#%&@*+=';
 
   const world = $('world'), svg = $('map'), camG = $('cam'), floorG = $('floor'), entsG = $('ents');
   let ents = [], built = false, installed = [], player, bot, targetMark = null;
@@ -68,6 +69,7 @@
     }
     if (seams) { sv('path', { d: seams, class: 'seam' }, g); sv('path', { d: his, class: 'seamhi' }, g); }
     sv('path', { d: line([P(x, y1, h), P(x1, y1, h), P(x1, y, h)]), class: 'edgehi' }, g);
+    if (opts.noStuds) return;
     const nx = opts.nx || Math.max(1, Math.round(w / 8)), ny = opts.ny || Math.max(1, Math.round(d / 8));
     const cells = [];
     for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) cells.push([x + ((i + 0.5) * w) / nx, y + ((j + 0.5) * d) / ny, j * nx + i]);
@@ -114,15 +116,13 @@
     return { kind: 'review', data: r, take, g, x0, y0, x1: x0 + w, y1: y0 + d, h, key: x0 + w + y0 + d, cx: x0 + w / 2, cy: y0 + d / 2 };
   }
   function rawEnt(r, x0, y0) {
-    const w = 16, d = 8, h = COURSE * (2 + (hash(r.id) % 3));
+    const w = 12, d = 6, h = COURSE * (1 + (hash(r.id) % 2));
     const g = sv('g', { class: 'unit rawu', 'data-ent': '' });
-    brick(g, x0, y0, w, d, h, 'raw', { nx: 2, ny: 1 });
-    const rows = [], rand = rng(hash(r.id));
-    for (let z = h - 3; z > 2; z -= 3.6) {
-      const t = sv('text', { class: 'ascii', transform: onFront(x0 + 1, y0 + d + 0.1, z), 'font-size': 3.4 }, g);
-      t.textContent = Array.from({ length: 6 }, () => GLYPHS[Math.floor(rand() * GLYPHS.length)]).join('');
-      rows.push(t);
-    }
+    brick(g, x0, y0, w, d, h, 'raw', { noStuds: true });
+    const rand = rng(hash(r.id));
+    const t = sv('text', { class: 'ascii', transform: onFront(x0 + 0.8, y0 + d + 0.1, h - 3), 'font-size': 3.2 }, g);
+    t.textContent = Array.from({ length: 5 }, () => GLYPHS[Math.floor(rand() * GLYPHS.length)]).join('');
+    const rows = [t];
     return { kind: 'frontier', data: r, g, rows, x0, y0, x1: x0 + w, y1: y0 + d, h, key: x0 + w + y0 + d, cx: x0 + w / 2, cy: y0 + d / 2 };
   }
   function benchEnt() {
@@ -140,7 +140,7 @@
   function scramble(e) {
     if (!e.rows) return;
     let n = 0;
-    const tick = () => { e.rows.forEach((t) => { t.textContent = Array.from({ length: 6 }, () => GLYPHS[Math.floor(Math.random() * GLYPHS.length)]).join(''); }); if (++n < 7) setTimeout(tick, 55); };
+    const tick = () => { e.rows.forEach((t) => { t.textContent = Array.from({ length: 5 }, () => GLYPHS[Math.floor(Math.random() * GLYPHS.length)]).join(''); }); if (++n < 7) setTimeout(tick, 55); };
     tick();
   }
 
@@ -150,25 +150,26 @@
     drawFloor();
     floorText(`YOUR BENCH · ${inst.length} PIECES BUILT IN`, -50, 34, 7, 'big');
     ents.push(benchEnt());
-    const groups = {};
-    for (const r of reviews) (groups[r.lane] = groups[r.lane] || []).push(r);
     const takeOf = new Map(reviews.slice().sort((a, b) => tot(b) - tot(a)).map((r, i) => [r.id, i + 1]));
-    groups.Uncharted = frontier;
-    for (const [lane, items] of Object.entries(groups)) {
-      const centre = AISLES[lane] || [0, 300], raw = lane === 'Uncharted';
-      const cols = raw ? 7 : Math.min(items.length, 4), rows = Math.ceil(items.length / cols);
-      const bx0 = centre[0] - (cols * 24) / 2, by0 = centre[1] - (rows * 30) / 2;
-      sv('polygon', { points: pts([P(bx0 - 10, by0 - 10, 0.2), P(bx0 + cols * 24 + 2, by0 - 10, 0.2), P(bx0 + cols * 24 + 2, by0 + rows * 30 + 4, 0.2), P(bx0 - 10, by0 + rows * 30 + 4, 0.2)]), class: raw ? 'aisle bag' : 'aisle' }, floorG);
-      floorText(raw ? 'THE BAG · UNSCANNED GITHUB SKILLS' : `AISLE ${AISLE_NO[lane] || '·'} · ${lane.toUpperCase()}`, bx0 - 8, by0 + rows * 30 + 16, raw ? 8 : 6.5, raw ? 'big' : '');
-      const sorted = raw ? items : items.slice().sort((a, b) => tot(b) - tot(a));
-      sorted.forEach((it, i) => {
-        const x0 = bx0 + (i % cols) * 24, y0 = by0 + Math.floor(i / cols) * 30;
-        const e = raw ? rawEnt(it, x0, y0) : shelfEnt(it, x0, y0, takeOf.get(it.id));
-        e.aisle = lane; ents.push(e);
-      });
+    for (const lane of Object.keys(AISLES)) {
+      const scanned = reviews.filter((r) => r.lane === lane).sort((a, b) => tot(b) - tot(a));
+      const unopened = frontier.filter((r) => (r.lane || 'Wildcard') === lane);
+      const [cxw, cyw] = AISLES[lane];
+      // unopened bricks in a dense grid at the back of the aisle
+      const cols = Math.max(6, Math.min(26, Math.ceil(Math.sqrt(unopened.length * 2.2)))), rows = Math.ceil(unopened.length / cols);
+      const PX = 18, PY = 14, gw = cols * PX, gh = rows * PY;
+      const bx0 = cxw - gw / 2, by0 = cyw - gh / 2;
+      // scanned bricks in a row along the front, nearest the viewer
+      const sy = by0 + gh + 14, scols = Math.max(1, scanned.length), sx0 = cxw - (scols * 24) / 2;
+      const x0a = Math.min(bx0, sx0) - 10, x1a = Math.max(bx0 + gw, sx0 + scols * 24) + 4, y0a = by0 - 10, y1a = sy + 22;
+      sv('polygon', { points: pts([P(x0a, y0a, 0.2), P(x1a, y0a, 0.2), P(x1a, y1a, 0.2), P(x0a, y1a, 0.2)]), class: 'aisle' }, floorG);
+      floorText(`AISLE ${AISLE_NO[lane]} · ${lane.toUpperCase()} · ${scanned.length} INSPECTED · ${unopened.length} UNOPENED`, x0a + 2, y1a + 12, 7, 'big');
+      unopened.forEach((it, i) => { const e = rawEnt(it, bx0 + (i % cols) * PX, by0 + Math.floor(i / cols) * PY); e.aisle = lane; ents.push(e); });
+      scanned.forEach((it, i) => { const e = shelfEnt(it, sx0 + i * 24, sy, takeOf.get(it.id)); e.aisle = lane; ents.push(e); });
     }
     ents.sort((a, b) => a.key - b.key);
-    ents.forEach((e, i) => { e.g.dataset.ent = i; entsG.appendChild(e.g); });
+    ents.forEach((e, i) => { e.g.dataset.ent = i; entsG.appendChild(e.g); e.sc = P(e.cx, e.cy, e.h / 2); e.shown = true; });
+    lastCull = null;
 
     bot = { g: sv('g', { class: 'bot' }) };
     entsG.appendChild(bot.g);
@@ -231,7 +232,7 @@
       if (f.kind === 'frontier') scramble(f);
       if (f.kind === 'home') quest.home = true;
       else if (!visited.has(f)) { visited.add(f); f.g.classList.add('visited'); }
-      const verb = f.kind === 'home' ? 'open your bench' : f.kind === 'frontier' ? `dig out of the bag · ${f.data.name}` : `pick up · ${f.data.name}`;
+      const verb = f.kind === 'home' ? 'open your bench' : f.kind === 'frontier' ? `open · ${f.data.name}` : `pick up · ${f.data.name}`;
       prompt.replaceChildren(ce('kbd', null, 'E'), document.createTextNode(verb));
       prompt.classList.add('on');
       if (pendingOpen === f) { pendingOpen = null; openPanel(f); }
@@ -249,6 +250,14 @@
   }
   const link = (url, text) => { const a = ce('a', 'src', text + ' ↗'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; return a; };
   function tile(text, col) { return ce('span', 'tile ' + col, text); }
+  function addBtn(r, unopened) {
+    const b = ce('button', 'btn yellow addbtn');
+    b.type = 'button';
+    b.textContent = r.adopted ? 'ALREADY IN YOUR BUILD' : unopened ? '+ CHECK & ADD TO MY CLAUDE' : '+ ADD TO MY CLAUDE';
+    if (r.adopted) b.disabled = true;
+    b.addEventListener('click', () => window.skillAdd && window.skillAdd(r, !!unopened));
+    return b;
+  }
   function openPanel(e) {
     const body = $('pbody'), kids = [];
     if (e.kind === 'home') {
@@ -273,14 +282,14 @@
       if (r.why) kids.push(ce('p', 'why', r.why));
       if (r.caveat) kids.push(ce('p', 'cav', r.caveat));
       if (r.flag) kids.push(ce('div', 'flag', 'Cracked piece — never used · ' + r.flag));
-      kids.push(link(r.url, r.id));
+      kids.push(addBtn(r), link(r.url, r.id));
     } else {
       const r = e.data;
       const raw = ce('pre', 'rawbox'), rand = rng(hash(r.id) + 3);
       raw.textContent = Array.from({ length: 4 }, () => Array.from({ length: 30 }, () => GLYPHS[Math.floor(rand() * GLYPHS.length)]).join('')).join('\n');
-      const head = ce('div', 'phead'); head.append(tile('?', 'raw'), ce('span', 'pmeta', 'IN THE BAG · GITHUB'));
-      kids.push(head, raw, ce('h3', null, r.name), ce('p', 'meta', `${r.owner} · found on ${r.source}`), ce('p', null, r.summary),
-        ce('p', 'cav', 'Still in the bag: nobody has checked this piece — not its code, not its claims. The scout inspects it on a coming sweep.'), link(r.url, r.id));
+      const head = ce('div', 'phead'); head.append(tile('?', 'raw'), ce('span', 'pmeta', `UNOPENED · ${(r.lane || 'Wildcard').toUpperCase()}`));
+      kids.push(head, raw, ce('h3', null, r.name), ce('p', 'meta', `${r.owner} · listed on ${r.source}`), ce('p', null, r.summary),
+        ce('p', 'cav', 'Unopened: nobody has checked this piece — not its code, not its claims. Adding it asks Claude to inspect it first.'), addBtn(r, true), link(r.url, r.id));
     }
     body.replaceChildren(...kids);
     body.scrollTop = 0;
@@ -293,15 +302,15 @@
 
   function zoneName() {
     if (Math.hypot(player.x, player.y) < 80) return 'your bench';
-    let best = null, bd = 160;
+    let best = null, bd = 300;
     for (const [n, c] of Object.entries(AISLES)) { const d = Math.hypot(player.x - c[0], player.y - c[1]); if (d < bd) { bd = d; best = n; } }
-    return best ? (best === 'Uncharted' ? 'the bag' : `aisle ${AISLE_NO[best]} · ${best}`) : 'the baseplate';
+    return best ? `aisle ${AISLE_NO[best]} · ${best}` : 'the baseplate';
   }
   function updateHud() {
     if (!built) return;
     const total = ents.length - 1, fv = [...visited].filter((e) => e.kind === 'frontier').length;
     const bar = '█'.repeat(Math.round((visited.size / total) * 18)).padEnd(18, '░');
-    const qs = [['walk to your bench', quest.home], ['open it, see what\'s built in', quest.openedHome], ['find a piece to snap on', quest.add], [`dig through the bag ${Math.min(fv, 5)}/5`, fv >= 5]];
+    const qs = [['walk to your bench', quest.home], ['open it, see what\'s built in', quest.openedHome], ['find a piece to snap on', quest.add], [`open 5 unopened bricks ${Math.min(fv, 5)}/5`, fv >= 5]];
     $('hudlog').textContent = ['BUILD LOG', `zone  ${zoneName()}`, `seen  ${String(visited.size).padStart(2, '0')}/${total} ${bar}`, '',
       ...qs.map(([t, d]) => `[${d ? 'x' : ' '}] ${t}`), '[!] create the github repo', '    (outside the build)'].join('\n');
   }
@@ -328,7 +337,7 @@
     miniLast = key;
     const g = miniBase.map((row) => row.slice());
     if (r >= 0 && r < MH && c >= 0 && c < MW) g[r][c] = '@';
-    $('mini').textContent = g.map((row) => row.join('')).join('\n') + '\n@ you B bench O snapped s aside ░ bag';
+    $('mini').textContent = g.map((row) => row.join('')).join('\n') + '\n@ you B bench O snapped s aside ░ unopened';
   }
 
   /* ---------- camera, input, full screen, loop ---------- */
@@ -338,7 +347,7 @@
   function resize() {
     W = world.clientWidth || 800; Hh = world.clientHeight || 500;
     svg.setAttribute('viewBox', `0 0 ${W} ${Hh}`);
-    if (!resize.done) { zoom = W < 640 ? 1.2 : 1.9; resize.done = true; }
+    if (!resize.done) { zoom = W < 640 ? 1.1 : 1.6; resize.done = true; }
     kick();
   }
   new ResizeObserver(resize).observe(world);
@@ -417,9 +426,23 @@
     else targetMark.setAttribute('visibility', 'hidden');
     const [px, py] = P(player.x, player.y, 0), k = 1 - Math.exp(-dt * 5);
     cam.x += (px - cam.x) * k; cam.y += (py - cam.y) * k;
+    cull();
     camG.setAttribute('transform', `translate(${f1(W / 2)} ${f1(Hh / 2)}) scale(${zoom.toFixed(3)}) translate(${f1(-cam.x)} ${f1(-cam.y)})`);
     if (!moving && !target && keys.size === 0 && Math.hypot(px - cam.x, py - cam.y) < 0.3) { running = false; return; }
     requestAnimationFrame(frame);
+  }
+
+  /* ---------- culling: only bricks near the camera are drawn ---------- */
+  let lastCull = null;
+  function cull(force) {
+    if (!lastCull || force || Math.abs(cam.x - lastCull.x) > 40 / zoom || Math.abs(cam.y - lastCull.y) > 40 / zoom || lastCull.z !== zoom || lastCull.w !== W || lastCull.h !== Hh) {
+      lastCull = { x: cam.x, y: cam.y, z: zoom, w: W, h: Hh };
+      const hw = W / 2 / zoom + 140, hh = Hh / 2 / zoom + 140;
+      for (const e of ents) {
+        const on = Math.abs(e.sc[0] - cam.x) < hw + 60 && Math.abs(e.sc[1] - cam.y) < hh + 60;
+        if (on !== e.shown) { e.shown = on; e.g.style.display = on ? '' : 'none'; }
+      }
+    }
   }
 
   /* ---------- data ---------- */

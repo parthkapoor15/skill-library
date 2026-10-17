@@ -173,6 +173,18 @@
 .fail { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: inherit; color: var(--mute); font-size: 11px; }
 .fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: #ff5f5f; }
 [data-dash-source-state=empty] { color: transparent; }
+.addbtn { align-self: flex-start; height: 44px; }
+.addbtn:disabled { opacity: .55; cursor: default; }
+.mini-add { font: 800 10.5px var(--round); letter-spacing: .06em; color: #3a2c00; background: linear-gradient(180deg, #ffd53d, #eebd10); box-shadow: inset 0 -3px 0 var(--yeld); border: 0; border-radius: 7px; padding: 0 10px; height: 30px; cursor: pointer; white-space: nowrap; }
+.mini-add:disabled { opacity: .5; cursor: default; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); z-index: 2147483600; width: min(560px, calc(100% - 28px)); box-sizing: border-box; background: linear-gradient(180deg, #1a2034, #151a2b); border: 2px solid var(--line); border-radius: 14px; box-shadow: 0 6px 0 var(--lip), 0 20px 40px rgba(0,0,0,.5); padding: 14px 16px; color: var(--ink); font: 500 14px/1.45 var(--round); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.toast b { display: block; margin-bottom: 6px; }
+.toast code { display: block; font: 12px/1.45 var(--mono); color: #c4cad8; background: #10142a; border: 2px solid var(--line); border-radius: 8px; padding: 8px 10px; white-space: pre-wrap; user-select: all; -webkit-user-select: all; }
+.toast small { display: block; margin-top: 8px; color: var(--mute); font-size: 12.5px; }
+.world .toast { position: absolute; }
+.cat-count { color: var(--mute); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+
 [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
 </style>
 
@@ -198,7 +210,7 @@
     <div class="stat grey"><small>rejected</small><b class="dash-skeleton" data-source="census" data-field="n" data-where="key=SKIP">—</b></div>
     <div class="stat warn"><small>cracked pieces</small><b class="dash-skeleton" data-source="census" data-field="n" data-where="key=flagged">—</b></div>
     <div class="stat green"><small>in your build</small><b class="dash-skeleton" data-source="census" data-field="n" data-where="key=installed">—</b></div>
-    <div class="stat blue"><small>still in the bag</small><b class="dash-skeleton" data-source="census" data-field="n" data-where="key=frontier">—</b></div>
+    <div class="stat blue"><small>unopened on github</small><b class="dash-skeleton" data-source="census" data-field="n" data-where="key=frontier">—</b></div>
   </section>
 
   <section class="world" id="world" tabindex="0" aria-label="Skill vault: walk the baseplate to inspect skills" data-source="installed reviews frontier">
@@ -238,8 +250,27 @@
     <aside class="panel" id="panel" aria-live="polite"><div class="pbar"><button class="pclose" id="pclose" aria-label="Close">ESC ✕</button></div><div class="pb" id="pbody"></div></aside>
     <div class="start" id="start">
       <h2>Skill Vault</h2>
-      <p>Your bench is a green build, one stud for every skill you've installed. Around it, the pieces the scout has inspected — red ones snapped on, yellow set aside, grey rejected. Past them, the bag of GitHub skills nobody has checked yet.</p>
+      <p>Your bench is a green build, one stud for every skill you've installed. Around it, the pieces the scout has inspected — red ones snapped on, yellow set aside, grey rejected. Behind them in every aisle, clear bricks: GitHub skills nobody has opened yet.</p>
       <span class="go">START BUILDING</span>
+    </div>
+  </section>
+
+  <section class="card logp" id="catalogue">
+    <div class="cardh"><span><b>Catalogue</b> · every skill found on GitHub, unopened</span><span class="cat-count" id="catcount" data-source="frontier">—</span></div>
+    <div class="tools">
+      <input class="cq" type="search" placeholder="search all GitHub skills" aria-label="Search the catalogue">
+      <button class="chip cchip" data-l="" aria-pressed="true">all</button>
+      <button class="chip cchip" data-l="Post-production" aria-pressed="false">post</button>
+      <button class="chip cchip" data-l="AI filmmaking" aria-pressed="false">film &amp; writing</button>
+      <button class="chip cchip" data-l="Building tools &amp; sites" aria-pressed="false">building</button>
+      <button class="chip cchip" data-l="Business &amp; outreach" aria-pressed="false">business</button>
+      <button class="chip cchip" data-l="Wildcard" aria-pressed="false">wildcard</button>
+    </div>
+    <div class="tablebox">
+      <table class="tbl" id="cattab" data-source="frontier" data-row-key="id">
+        <thead><tr><th data-field="name">skill</th><th class="o" data-field="lane">aisle</th><th class="o" data-field="source">listed on</th><th>add</th></tr></thead>
+        <tbody></tbody>
+      </table>
     </div>
   </section>
 
@@ -263,7 +294,7 @@
           <th class="r o" data-field="craft"><button data-sort="craft">craft</button></th>
           <th class="r o" data-field="originality"><button data-sort="originality">orig</button></th>
           <th class="r" data-source="scored" data-field="total"><button data-sort="total">total</button></th>
-          <th class="o" data-field="flag">cracks</th>
+          <th class="o" data-field="flag">cracks</th><th>add</th>
         </tr></thead>
         <tbody></tbody>
       </table>
@@ -332,8 +363,56 @@ dash.onData(() => {
   }));
 });
 
+/* ---------- add: copy the command for Claude ---------- */
+let toastTimer = 0;
+function showToast(title, cmd, note) {
+  const host = document.fullscreenElement || document.querySelector('.bk');
+  let t = host.querySelector(':scope > .toast');
+  if (!t) { t = el('div', 'toast'); t.setAttribute('role', 'status'); host.append(t); }
+  t.replaceChildren(el('b', null, title), el('code', null, cmd), el('small', null, note));
+  t.classList.add('on');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('on'), 9000);
+}
+async function copyText(s) {
+  try { await navigator.clipboard.writeText(s); return true; } catch (e) {}
+  try { const ta = el('textarea'); ta.value = s; ta.style.cssText = 'position:fixed;opacity:0;'; document.body.append(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok; } catch (e) { return false; }
+}
+window.skillAdd = async (r, unopened) => {
+  const cmd = unopened
+    ? `Check and add the skill "${r.name}" to my Claude from my Skill Vault: ${r.url} (not inspected yet, so review it for safety first)`
+    : `Add the skill "${r.name}" to my Claude from my Skill Vault: ${r.url} (scout verdict: ${WORDS[r.verdict]}, ${totalOf(r)}/20)`;
+  const ok = await copyText(cmd);
+  showToast(ok ? 'Command copied: paste it into your chat with Claude' : 'Copy this command into your chat with Claude', cmd,
+    ok ? 'Claude will install it in your account, then it appears on your bench.' : 'Your browser blocked the clipboard here; select the text above and copy it.');
+};
+function addCell(r, unopened) {
+  const td = el('td'); const b = el('button', 'mini-add', r.adopted ? 'built in' : unopened ? '+ check & add' : '+ add');
+  b.type = 'button'; if (r.adopted) b.disabled = true; else b.addEventListener('click', () => window.skillAdd(r, unopened));
+  td.append(b); return td;
+}
+
+/* ---------- catalogue: every GitHub skill found, unopened ---------- */
+const cstate = { q: '', l: '' };
+const cbody = document.querySelector('#cattab tbody');
+const drawCat = () => {
+  const d = dash.data('frontier'), cnt = document.getElementById('catcount');
+  if (d.status !== 'ok') { cbody.replaceChildren(); cnt.textContent = '—'; return; }
+  const q = cstate.q.toLowerCase();
+  const rows = d.data.filter((r) => (!cstate.l || (r.lane || 'Wildcard') === cstate.l) && (!q || [r.name, r.id, r.summary, r.lane].join(' ').toLowerCase().includes(q)));
+  cnt.textContent = `${rows.length} of ${d.data.length}`;
+  cbody.replaceChildren(...rows.map((r) => {
+    const tr = el('tr'); tr.dataset.key = r.id;
+    const n = el('td', 'n'); const a = el('a', null, r.name); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; n.append(a, el('small', null, r.summary));
+    tr.append(n, el('td', 'o', r.lane || 'Wildcard'), el('td', 'o', r.source), addCell(r, true));
+    return tr;
+  }));
+};
+document.querySelector('.cq').addEventListener('input', (e) => { cstate.q = e.target.value; drawCat(); });
+document.querySelectorAll('.cchip').forEach((c) => c.addEventListener('click', () => { cstate.l = c.dataset.l; document.querySelectorAll('.cchip').forEach((o) => o.setAttribute('aria-pressed', String(o === c))); drawCat(); }));
+dash.onData(drawCat);
+
 const tstate = { q: '', v: '', sort: 'total', dir: -1 };
-const tbody = document.querySelector('.tbl tbody');
+const tbody = document.querySelector('#log .tbl tbody');
 const drawTable = () => {
   const d = dash.data('reviews');
   if (d.status !== 'ok') { tbody.replaceChildren(); return; }
@@ -346,14 +425,14 @@ const drawTable = () => {
     const n = el('td', 'n'); const a = el('a', null, r.name); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; n.append(a, el('small', null, r.summary));
     const v = el('td'); v.append(el('span', 'tile ' + (r.adopted ? 'green' : COLR[r.verdict]), r.adopted ? 'built in' : WORDS[r.verdict]));
     tr.append(n, v, el('td', 'o', r.lane), el('td', 'r o', String(num(r.fit))), el('td', 'r o', String(num(r.leverage))),
-      el('td', 'r o', String(num(r.craft))), el('td', 'r o', String(num(r.originality))), el('td', 'r', String(totalOf(r))), el('td', 'f o', r.flag || ''));
+      el('td', 'r o', String(num(r.craft))), el('td', 'r o', String(num(r.originality))), el('td', 'r', String(totalOf(r))), el('td', 'f o', r.flag || ''), addCell(r, false));
     return tr;
   }));
   document.querySelectorAll('.tbl th').forEach((th) => { const b = th.querySelector('button'); if (b) th.setAttribute('aria-sort', b.dataset.sort === tstate.sort ? (tstate.dir > 0 ? 'ascending' : 'descending') : 'none'); });
 };
 document.querySelector('.tools .q').addEventListener('input', (e) => { tstate.q = e.target.value; drawTable(); });
-document.querySelectorAll('.chip').forEach((c) => c.addEventListener('click', () => { tstate.v = c.dataset.v; document.querySelectorAll('.chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c))); drawTable(); }));
-document.querySelectorAll('.tbl th button').forEach((b) => b.addEventListener('click', () => { const k = b.dataset.sort; if (tstate.sort === k) tstate.dir *= -1; else { tstate.sort = k; tstate.dir = ['name', 'lane', 'verdict'].includes(k) ? 1 : -1; } drawTable(); }));
+document.querySelectorAll('#log .chip').forEach((c) => c.addEventListener('click', () => { tstate.v = c.dataset.v; document.querySelectorAll('#log .chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c))); drawTable(); }));
+document.querySelectorAll('#log .tbl th button').forEach((b) => b.addEventListener('click', () => { const k = b.dataset.sort; if (tstate.sort === k) tstate.dir *= -1; else { tstate.sort = k; tstate.dir = ['name', 'lane', 'verdict'].includes(k) ? 1 : -1; } drawTable(); }));
 dash.onData(drawTable);
 </script>
 <script src="hlkernel.js"></script>

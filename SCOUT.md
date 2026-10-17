@@ -122,14 +122,20 @@ skill reviewed:
 Write in plain, specific sentences — name the task it changes, not adjectives.
 If nothing clears ADD or WATCH, that's a fine run; don't pad.
 
-## The bag (unscanned skills)
+## The catalogue (unopened skills)
 
-`dashboard/frontier.json` lists skills you found but did not review this run —
-"still in the bag" on the dashboard. Each run:
+`dashboard/frontier.json` is the catalogue: every skill found on the public lists
+that has not been reviewed yet — the clear "unopened" bricks on the dashboard, each
+shown in its lane's aisle. Each run:
 
 - remove every entry you reviewed this run (it now lives in `reviews.json`);
-- add new candidates you saw but did not get to (cap the file at ~40, newest first):
-  `{"id": "owner/repo", "name": "...", "owner": "...", "url": "...", "summary": "the list's own one-line description", "source": "where you found it"}`.
+- add every new skill you find on the lists, with no cap:
+  `{"id": "owner/repo", "name": "...", "owner": "...", "url": "...", "summary": "the list's own one-line description", "source": "where you found it", "lane": "<one of the five lanes>"}`.
+  Pick `lane` from the skill's name and description: Post-production for video, audio, colour, editing,
+  captions and motion; AI filmmaking for story, scripts, prose, image/video generation and writing style;
+  Business & outreach for marketing, sales, docs, decks, legal, careers; Building tools & sites for code,
+  web, design systems, testing, data, agents and automation; Wildcard for anything else.
+  When a description fits several, prefer Post-production, then the lane with the most matching terms.
 
 `dashboard/installed.json` is a snapshot of the skills installed in Parth's Claude;
 leave it alone unless he asks you to refresh it.
