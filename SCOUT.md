@@ -44,6 +44,9 @@ Look for skills created or updated since the date of the last entry in
   lane (e.g. "claude skill davinci resolve", "claude skill screenplay",
   "claude skill premiere pro", "claude skill proposal writing").
 - Hacker News and r/ClaudeAI posts about new skills from the last week.
+- Skill launches on X — search `x.com "agent skill"` and `x.com "claude skill"` for
+  the last week. Many skills are announced there before any list picks them up
+  (Hairline was found this way).
 
 How to read a repo: `git clone --depth 1` it into a fresh, empty directory under
 the scratchpad and read it there; if cloning is refused, use WebFetch on the
@@ -61,7 +64,8 @@ find-animation-opportunities, image-to-code, the replica-* pack (recon, architec
 design, build, backend, test, diff, entrepreneur, brand, launch, deploy),
 chrome-browser, built-in-browser, computer-use, morning, import-memory.
 
-Also check `skills/` in this repo. A candidate that overlaps one of these only
+Also check `skills/` in this repo (entries with `adopted` in `reviews.json`); for
+those, report new upstream commits instead of re-reviewing. A candidate that overlaps one of these only
 gets ADD if it is clearly better — say exactly how.
 
 ## Safety gate (pass/fail, before any scoring)
