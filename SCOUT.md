@@ -56,6 +56,14 @@ downloaded** — not scripts, not installers, not `npm install`. Read only.
 Cap the sweep at ~40 candidates per run. Prefer depth on the promising ones over
 breadth on everything.
 
+## The daily tower walk
+
+Every run also walks the towers: open the next 15 skills from `dashboard/frontier.json`,
+working through the lanes in Parth's order (Post-production, AI filmmaking, Building
+tools & sites, Business & outreach, Wildcard), round-robin, so every lane gets
+visited. They go through the same safety gate and rubric as anything else, and
+count toward the ~40 cap.
+
 ## Already installed (don't recommend duplicates)
 
 docx, pdf, pptx, xlsx, skill-creator, frontend-design, deep-research, docs,
@@ -64,7 +72,7 @@ find-animation-opportunities, image-to-code, the replica-* pack (recon, architec
 design, build, backend, test, diff, entrepreneur, brand, launch, deploy),
 chrome-browser, built-in-browser, computer-use, morning, import-memory.
 
-Also check `skills/` in this repo (entries with `adopted` in `reviews.json`); for
+Also check `skills/` in this repo (entries with `adopted` or `queued` in `reviews.json`); for
 those, report new upstream commits instead of re-reviewing. A candidate that overlaps one of these only
 gets ADD if it is clearly better — say exactly how.
 
@@ -97,6 +105,32 @@ Verdict:
 - **WATCH** — interesting but immature, unmaintained, or almost-there. Say what
   would make it an ADD.
 - **SKIP** — everything else.
+
+## Picking the best (automatic adoption)
+
+Parth asked for the best skills to be picked and readied for him without asking.
+At the end of each run, take **at most one** skill — the highest-scoring ADD of the run
+(ties: higher Fit, then Leverage) — and adopt it into the repo only if all hold:
+
+- it passed the safety gate with no flag, and you read every file it ships;
+- total ≥ 17 with Fit ≥ 4;
+- it is not a duplicate of an installed or adopted skill;
+- its licence allows redistribution (MIT, Apache-2.0, BSD, CC-BY or similar). No licence → don't adopt.
+
+Adopting means: copy the skill's folder into `skills/<name>/` exactly as upstream (no edits),
+add `SOURCE.md` (source URL, author, licence, commit, date) and the `LICENSE`,
+run `python3 tools/package.py <name>` to build the upload zip into `dist/`, and set
+`"queued": "<date>"` on its `reviews.json` entry.
+
+You **cannot install** it into Parth's Claude from a scheduled run: installing changes his
+account, needs his computer and his yes for each skill. So the run ends with the
+install ready, not done — the summary names the queued skill and says
+"reply **install <name>** and I'll put it in". When Parth says yes in a linked
+session, install the zip from `dist/` (Customize → Skills → + → Upload a skill),
+then change `queued` to `adopted` and commit.
+
+One a day at most, on purpose: every installed skill's description competes for
+Claude's attention, so a crowded shelf makes all of them fire worse.
 
 ## Recording verdicts
 
@@ -153,4 +187,4 @@ Then:
    `{at: <ISO now>, by: "Skill scout"}`. Don't touch the page itself.
    If a step is refused or the tools are missing, say so in the run summary and carry on.
 3. Commit with message `scout: <date> — <a> ADD, <w> WATCH, <s> SKIP` and push to `main`.
-4. End with a two-line summary: the counts, and the name of any ADD.
+4. End with a short summary: the counts, the name of any ADD, and the queued skill (if any) with "reply install <name>".

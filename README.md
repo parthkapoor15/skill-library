@@ -8,14 +8,15 @@ no to the rest with a reason.
 
 ## How it works
 
-Every 3 days a scheduled Claude run:
+Every day a scheduled Claude run:
 
 1. Reads `SCOUT.md` (the playbook — edit it to change what the scout cares about).
 2. Sweeps the sources listed there for skills published or updated since the last run.
-3. Skips anything already in `reviews.json`.
+3. Skips anything already in `reviews.json`, and walks the towers: opens the next 15 unopened skills in the catalogue.
 4. Reads each candidate's `SKILL.md` and any scripts, checks it for safety, and scores it.
 5. Logs every verdict in `reviews.json`, rebuilds `REVIEWS.md`, and refreshes the dashboard.
-6. Commits and pushes.
+6. Picks at most one standout ADD, adopts it into `skills/` and builds its zip — queued for you to approve with "install <name>".
+7. Commits and pushes.
 
 Verdicts are **ADD**, **WATCH**, or **SKIP**. Only ADD and WATCH get a full write-up;
 SKIPs get one line so you can see the scout isn't sleeping.
