@@ -1,0 +1,40 @@
+# Skill Library
+
+Parth's curated shelf of Claude skills — and the scout that keeps it honest.
+
+Thousands of skills get published. Most are a prompt in a trench coat. This repo
+exists to catch the few that would actually change how work gets done, and to say
+no to the rest with a reason.
+
+## How it works
+
+Every 3 days a scheduled Claude run:
+
+1. Reads `SCOUT.md` (the playbook — edit it to change what the scout cares about).
+2. Sweeps the sources listed there for skills published or updated since the last run.
+3. Skips anything already in `seen.json`.
+4. Reads each candidate's `SKILL.md` and any scripts, checks it for safety, and scores it.
+5. Writes verdicts to the top of `REVIEWS.md` and logs every skill it looked at in `seen.json`.
+6. Commits and pushes.
+
+Verdicts are **ADD**, **WATCH**, or **SKIP**. Only ADD and WATCH get a full write-up;
+SKIPs get one line so you can see the scout isn't sleeping.
+
+## Layout
+
+| Path | What it is |
+|---|---|
+| `SCOUT.md` | The scout's playbook: sources, rubric, safety gate, report format |
+| `REVIEWS.md` | Verdicts, newest first |
+| `seen.json` | Ledger of every skill reviewed, so nothing is judged twice |
+| `skills/` | Skills you've decided to keep — one folder per skill |
+
+## Adding a skill you liked
+
+Tell Claude "add `<skill name>` from the skill library" — it copies the skill into
+`skills/<name>/`, records the source and commit it came from, and marks it adopted
+in `seen.json`. Then install it in Claude from that folder.
+
+## Changing the bar
+
+Edit the **Lanes** and **Rubric** sections of `SCOUT.md`. The next run uses it.
