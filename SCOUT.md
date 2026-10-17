@@ -122,15 +122,29 @@ skill reviewed:
 Write in plain, specific sentences — name the task it changes, not adjectives.
 If nothing clears ADD or WATCH, that's a fine run; don't pad.
 
+## The bag (unscanned skills)
+
+`dashboard/frontier.json` lists skills you found but did not review this run —
+"still in the bag" on the dashboard. Each run:
+
+- remove every entry you reviewed this run (it now lives in `reviews.json`);
+- add new candidates you saw but did not get to (cap the file at ~40, newest first):
+  `{"id": "owner/repo", "name": "...", "owner": "...", "url": "...", "summary": "the list's own one-line description", "source": "where you found it"}`.
+
+`dashboard/installed.json` is a snapshot of the skills installed in Parth's Claude;
+leave it alone unless he asks you to refresh it.
+
 Then:
 
 1. Run `python3 tools/render.py` to rebuild `REVIEWS.md`.
-2. Refresh the dashboard at https://claude.ai/artifact/1kMEr4ieeJ723KPhuUieAu:
-   upload `reviews.json` to it as an asset (Artifact tool, publish with that
-   `url`, `file_path: reviews.json`, `asset: true`), then with the ArtifactData
-   tool `update` collection `datasets`, doc `reviews`, setting
-   `source.url` to the upload's url, `source.name` to `reviews.json`, and
-   `updated` to `{at: <ISO now>, by: "Skill scout"}`. Don't touch the page itself.
-   If either step is refused, say so in the run summary and carry on.
+2. Refresh the dashboard at https://claude.ai/artifact/1kMEr4ieeJ723KPhuUieAu.
+   For each of `reviews.json` (dataset `reviews`) and `dashboard/frontier.json`
+   (dataset `frontier`): upload the file to the dashboard as an asset (Artifact tool,
+   publish with that `url`, `file_path` = the file, `asset: true`); then with the
+   ArtifactData tool `get` collection `datasets`, doc `<dataset>`, and `update` it
+   (`if_version` = the version you just read) setting `source.url` to the upload's
+   url, `source.name` to the file's name, and `updated` to
+   `{at: <ISO now>, by: "Skill scout"}`. Don't touch the page itself.
+   If a step is refused or the tools are missing, say so in the run summary and carry on.
 3. Commit with message `scout: <date> — <a> ADD, <w> WATCH, <s> SKIP` and push to `main`.
 4. End with a two-line summary: the counts, and the name of any ADD.
