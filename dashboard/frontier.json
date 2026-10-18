@@ -1,32 +1,5 @@
 [
 {
-"id": "serpapi/serpapi-search-tools-python",
-"name": "serpapi-search-tools-python",
-"owner": "serpapi",
-"url": "https://github.com/serpapi/serpapi-search-tools-python",
-"summary": "Real-time search tools for Python agents with native support for popular agent SDKs",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "serpapi/serpapi-cli",
-"name": "serpapi-cli",
-"owner": "serpapi",
-"url": "https://github.com/serpapi/serpapi-cli",
-"summary": "SerpApi client for the command line, covering all 130+ engines",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "crawlbase/crawlbase-mcp",
-"name": "crawlbase-mcp",
-"owner": "crawlbase",
-"url": "https://github.com/crawlbase/crawlbase-mcp",
-"summary": "The MCP server behind these skills (npm @crawlbase/mcp) with JS rendering, proxy rotation, and anti-bot protection",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "crawlbase/langchain-crawlbase",
 "name": "langchain-crawlbase",
 "owner": "crawlbase",
@@ -387,15 +360,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "LambdaTest/agent-skills/tree/main/smartui-skill",
-"name": "smartui-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill",
-"summary": "Generate SmartUI visual regression configs for screenshot comparison",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/specflow-skill",
 "name": "specflow-skill",
 "owner": "LambdaTest",
@@ -522,15 +486,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "trycourier/courier-skills",
-"name": "courier-skills",
-"owner": "trycourier",
-"url": "https://github.com/trycourier/courier-skills",
-"summary": "Multi-channel notifications via email, SMS, push, and chat",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "veniceai/skills/tree/main/skills/venice-api-overview",
 "name": "venice-api-overview",
 "owner": "veniceai",
@@ -549,15 +504,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "veniceai/skills/tree/main/skills/venice-chat",
-"name": "venice-chat",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-chat",
-"summary": "Chat completions, multimodal inputs, tools, and streaming",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "veniceai/skills/tree/main/skills/venice-responses",
 "name": "venice-responses",
 "owner": "veniceai",
@@ -565,51 +511,6 @@
 "summary": "OpenAI-compatible Responses API for Venice",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-embeddings",
-"name": "venice-embeddings",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-embeddings",
-"summary": "Embeddings models, dimensions, and encoding formats",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-image-generate",
-"name": "venice-image-generate",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-image-generate",
-"summary": "Image generation endpoints and available styles",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-image-edit",
-"name": "venice-image-edit",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-image-edit",
-"summary": "Image edits, upscaling, and background removal",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-audio-speech",
-"name": "venice-audio-speech",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-audio-speech",
-"summary": "Text-to-speech models, voices, formats, and streaming",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-audio-music",
-"name": "venice-audio-music",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-audio-music",
-"summary": "Music generation queueing, retrieval, and completion endpoints",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "veniceai/skills/tree/main/skills/venice-audio-transcription",
@@ -621,15 +522,6 @@
 "lane": "Wildcard"
 },
 {
-"id": "veniceai/skills/tree/main/skills/venice-video",
-"name": "venice-video",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-video",
-"summary": "Video generation and transcription workflows",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "veniceai/skills/tree/main/skills/venice-models",
 "name": "venice-models",
 "owner": "veniceai",
@@ -637,15 +529,6 @@
 "summary": "Model catalog, traits, and compatibility mappings",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-characters",
-"name": "venice-characters",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-characters",
-"summary": "Character endpoints and character_slug usage",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "veniceai/skills/tree/main/skills/venice-api-keys",
@@ -745,24 +628,6 @@
 "summary": "Set up and audit analytics tracking and measurement pipelines",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/churn-prevention",
-"name": "churn-prevention",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention",
-"summary": "Build cancellation flows, save offers, and recover failed payments",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/cold-email",
-"name": "cold-email",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email",
-"summary": "Write B2B cold emails and follow-up sequences that convert",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
 },
 {
 "id": "coreyhaines31/marketingskills/tree/main/skills/competitors",
@@ -8602,5 +8467,59 @@
 "summary": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact t",
 "source": "anthropics/skills",
 "lane": "Business & outreach"
+},
+{
+"id": "KirttiVushan/claude-code/tree/main/skills/video-editing",
+"name": "video-editing",
+"owner": "KirttiVushan",
+"url": "https://github.com/KirttiVushan/claude-code/tree/main/skills/video-editing",
+"summary": "Video editing skill in a Claude Code config collection",
+"source": "web search 2026-10-18",
+"lane": "Post-production"
+},
+{
+"id": "affaan-m/ECC/tree/main/skills/video-editing",
+"name": "video-editing (ECC)",
+"owner": "affaan-m",
+"url": "https://github.com/affaan-m/ECC/tree/main/skills/video-editing",
+"summary": "Video editing skill from the everything-claude-code collection",
+"source": "web search 2026-10-18",
+"lane": "Post-production"
+},
+{
+"id": "kajisho5/color-grading-skill",
+"name": "color-grading-skill",
+"owner": "kajisho5",
+"url": "https://github.com/kajisho5/color-grading-skill",
+"summary": "Decides grade parameters, then calls ffmpeg-skill's color.py",
+"source": "web search 2026-10-18",
+"lane": "Post-production"
+},
+{
+"id": "Shanyin-ai/shanyin-screenwriting-master",
+"name": "Shanyin Screenwriting Master",
+"owner": "Shanyin-ai",
+"url": "https://github.com/Shanyin-ai/shanyin-screenwriting-master",
+"summary": "Screenwriting skill paired with Director Master",
+"source": "web search 2026-10-18",
+"lane": "AI filmmaking"
+},
+{
+"id": "cloudaipro/openclaw-agent-skills#seedance-screenwriter",
+"name": "seedance-screenwriter",
+"owner": "cloudaipro",
+"url": "https://github.com/cloudaipro/openclaw-agent-skills",
+"summary": "Screenwriting for Seedance video generation",
+"source": "web search 2026-10-18",
+"lane": "AI filmmaking"
+},
+{
+"id": "GongLingRui/screen-creative-skills",
+"name": "screen-creative-skills",
+"owner": "GongLingRui",
+"url": "https://github.com/GongLingRui/screen-creative-skills",
+"summary": "Screen and film creative-writing skills",
+"source": "web search 2026-10-18",
+"lane": "AI filmmaking"
 }
 ]

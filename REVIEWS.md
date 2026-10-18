@@ -2,6 +2,48 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-18 — 21 reviewed · 1 ADD · 2 WATCH · 18 SKIP
+
+### ADD — ffmpeg-skill
+https://github.com/kajisho5/ffmpeg-skill · lane: Post-production · F/L/C/O = 5/4/5/4 (18)
+
+**What it does:** 42 stdlib-Python FFmpeg tools behind one contract: probe first, edit, then check.py against a platform spec and look.py contact sheets before reporting. Covers lossless cuts, loudness to LUFS/true-peak targets, audio sync with drift fix, multicam, LUT and HDR-to-SDR, proxies, batch, and timeline export to FCPXML/EDL/OTIO.
+
+**Why it's worth it for you:** The mechanical end of agency jobs (proxies for a folder of rushes, a -14 LUFS / -1 dBTP pass, a lav-to-camera sync, the same master cut down for Reels, Shorts and YouTube with a PASS/FAIL check on each) becomes one sentence to Claude with a five-line, measured report. It also writes an EDL or FCPXML you can open in Resolve or Premiere. It sits next to your delivery-QC app, it doesn't replace it.
+
+**Watch out for:** Needs ffmpeg/ffprobe on whatever machine Claude runs it on. It is file-level only and doesn't drive Resolve or Premiere; video-editor-assistant (yesterday's ADD) covers those. The captioning and template defaults are aimed at social video. Transcription needs a local whisper/parakeet, which downloads its model on first use.
+
+### WATCH — Director Master (山音超级导演大师)
+https://github.com/Shanyin-ai/shanyin-director-master · lane: AI filmmaking · F/L/C/O = 4/3/4/4 (15)
+
+A gated five-step director workflow: tone, then rhythm plan, then script trims, then a shot breakdown, ending in a nine-column storyboard xlsx (shot no., timecode, angle, size, picture, location, sound, notes, narrative purpose). It has a rule to write only what the camera can see, and shot-length baselines taken from 551 shots of real shorts. Turning a script into a shot-by-shot plan with a stated purpose for every shot is the prep work for the directing you're moving into. It pauses for your sign-off at each step instead of dumping a whole table at once. *Everything is in Chinese, including the trigger description, so it won't fire on English requests. An English fork or bilingual description would make it an ADD. MIT, pure markdown, nothing to run.*
+
+### WATCH — cold-email
+https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email · lane: Business & outreach · F/L/C/O = 3/3/5/3 (14)
+
+Cold outreach skill with ten reference files: a 'value-first teardown' play for services, follow-up angles, reply handling, deliverability, and a list of AI tells to strip from the copy. It has evals and is actively maintained. The teardown play fits agency pitching: open by naming one specific thing in their reel or their delivery, ask permission, then send three concrete fixes. That beats a generic 'I'm an editor' email. *Built for B2B SaaS SDRs: sending domains, sequences and tooling are mostly irrelevant for a freelancer sending ten emails, and the AI-tells list overlaps better-writing. A slimmed freelancer/services variant would make it an ADD.*
+
+### Skipped
+
+- [AI storyboard system](https://github.com/rainlib/ai-storyboard) — A Chinese-only multi-agent project scaffold (scriptwriter, storyboard artist, director review, animator) built around 9-beat boards. GPL-3, untouched since January, and its 9-grid approach is already on WATCH via h3-storyboard.
+- [venice-video](https://github.com/veniceai/skills/tree/main/skills/venice-video) — Accurate API reference for Venice's paid video-generation endpoints (Kling, Seedance and others). Only useful if you build on a Venice account.
+- [storyboard-creation (inference.sh)](https://github.com/inferen-sh/skills/tree/main/guides/video/storyboard-creation) — Standard shot vocabulary wrapped around a paid CLI that generates the images. Its required CLI installs via curl | sh, and the repo has no licence. ⚠️ ⚠️ Setup tells you to pipe cli.inference.sh into sh (download-and-execute)..
+- [venice-audio-speech](https://github.com/veniceai/skills/tree/main/skills/venice-audio-speech) — Venice TTS API reference; vendor docs, not a workflow.
+- [venice-audio-music](https://github.com/veniceai/skills/tree/main/skills/venice-audio-music) — Venice async music/SFX API reference; vendor docs, not a workflow.
+- [venice-image-generate](https://github.com/veniceai/skills/tree/main/skills/venice-image-generate) — Venice image-generation API reference; vendor docs.
+- [venice-image-edit](https://github.com/veniceai/skills/tree/main/skills/venice-image-edit) — Venice image edit/upscale API reference; vendor docs.
+- [churn-prevention](https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention) — Well made, but it's SaaS cancel flows and dunning, and you sell services, not subscriptions.
+- [ffmpeg-usage](https://github.com/ychoi-kr/claude-ffmpeg-skill) — A page of ffmpeg recipes, a year old. kajisho5/ffmpeg-skill does all of it with tested scripts.
+- [FFmpeg Claude Skill](https://github.com/donghaozhang/ffmpeg-claude-skill) — Recipe docs with no scripts, superseded by kajisho5/ffmpeg-skill. The repo's .claude/settings.local.json pre-allows pip install, git push and gh repo create if you open the repo in Claude Code.
+- [venice-characters](https://github.com/veniceai/skills/tree/main/skills/venice-characters) — Venice chat-persona catalogue API; nothing to do with film characters.
+- [venice-chat](https://github.com/veniceai/skills/tree/main/skills/venice-chat) — Venice chat-completions API reference; vendor docs.
+- [venice-embeddings](https://github.com/veniceai/skills/tree/main/skills/venice-embeddings) — Venice embeddings API reference; vendor docs.
+- [Courier](https://github.com/trycourier/courier-skills) — Integration guide for Courier's notification platform; only relevant if you build on Courier.
+- [serpapi-search-tools-python](https://github.com/serpapi/serpapi-search-tools-python) — A Python library for a paid search API, not a skill (no SKILL.md).
+- [serpapi-cli](https://github.com/serpapi/serpapi-cli) — A Go CLI for a paid search API, not a skill (no SKILL.md).
+- [crawlbase-mcp](https://github.com/crawlbase/crawlbase-mcp) — A paid scraping MCP server, not a skill. Pitched on anti-bot evasion.
+- [smartui-skill](https://github.com/LambdaTest/agent-skills/tree/main/smartui-skill) — Config snippets for a paid visual-regression cloud.
+
 ## 2026-10-17 — 22 reviewed · 3 ADD · 6 WATCH · 13 SKIP
 
 ### ADD — Video Editor Assistant
