@@ -1,32 +1,5 @@
 [
 {
-"id": "crawlbase/langchain-crawlbase",
-"name": "langchain-crawlbase",
-"owner": "crawlbase",
-"url": "https://github.com/crawlbase/langchain-crawlbase",
-"summary": "LangChain document loader, tool, and retriever backed by the Crawling API",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "crawlbase/n8n-nodes-crawlbase",
-"name": "n8n-nodes-crawlbase",
-"owner": "crawlbase",
-"url": "https://github.com/crawlbase/n8n-nodes-crawlbase",
-"summary": "Native Crawlbase node for n8n with credentials and Crawling API options",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/api-skill",
-"name": "api-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/api-skill",
-"summary": "Suite of API skills for designing, mocking, documenting, securing, and generating tests for REST/GraphQL/gRPC APIs",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/appium-skill",
 "name": "appium-skill",
 "owner": "LambdaTest",
@@ -513,24 +486,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "veniceai/skills/tree/main/skills/venice-audio-transcription",
-"name": "venice-audio-transcription",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-audio-transcription",
-"summary": "Audio transcription models and speech-to-text options",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-models",
-"name": "venice-models",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-models",
-"summary": "Model catalog, traits, and compatibility mappings",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "veniceai/skills/tree/main/skills/venice-api-keys",
 "name": "venice-api-keys",
 "owner": "veniceai",
@@ -538,15 +493,6 @@
 "summary": "API key CRUD, rate limits, and Web3 keys",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-billing",
-"name": "venice-billing",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-billing",
-"summary": "Balance, usage, and billing analytics endpoints",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "veniceai/skills/tree/main/skills/venice-x402",
@@ -603,15 +549,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/ad-creative",
-"name": "ad-creative",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative",
-"summary": "Generate and iterate ad creative including headlines, descriptions, and primary text",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/ai-seo",
 "name": "ai-seo",
 "owner": "coreyhaines31",
@@ -630,15 +567,6 @@
 "lane": "Wildcard"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/competitors",
-"name": "competitors",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitors",
-"summary": "Build competitor comparison and alternative landing pages for SEO",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/content-strategy",
 "name": "content-strategy",
 "owner": "coreyhaines31",
@@ -646,24 +574,6 @@
 "summary": "Plan content strategy and decide what topics and formats to prioritize",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/copy-editing",
-"name": "copy-editing",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copy-editing",
-"summary": "Edit and improve existing marketing copy for clarity and impact",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/copywriting",
-"name": "copywriting",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting",
-"summary": "Write and rewrite marketing copy for landing pages, homepages, and ads",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
 },
 {
 "id": "coreyhaines31/marketingskills/tree/main/skills/emails",
@@ -918,15 +828,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "realkimbarrett/advertising-skills/tree/main/skills/operator-os/scroll-stopping-creative",
-"name": "scroll-stopping-creative",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/scroll-stopping-creative",
-"summary": "Create ad concepts that stop attention in the first 3 seconds",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "realkimbarrett/advertising-skills/tree/main/skills/operator-os/conversion-path-builder",
 "name": "conversion-path-builder",
 "owner": "realkimbarrett",
@@ -1132,15 +1033,6 @@
 "summary": "Track revenue, retention, and growth metrics including MRR/ARR, churn, NRR, and expansion",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/storyboard",
-"name": "storyboard",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/storyboard",
-"summary": "Visualize user journeys with 6-frame narrative storyboards",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/user-story",
@@ -1573,15 +1465,6 @@
 "summary": "Identify best GTM motions across 7 types including PLG and ABM",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "phuryn/pm-skills/tree/main/pm-go-to-market/skills/gtm-strategy",
-"name": "gtm-strategy",
-"owner": "phuryn",
-"url": "https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/gtm-strategy",
-"summary": "Create GTM strategy with channels, messaging, and launch timeline",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "phuryn/pm-skills/tree/main/pm-go-to-market/skills/ideal-customer-profile",
@@ -2331,15 +2214,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "degausai/wonda",
-"name": "wonda",
-"owner": "degausai",
-"url": "https://github.com/degausai/wonda",
-"summary": "AI content creation: images, video, music, audio, editing, publishing",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "gitroomhq/postiz-agent",
 "name": "postiz-agent",
 "owner": "gitroomhq",
@@ -2347,15 +2221,6 @@
 "summary": "Schedule social media posts across 28+ platforms programmatically",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "taisly/agent",
-"name": "agent",
-"owner": "taisly",
-"url": "https://github.com/taisly/agent",
-"summary": "Codex plugin, Agent Skill, CLI, and MCP server for publishing approved short-form videos to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook through Taisly",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "indranilbanerjee/digital-marketing-pro",
@@ -8520,6 +8385,123 @@
 "url": "https://github.com/GongLingRui/screen-creative-skills",
 "summary": "Screen and film creative-writing skills",
 "source": "web search 2026-10-18",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#beat-sheet-builder",
+"name": "beat-sheet-builder",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/development/beat-sheet-builder",
+"summary": "Builds a beat sheet for a screenplay from premise and structure",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#logline-writer",
+"name": "logline-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/development/logline-writer",
+"summary": "Writes and tests loglines for a film or series",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#coverage-report-writer",
+"name": "coverage-report-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/revision/coverage-report-writer",
+"summary": "Writes script coverage reports on a screenplay",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#script-notes-writer",
+"name": "script-notes-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/revision/script-notes-writer",
+"summary": "Writes development notes on a screenplay draft",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#dialogue-polisher",
+"name": "dialogue-polisher",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/scripting/dialogue-polisher",
+"summary": "Polishes screenplay dialogue",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#one-pager-writer",
+"name": "one-pager-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/production/one-pager-writer",
+"summary": "Writes a one-page project summary for a film",
+"source": "claudskills.com (search)",
+"lane": "Business & outreach"
+},
+{
+"id": "ur-grue/autopunk-media-skills#assembly-cut-notes",
+"name": "assembly-cut-notes",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/assembly-cut-notes",
+"summary": "Writes editorial notes on an assembly cut",
+"source": "claudskills.com (search)",
+"lane": "Post-production"
+},
+{
+"id": "ur-grue/autopunk-media-skills#rough-cut-notes",
+"name": "rough-cut-notes",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/rough-cut-notes",
+"summary": "Writes editorial notes on a rough cut",
+"source": "claudskills.com (search)",
+"lane": "Post-production"
+},
+{
+"id": "ur-grue/autopunk-media-skills#fine-cut-notes",
+"name": "fine-cut-notes",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/fine-cut-notes",
+"summary": "Writes editorial notes on a fine cut",
+"source": "claudskills.com (search)",
+"lane": "Post-production"
+},
+{
+"id": "ur-grue/autopunk-media-skills#subtitles-rewriter",
+"name": "subtitles-rewriter",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/subtitles-rewriter",
+"summary": "Rewrites subtitles for reading speed and line length",
+"source": "claudskills.com (search)",
+"lane": "Post-production"
+},
+{
+"id": "ur-grue/autopunk-media-skills#call-sheet-writer",
+"name": "call-sheet-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/pre-production/call-sheet-writer",
+"summary": "Writes a production call sheet",
+"source": "claudskills.com (search)",
+"lane": "AI filmmaking"
+},
+{
+"id": "ur-grue/autopunk-media-skills#pitch-treatment-writer",
+"name": "pitch-treatment-writer",
+"owner": "ur-grue",
+"url": "https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/development/pitch-treatment-writer",
+"summary": "Writes a documentary pitch treatment",
+"source": "claudskills.com (search)",
+"lane": "Business & outreach"
+},
+{
+"id": "modelstudioai/skills#happyhorse-prompt-studio",
+"name": "happyhorse-prompt-studio",
+"owner": "modelstudioai",
+"url": "https://github.com/modelstudioai/skills/tree/main/skills/happyhorse-prompt-studio",
+"summary": "Prompt studio for the HappyHorse video generation model",
+"source": "modelstudioai/skills (sweep)",
 "lane": "AI filmmaking"
 }
 ]

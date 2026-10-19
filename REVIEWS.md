@@ -2,6 +2,39 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-19 — 24 reviewed · 0 ADD · 1 WATCH · 23 SKIP
+
+### WATCH — Treatment Writer
+https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/screenwriting/development/treatment-writer · lane: AI filmmaking · F/L/C/O = 4/3/4/2 (13)
+
+Prompt-only skill (MIT) that turns a logline, protagonist, act summaries and theme into a 900–1,300-word present-tense treatment with a fixed structure (title block, logline, premise, ≤5 characters with want/flaw, three-act prose, theme) and a quality checklist; worked example included. Gives Parth a consistent, producer-ready treatment format for his own feature ideas and for pitching to production houses, instead of re-specifying length and structure each time. *It is a template, not new capability: Claude writes treatments unprompted, and the word budget is short for a feature treatment. Would become an ADD if chained with its sibling beat-sheet-builder/logline-writer into a development pack with an editable length and genre-voice setting. Part of a 412-skill collection, so cherry-pick only.*
+
+### Skipped
+
+- [Spark Video (episode producer)](https://github.com/modelstudioai/skills/tree/main/skills/spark-video) — Serious screenwriter→director→render→review→stitch pipeline for AI short dramas on Alibaba Bailian/Wan, with confirmation gates. Skipped: its SKILL.md tells the agent to git-pull the skill from origin at the start of every session, so code that was never reviewed would run, and it is locked to DashScope. ⚠️ ⚠️ Self-update: instructs the agent to `git pull` the skill (incl. scripts) at every session start — unreviewed code updates..
+- [Picture Lock Checklist](https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/picture-lock-checklist) — Well-written checklist template (editorial, clearances, technical, accessibility, delivery, lock verdict), but it only reformats counts the user types in; Claude produces the same checklist when asked, and Parth's own delivery-spec QC app covers the technical half against real files.
+- [Vox Video Director](https://github.com/modelstudioai/skills/tree/main/skills/vox-video-director) — Topic → paper-collage explainer video via the Bailian CLI plus ffmpeg; competent scripts, but it requires an Alibaba Bailian account and uploads media to a third-party host, and the one look it makes is a trend style.
+- [copywriting](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting) — Strongest of the pack: diagnose-before-drafting (respect an existing voice), a three-question line gate and a "leave it alone" test. Still built around SaaS conversion pages; better-writing covers Parth's portfolio and pitch prose, so not worth a shelf slot.
+- [Broadcaster Pitch Writer](https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/business/broadcaster-pitch-writer) — Generic documentary-commissioning pitch template (logline, audience, comps, financing); aimed at UK broadcaster pitches rather than Parth's agency and production-house work, and adds little over asking Claude directly.
+- [Cinematic Storyboard Sheet](https://github.com/0xagi-bsky-social/Codex-Skills/tree/main/cinematic-storyboard-sheet) — Codex-only: the whole skill is one prompt for Codex's image_gen tool and it forbids any other output, so it does nothing in Claude.
+- [ad-creative](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative) — Thorough performance-ad copy system (hooks, format taxonomy, platform specs) for SaaS paid acquisition; ad copy at scale is not Parth's work.
+- [Story pitch](https://github.com/jamditis/claude-skills-journalism/tree/main/journalism-core/skills/story-pitch) — Solid pitch guide, but for journalists pitching editors and outlets; not Parth's client or production-house pitching.
+- [copy-editing](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copy-editing) — Seven-sweep marketing-copy edit for conversion pages; overlaps forjd/better-writing (already an ADD) for the editing Parth actually does.
+- [Wonda CLI](https://github.com/degausai/wonda) — A 2,264-line manual for a paid ($19.99/mo) content SaaS; installs via `curl | bash`, and includes Reddit account creation and LinkedIn/X automation. ⚠️ ⚠️ Install path is `curl -fsSL wonda.sh/install.sh | bash`; skill drives social-account creation and automation..
+- [Transcript Timecoder](https://github.com/ur-grue/autopunk-media-skills/tree/main/skills/tv-documentary/post-production/transcript-timecoder) — Estimates timecodes from words-per-minute rather than reading media or ASR timings, so the "broadcast-standard" timecodes it writes into a paper edit are guesses that will not line up with the footage.
+- [venice-audio-transcription](https://github.com/veniceai/skills/tree/main/skills/venice-audio-transcription) — Endpoint reference for Venice's paid transcription API; useful only with a Venice account, and the ffmpeg-skill already queued covers local ASR.
+- [storyboard (PM)](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/storyboard) — A six-frame product user-journey storyboard for PMs, not a film storyboard; CC BY-NC-SA.
+- [venice-models](https://github.com/veniceai/skills/tree/main/skills/venice-models) — Model catalogue endpoint docs for one vendor's API.
+- [venice-billing](https://github.com/veniceai/skills/tree/main/skills/venice-billing) — Billing and usage endpoint docs for one vendor's API.
+- [competitors](https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitors) — SEO "X vs Y" and alternatives landing pages for SaaS products; no use for a freelance editor.
+- [gtm-strategy](https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/gtm-strategy) — Product-launch GTM outline for software products; not Parth's work (it was mis-shelved under Post-production on the catalogue).
+- [Taisly social posting](https://github.com/taisly/agent) — Wrapper for a third-party SaaS that posts short-form video to TikTok/Reels/Shorts; publishing, not post-production.
+- [scroll-stopping-creative](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/scroll-stopping-creative) — 22-line list of attention principles; no method, no examples, and the repo has no licence file.
+- [langchain-crawlbase](https://github.com/crawlbase/langchain-crawlbase) — A Python LangChain package for a paid scraping API; contains no SKILL.md at all.
+- [n8n-nodes-crawlbase](https://github.com/crawlbase/n8n-nodes-crawlbase) — An n8n node package for a paid scraping API; not a Claude skill, no licence file.
+- [api-skill suite](https://github.com/LambdaTest/agent-skills/tree/main/api-skill) — Eighteen generic REST/GraphQL API design and testing skills plus an installer shell script; enterprise backend work that is not part of Parth's toolmaking.
+- [davinci-resolve (code-buddy)](https://github.com/phuetz/code-buddy) — Listed on skills.sh, but no DaVinci Resolve skill exists in the repo at 7b77f46, and the repo is under the Business Source License (not redistributable).
+
 ## 2026-10-18 — 21 reviewed · 1 ADD · 2 WATCH · 18 SKIP
 
 ### ADD — ffmpeg-skill
