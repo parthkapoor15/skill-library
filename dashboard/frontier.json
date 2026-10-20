@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/appium-skill",
-"name": "appium-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/appium-skill",
-"summary": "Generate Appium mobile automation for Android and iOS in Java, Python, or JS",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/behat-skill",
-"name": "behat-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/behat-skill",
-"summary": "Generate Behat BDD tests for PHP with Gherkin and Mink",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/behave-skill",
-"name": "behave-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/behave-skill",
-"summary": "Generate Behave BDD tests for Python with Gherkin and step implementations",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/capybara-skill",
 "name": "capybara-skill",
 "owner": "LambdaTest",
@@ -495,33 +468,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "veniceai/skills/tree/main/skills/venice-x402",
-"name": "venice-x402",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-x402",
-"summary": "Wallet credits and x402 payments on Base",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-crypto-rpc",
-"name": "venice-crypto-rpc",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-crypto-rpc",
-"summary": "JSON-RPC proxying for supported crypto networks",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "veniceai/skills/tree/main/skills/venice-augment",
-"name": "venice-augment",
-"owner": "veniceai",
-"url": "https://github.com/veniceai/skills/tree/main/skills/venice-augment",
-"summary": "Search, scraping, and text parsing endpoints",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "veniceai/skills/tree/main/skills/venice-errors",
 "name": "venice-errors",
 "owner": "veniceai",
@@ -576,24 +522,6 @@
 "lane": "Wildcard"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/emails",
-"name": "emails",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/emails",
-"summary": "Build email sequences, drip campaigns, and lifecycle email flows",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/free-tools",
-"name": "free-tools",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/free-tools",
-"summary": "Plan and build free tools for lead generation and SEO value",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/launch",
 "name": "launch",
 "owner": "coreyhaines31",
@@ -601,15 +529,6 @@
 "summary": "Plan product launches, feature announcements, and go-to-market strategies",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/marketing-ideas",
-"name": "marketing-ideas",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas",
-"summary": "Generate marketing strategies and campaign ideas for SaaS products",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
 },
 {
 "id": "coreyhaines31/marketingskills/tree/main/skills/marketing-psychology",
@@ -1033,33 +952,6 @@
 "summary": "Track revenue, retention, and growth metrics including MRR/ARR, churn, NRR, and expansion",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/user-story",
-"name": "user-story",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story",
-"summary": "Write user stories with acceptance criteria using Mike Cohn and Gherkin formats",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping",
-"name": "user-story-mapping",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping",
-"summary": "Organize stories by user workflow using Jeff Patton's story mapping approach",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/user-story-splitting",
-"name": "user-story-splitting",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story-splitting",
-"summary": "Break down large stories using 8 proven splitting patterns",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/context-engineering-advisor",
@@ -2331,15 +2223,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "SupercmoHQ/superCMO-skills",
-"name": "superCMO-skills",
-"owner": "SupercmoHQ",
-"url": "https://github.com/SupercmoHQ/superCMO-skills",
-"summary": "Open-source skills + local MCP server for marketing video & image production: UGC videos, ad videos, product photography, and image ads from a product photo and a brief; casts AI actors, picks the bes",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "sandbaseai/sandbase-skills/tree/main/research/multi-source-search",
 "name": "multi-source-search",
 "owner": "sandbaseai",
@@ -2457,15 +2340,6 @@
 "lane": "AI filmmaking"
 },
 {
-"id": "zarazhangrui/frontend-slides",
-"name": "frontend-slides",
-"owner": "zarazhangrui",
-"url": "https://github.com/zarazhangrui/frontend-slides",
-"summary": "Generate animation-rich HTML presentations with visual style previews",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "sujunmin/agy-ppt",
 "name": "agy-ppt",
 "owner": "sujunmin",
@@ -2563,15 +2437,6 @@
 "summary": "Leverage core platform capabilities",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "op7418/Youtube-clipper-skill",
-"name": "Youtube-clipper-skill",
-"owner": "op7418",
-"url": "https://github.com/op7418/Youtube-clipper-skill",
-"summary": "YouTube clip generation and editing with automated workflows",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "ognjengt/founder-skills",
@@ -6872,15 +6737,6 @@
 "owner": "kgohil",
 "url": "https://github.com/kgohil/trace-my-code/tree/main/skills/trace-my-code",
 "summary": "Maintain domain flows, architecture notes, and reuse patterns with code-drift checks.",
-"source": "karanb192/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "hasuwini77/3d-logo-skill/tree/main/skills/3d-logo",
-"name": "3d-logo",
-"owner": "hasuwini77",
-"url": "https://github.com/hasuwini77/3d-logo-skill/tree/main/skills/3d-logo",
-"summary": "Build a rotating 3D logo component with React Three Fiber.",
 "source": "karanb192/awesome-claude-skills",
 "lane": "Building tools & sites"
 },
