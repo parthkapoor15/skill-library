@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/capybara-skill",
-"name": "capybara-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill",
-"summary": "Generate Capybara E2E tests in Ruby with RSpec integration",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/cicd-pipeline-skill",
-"name": "cicd-pipeline-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill",
-"summary": "Generate CI/CD pipelines for tests on GitHub Actions, Jenkins, GitLab CI, and Azure DevOps",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/codeception-skill",
-"name": "codeception-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill",
-"summary": "Generate Codeception acceptance, functional, and unit tests in PHP",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/cucumber-skill",
 "name": "cucumber-skill",
 "owner": "LambdaTest",
@@ -504,24 +477,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/analytics",
-"name": "analytics",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics",
-"summary": "Set up and audit analytics tracking and measurement pipelines",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/content-strategy",
-"name": "content-strategy",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy",
-"summary": "Plan content strategy and decide what topics and formats to prioritize",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/launch",
 "name": "launch",
 "owner": "coreyhaines31",
@@ -540,33 +495,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/onboarding",
-"name": "onboarding",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding",
-"summary": "Optimize post-signup onboarding and user activation to improve time-to-value",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/cro",
-"name": "cro",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/cro",
-"summary": "Improve conversion rates on any marketing page or form, including homepages, landing pages, and contact forms",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/ads",
-"name": "ads",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/ads",
-"summary": "Create and optimize paid campaigns on Google, Meta, LinkedIn, and more",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/paywalls",
 "name": "paywalls",
 "owner": "coreyhaines31",
@@ -574,15 +502,6 @@
 "summary": "Design and optimize upgrade screens, paywalls, and upsell modals",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/popups",
-"name": "popups",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups",
-"summary": "Create and optimize popups, modals, and slide-ins for conversions",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
 },
 {
 "id": "coreyhaines31/marketingskills/tree/main/skills/pricing",
@@ -990,15 +909,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/epic-breakdown-advisor",
-"name": "epic-breakdown-advisor",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/epic-breakdown-advisor",
-"summary": "Split epics into stories using Richard Lawrence's 9 splitting patterns",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/feature-investment-advisor",
 "name": "feature-investment-advisor",
 "owner": "deanpeters",
@@ -1035,15 +945,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/pol-probe-advisor",
-"name": "pol-probe-advisor",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/pol-probe-advisor",
-"summary": "Recommend prototype type: Feasibility, Task-Focused, Narrative, Synthetic, or Vibe",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/positioning-workshop",
 "name": "positioning-workshop",
 "owner": "deanpeters",
@@ -1078,15 +979,6 @@
 "summary": "Project market size with real-world data and citations",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping-workshop",
-"name": "user-story-mapping-workshop",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping-workshop",
-"summary": "Walk through creating story maps with backbone and release slices",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/vp-cpo-readiness-advisor",
@@ -1131,7 +1023,7 @@
 "url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/prd-development",
 "summary": "Structured PRD process: problem → personas → solution → metrics → stories (2-4 days)",
 "source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
+"lane": "Business & outreach"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/product-strategy-session",
@@ -1275,7 +1167,7 @@
 "url": "https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/sprint-plan",
 "summary": "Plan sprints with capacity, story selection, and risk mapping",
 "source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
+"lane": "Business & outreach"
 },
 {
 "id": "phuryn/pm-skills/tree/main/pm-execution/skills/stakeholder-map",
@@ -1311,7 +1203,7 @@
 "url": "https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/user-stories",
 "summary": "Create INVEST-compliant user stories with 3 C's structure",
 "source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
+"lane": "Business & outreach"
 },
 {
 "id": "phuryn/pm-skills/tree/main/pm-execution/skills/wwas",
@@ -2565,15 +2457,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "mvanhorn/last30days-skill",
-"name": "last30days-skill",
-"owner": "mvanhorn",
-"url": "https://github.com/mvanhorn/last30days-skill",
-"summary": "Research any topic across Reddit, X, YouTube, HN, Polymarket, and the web, ranked by upvotes, likes, and real money instead of editors",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "santifer/career-ops",
 "name": "career-ops",
 "owner": "santifer",
@@ -2617,15 +2500,6 @@
 "summary": "28 eval-informed mental models for decisions, debugging, systems, and strategy",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "JimmySadek/youtube-fetcher-to-markdown",
-"name": "youtube-fetcher",
-"owner": "JimmySadek",
-"url": "https://github.com/JimmySadek/youtube-fetcher-to-markdown",
-"summary": "Create Obsidian-ready Markdown notes from YouTube videos",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "zapier/zapier-mcp",
@@ -3211,15 +3085,6 @@
 "summary": "Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "NoizAI/skills",
-"name": "skills",
-"owner": "NoizAI",
-"url": "https://github.com/NoizAI/skills",
-"summary": "Human-like TTS workflows with local/cloud APIs and app delivery",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "Kevin7Qi/codex-collab",
@@ -8235,15 +8100,6 @@
 "lane": "AI filmmaking"
 },
 {
-"id": "GongLingRui/screen-creative-skills",
-"name": "screen-creative-skills",
-"owner": "GongLingRui",
-"url": "https://github.com/GongLingRui/screen-creative-skills",
-"summary": "Screen and film creative-writing skills",
-"source": "web search 2026-10-18",
-"lane": "AI filmmaking"
-},
-{
 "id": "ur-grue/autopunk-media-skills#beat-sheet-builder",
 "name": "beat-sheet-builder",
 "owner": "ur-grue",
@@ -8359,5 +8215,23 @@
 "summary": "Prompt studio for the HappyHorse video generation model",
 "source": "modelstudioai/skills (sweep)",
 "lane": "AI filmmaking"
+},
+{
+"id": "Vincentwei1021/video-shotcraft",
+"name": "video-shotcraft",
+"owner": "Vincentwei1021",
+"url": "https://github.com/Vincentwei1021/video-shotcraft",
+"summary": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
+"source": "web search",
+"lane": "Post-production"
+},
+{
+"id": "Vossy/claude-video-editing-skill",
+"name": "claude-video-editing-skill",
+"owner": "Vossy",
+"url": "https://github.com/Vossy/claude-video-editing-skill",
+"summary": "Agent Skill that lets Claude and Cursor edit real video — auto-edit, clipping, subtitles, avatars, publishing — via the free Shorz desktop app's MCP server",
+"source": "web search",
+"lane": "Post-production"
 }
 ]

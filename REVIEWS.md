@@ -2,7 +2,40 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
-## 2026-10-20 — 31 reviewed · 2 ADD · 6 WATCH · 23 SKIP
+## 2026-10-21 — 20 reviewed · 0 ADD · 2 WATCH · 18 SKIP
+
+### WATCH — Axiom (Apple OS development)
+https://github.com/CharlesWiltgen/Axiom · lane: Building tools & sites · F/L/C/O = 4/3/5/3 (15)
+
+A large, actively maintained Apple-platform plugin: 285 skills (including axiom-macos for windows, menus, sandboxing, notarization and AppKit bridging), 42 agents, hooks, and six arm64 CLI tools (axbuild, xclog, xcsym, xcui, xcprof, xcproject) that give Claude short build, crash and profiling summaries. The tools ship as prebuilt Mach-O binaries. Their Go and Swift source is in the repo, but I couldn't check that the binaries match it. When he next works on the macOS delivery-spec QC app: sandbox and security-scoped bookmark access to client drives, Developer ID notarization, and axbuild's short error summary instead of a truncated xcodebuild log. *It's a plugin, not one skill: 285 skill descriptions would crowd his shelf and it uses 'You MUST use this skill' triggers. It becomes an ADD when he's actively building the QC app again, installed as just axiom-macos plus axiom-swiftui with the tools built from source.*
+
+### WATCH — LintLang
+https://github.com/hermes-labs-ai/lintlang · lane: Building tools & sites · F/L/C/O = 3/3/5/3 (14)
+
+Deterministic offline linter for SKILL.md, CLAUDE.md, tool definitions and system prompts. The skill is host-neutral, now pins lintlang 0.8.3 via uvx (which fixes a BOM-less UTF-16 file scanning silently clean and adds .cursor/rules discovery), treats scan output as untrusted, and says plainly that PASS doesn't mean safe. A quick second opinion before publishing his own skills or the CLAUDE.md for his QC app or UXP panel. *Still heuristic, and the rules keep changing between versions. Leave the optional after-every-edit hook off. It becomes an ADD if he starts writing skills regularly and the rule set settles.*
+
+### Skipped
+
+- [last30days](https://github.com/mvanhorn/last30days-skill) — Recent-topic research across Reddit, X, YouTube, HN and more, ranked by engagement. Its scripts include macOS Chrome/Safari cookie extraction that decrypts with the Keychain 'Safe Storage' key (consent-gated, but it is browser-credential access), and it ships 580 files. It's a research tool, not post-production; Claude's own search covers most of it. ⚠️ Bundled scripts read and decrypt browser cookies via the macOS Keychain (opt-in, but fails the gate).
+- [youtube-fetcher (Video Fetcher to Markdown)](https://github.com/JimmySadek/youtube-fetcher-to-markdown) — Pulls captions (or a yt-dlp download plus local Whisper) from YouTube, Instagram, TikTok and others into an Obsidian note with timestamps and a frame contact sheet. Well built and careful (browser cookies only when the user asks), but it is note-taking for reference videos, not a post-production task he does on jobs.
+- [video-editing (V3)](https://github.com/maxazure/video-editing-skill) — A 2,900-line, mostly Chinese SKILL.md plus ~450 files of FFmpeg scripts for Xiaohongshu/Douyin short-form talking-head videos (transcribe, rough cut, multicam switch, captions, platform lint, CapCut/EDL export). Its timeline and multicam tools overlap the queued ffmpeg-skill, which does the same job tidier and in English; this one is tuned to Chinese social platforms. Only SKILL.md and the network-touching code (font downloads, optional Pexels/OpenAI keys) were read, not every script. MIT is stated in the README with no LICENSE file.
+- [NoizAI skills](https://github.com/NoizAI/skills) — Ten skills wrapping Noiz's paid TTS, voice-cloning, sound-FX and music API (local Kokoro fallback for TTS). Mostly companion-voice and 'chat with anyone' cloning; no fit for scratch VO or client work over tools he already uses.
+- [cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/cro) — SaaS landing-page and form conversion audits. His portfolio's contact form doesn't need an A/B testing framework.
+- [yuwen-publish-precheck](https://github.com/yuwen-cool/yuwen-publish-precheck) — Pre-publish moderation check for Douyin, Xiaohongshu and WeChat Channels copy, with sourced rules and rewrites. Careful work, but only for Chinese platforms.
+- [epic-breakdown-advisor](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/epic-breakdown-advisor) — Splits product epics into user stories with Richard Lawrence's nine patterns. Product-management only; was filed under AI filmmaking because of the word 'story'. CC BY-NC-SA licence.
+- [pol-probe-advisor](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/pol-probe-advisor) — Picks a 'proof of life' prototype type for a product hypothesis. Product-management only; no film or client use.
+- [ads](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ads) — Paid-media playbooks for Google, Meta and LinkedIn campaigns. He doesn't buy ads for his own work.
+- [analytics](https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics) — GA4/GTM event-tracking setup and audits. Claude already handles the one-off tracking snippet a microsite needs.
+- [content-strategy](https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy) — SaaS blog and topic-cluster planning. Not how he gets work.
+- [onboarding](https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding) — Post-signup activation for SaaS products. No fit.
+- [screen-creative-skills](https://github.com/GongLingRui/screen-creative-skills) — 31 short Chinese-drama development skills (script and IP evaluators, plot-point and character analysers, novel screening) with English copies. Each one is a scoring table plus an output template; the evaluator grades 'ideological value'. Claude gives deeper script notes unprompted. The latest commit only touched the README.
+- [user-story-mapping-workshop](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/user-story-mapping-workshop) — Facilitates an agile user-story-mapping workshop. Software product process, unrelated to his work.
+- [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill) — Templates for test pipelines in GitHub Actions, Jenkins, GitLab and Azure, steering toward LambdaTest. Claude writes a GitHub Actions file for his apps unprompted.
+- [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) — Ruby/RSpec Capybara test generator with a LambdaTest cloud section. He doesn't write Ruby.
+- [codeception-skill](https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill) — PHP Codeception test generator. Not his stack.
+- [popups](https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups) — Conversion popups and exit-intent modals. No use for a filmmaker's site.
+
+## 2026-10-20 — 30 reviewed · 2 ADD · 5 WATCH · 23 SKIP
 
 ### ADD — cinematic-director (DirectorSKILL)
 https://github.com/wuwangzhang1216/DirectorSKILL · lane: AI filmmaking · F/L/C/O = 5/4/5/4 (18)
@@ -41,11 +74,6 @@ Builds labelled positive and distractor requests and measures whether a skill's 
 https://github.com/Miftahul-Islam-Efaz/Motion-graphics-skill · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
 
 A director, motion-designer and sound-designer workflow for code-rendered video. Per-project taste and progress files, one beats.json driving both visuals and SFX, deterministic Playwright canvas renders, contact-sheet previews before export, and loudness/peak QA. Promo or motion pieces for his own tools and clients: one cue file drives animation and sound, and references get broken into timed contact sheets first. *Commercial single-user licence despite the public repo, so he'd need to buy it or get the author's OK. It overlaps the installed animation skills. It would be an ADD if relicensed and proven on a real promo.*
-
-### WATCH — LintLang
-https://github.com/hermes-labs-ai/lintlang · lane: Building tools & sites · F/L/C/O = 3/3/5/3 (14)
-
-Deterministic offline linter for SKILL.md, CLAUDE.md, tool definitions and system prompts. The skill is now host-neutral, pins lintlang 0.8.2 via uvx, treats scan output as untrusted, and says plainly that PASS doesn't mean safe. A quick second opinion before publishing his own skills or the CLAUDE.md for his QC app or UXP panel. *Still heuristic, and the rules keep changing between versions. Leave the optional after-every-edit hook off. It becomes an ADD if he starts writing skills regularly and the rule set settles.*
 
 ### WATCH — cold-email
 https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email · lane: Business & outreach · F/L/C/O = 3/3/5/3 (14)
