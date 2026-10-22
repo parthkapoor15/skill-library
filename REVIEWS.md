@@ -2,6 +2,63 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-22 — 24 reviewed · 2 ADD · 3 WATCH · 19 SKIP
+
+### ADD — Premiere Pro MCP: edit-premiere-project
+https://github.com/leancoderkavy/premiere-pro-mcp · lane: Post-production · F/L/C/O = 5/4/5/4 (18)
+
+**What it does:** Operating skill for a local Premiere Pro MCP server: a CEP and UXP bridge with 436 tools. Claude inspects the timeline first, builds an edit plan, previews it, and applies it only with a one-time confirmation token. It reads the timeline back after each change, refuses raw ExtendScript unless asked, and checks exports frame by frame. Updated 2026-10-21; telemetry stays off unless you set a PostHog key.
+
+**Why it's worth it for you:** Premiere work for agencies gets done from Claude: rough cuts and selects from transcripts, cleaning up bins and metadata (Scene/Shot/Take, ALE intake), verifying a delivery export against the spec, and OTIO/XML conform checks, all against the open project with an undo-safe preview first. It also sits right next to his own UXP command palette: same host, an MCP surface he can study or extend.
+
+**Watch out for:** The skill does nothing without the MCP server and its CEP panel running on his Mac (installed with npx and opened in Premiere). That is a computer-side install of a large codebase I only spot-checked: endpoints, telemetry and the skill's safety rules, not all 880 files. The server's own plugin ships this skill, so install it from there instead of as a loose zip. That's why it isn't queued.
+
+### ADD — Screenwriting Skills (26-skill pack)
+https://github.com/jtydhr88/screenwriting-skills · lane: AI filmmaking · F/L/C/O = 4/4/5/4 (17)
+
+**What it does:** 26 dramaturgy skills distilled from 47 craft books and 23 volumes of scripts: McKee, Field, Truby, Chekhov, Ozu, Japanese, Korean and French practice, series bibles, writers' room. Each skill is a numbered principle set with checklists, and a workflow skill routes between them. The bodies are in Chinese, but it answers in whatever language you ask in.
+
+**Why it's worth it for you:** Script development for the features he wants to direct: diagnosing a scene that "doesn't turn" (McKee's value check, beats, enter late and leave early), premise and theme tests, and series-engine bibles. It argues from named sources instead of generic story advice, which fits his first-principles taste.
+
+**Watch out for:** Not queued, for two reasons. The NOTICE carves the quoted book and script excerpts out of the MIT licence, so redistributing the pack isn't clean. And installing all 26 skills would put 26 descriptions on his shelf. Install it straight from the author's plugin marketplace, or pick sw-workflow, sw-scene-craft and sw-story-structure. About 850 KB of skill text in total, so expect heavy context.
+
+### WATCH — video-use
+https://github.com/browser-use/video-use · lane: Post-production · F/L/C/O = 4/3/5/3 (15)
+
+Edit by conversation from a word-level transcript. Claude packs the takes into a phrase view, confirms a plain-English strategy, writes an EDL, extracts each segment with 30 ms fades, adds overlays and burns subtitles last. Its hard rules for ffmpeg correctness are excellent. Fast social cut-downs and talking-head edits from raw takes without opening an NLE. The take-picking and EDL logic is the reusable part. *Renders a finished mp4, not a Premiere or Resolve timeline. Transcription needs a paid ElevenLabs key. It overlaps the queued ffmpeg-skill and the video-editor-assistant ADD. It would be an ADD if it exported the EDL as XML/OTIO for an NLE, or ran local Whisper.*
+
+### WATCH — Creative Director
+https://github.com/smixs/creative-director-skill · lane: Business & outreach · F/L/C/O = 3/3/5/4 (15)
+
+Ad-concepting engine: Pollard's idea levels, insight mining, three methods from different families (SIT/TRIZ, bisociation, inversion), and weighted scoring against a 571-campaign case library with saturation caps. It loops until an idea clears 9. Local helper scripts only maintain the library. CC-BY-4.0. Writing the idea section of a director's treatment, or pitching a spec concept to an agency: it tests whether a concept is derivative before he shoots a single frame. *Built for agency creatives, not directors: most of Parth's agency work arrives with the concept decided. Heavy (dozens of reference files). It would be an ADD once he starts pitching original concepts or spec ads, ideally paired with the treatment-writer WATCH.*
+
+### WATCH — object-separation
+https://github.com/Barty-Bart/motion-graphics/tree/main/skills/object-separation · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
+
+Local SAM 2.1 rotoscoping in one SKILL.md. It picks the model size from the machine, places the click points on a gridded frame, propagates in 60-frame chunks and writes a mask per frame plus a green-tinted check render. Nothing is uploaded. Quick mattes for a product or person when Resolve's Magic Mask or Premiere's object mask struggles, or for feeding AE and compositing scripts. *Masks are computed at 960 px wide and hard-edged, so they don't hold up at 4K finishing. Output is a PNG matte sequence, not an alpha ProRes. It would be an ADD with source-resolution mattes, edge refinement and an alpha-channel export.*
+
+### Skipped
+
+- [Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar) — 51 code-rendered film styles (oil paint, ukiyo-e, satellite briefing and more), each with a demo film. Inventive, but the skill clones and updates the library at run time and then runs its Node tools. ⚠️ ⚠️ Self-update: the skill's setup.sh clones and pulls the library from GitHub on each use, so the code that runs can change after review..
+- [Humanizer](https://github.com/blader/humanizer) — Careful, maintained (v3.1) AI-tell remover with ranked patterns, a no-new-facts rule and voice matching from a sample. Good, but it does the same job as better-writing, already an ADD; not clearly better.
+- [Adobe Premiere Pro MCP (hetpatel-11)](https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP) — Another Premiere MCP with an install/operate skill. It sends anonymous telemetry by default to the author's Cloudflare worker (documented, opt-out). leancoderkavy/premiere-pro-mcp does the same job with telemetry off by default and preview/confirm edit plans.
+- [VideoDB](https://github.com/video-db/skills) — SDK guide for VideoDB's cloud: upload or stream video, index scenes and speech, search moments, subtitles and overlays. It needs client footage uploaded to a third-party cloud and a paid key. The local parts (transcode, subtitles) are already covered by ffmpeg-skill.
+- [claude-youtube-editor](https://github.com/hassancs91/claude-youtube-editor) — One YouTuber's full channel pipeline as a repo template: AssemblyAI cut, Remotion screens, ElevenLabs voice cleanup, SFX, thumbnails and an upload script, wired to several paid APIs. Well made, but built for a solo creator's channel, not client post.
+- [github-image-upload](https://github.com/drogers0/gh-image/tree/main/skills/github-image-upload) — Attaches screenshots and files to GitHub PRs and issues through GitHub's internal upload endpoint. A dev convenience, mis-filed under Post-production. ⚠️ ⚠️ Non-image uploads use the full-access user_session cookie, read from a logged-in browser (macOS Keychain prompt). Opt-in and documented, but fails the gate..
+- [pricing](https://github.com/coreyhaines31/marketingskills/tree/main/skills/pricing) — SaaS tiering and Van Westendorp pricing. Freelance day rates and post packages aren't SaaS packaging.
+- [product-marketing](https://github.com/coreyhaines31/marketingskills/tree/main/skills/product-marketing) — Builds a positioning/ICP context file that the rest of the pack reads. Useful only if he adopts the marketing pack.
+- [site-architecture](https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture) — Sitemap, navigation and URL planning with Mermaid templates. Overkill for portfolio microsites; Claude does this unprompted.
+- [FireRed OpenStoryline](https://github.com/FireRedTeam/FireRed-OpenStoryline) — A separate Chinese editing-agent app with its own LLM/VLM keys and a web UI. The Claude skills only install it and drive its session API, and the instructions are mostly in Chinese. Last updated July.
+- [Beautiful Prose](https://github.com/SHADOWPR0/beautiful_prose) — A ban-list style contract (no em dashes, no not-X-but-Y) with register tags. Covered better by better-writing (ADD) and humanizer. Unmaintained since December.
+- [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) — Generic Cypress test writer plus TestMu cloud setup. Claude writes Cypress tests fine unprompted.
+- [programmatic-seo](https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo) — Template pages at scale for SEO. Not relevant to a portfolio.
+- [signup](https://github.com/coreyhaines31/marketingskills/tree/main/skills/signup) — Signup-funnel CRO. His tools have no signup funnels.
+- [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) — Gherkin/BDD test generator with a vendor-cloud upsell. Parth's tools don't use BDD.
+- [video-color-grading (each::sense)](https://github.com/eachlabs/skills/tree/main/skills/video-color-grading) — Sends your video URL and a prompt like "teal shadows, warm highlights" to a paid each::sense API. No scopes, LUTs or node structure, and no licence file. Not a grading workflow.
+- [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-skill) — React Native E2E tests. Parth builds no React Native apps.
+- [cutaway](https://github.com/half144/cutaway) — Repo is no longer public (clone refused), so there's nothing to review.
+- [avatar-extraction](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/avatar-extraction) — A 40-line buyer-persona template with no method behind it, and no repo licence.
+
 ## 2026-10-21 — 20 reviewed · 0 ADD · 2 WATCH · 18 SKIP
 
 ### WATCH — Axiom (Apple OS development)
