@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/espresso-skill",
-"name": "espresso-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/espresso-skill",
-"summary": "Generate Espresso UI tests for Android apps in Kotlin or Java",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/flutter-testing-skill",
-"name": "flutter-testing-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill",
-"summary": "Generate Flutter widget, integration, and golden tests in Dart",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/gauge-skill",
-"name": "gauge-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/gauge-skill",
-"summary": "Generate Gauge specs in Markdown with steps in Java, Python, JS, or Ruby",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/geb-skill",
 "name": "geb-skill",
 "owner": "LambdaTest",
@@ -486,24 +459,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/revops",
-"name": "revops",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/revops",
-"summary": "Streamline revenue operations, lead lifecycle, and marketing-to-sales handoff",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/sales-enablement",
-"name": "sales-enablement",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/sales-enablement",
-"summary": "Create pitch decks, one-pagers, objection handling docs, and demo scripts",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "coreyhaines31/marketingskills/tree/main/skills/schema",
 "name": "schema",
 "owner": "coreyhaines31",
@@ -511,15 +466,6 @@
 "summary": "Add and optimize schema markup and structured data for better SEO",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "coreyhaines31/marketingskills/tree/main/skills/seo-audit",
-"name": "seo-audit",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit",
-"summary": "Audit and diagnose technical and on-page SEO issues on a site",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
 },
 {
 "id": "coreyhaines31/marketingskills/tree/main/skills/social",
@@ -538,33 +484,6 @@
 "summary": "Turn a product or service into a compelling, high-converting offer",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/copy-chief/schwartz-awareness-mapper",
-"name": "schwartz-awareness-mapper",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/schwartz-awareness-mapper",
-"summary": "Determine audience awareness level and the correct messaging approach",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/copy-chief/mechanism-builder",
-"name": "mechanism-builder",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/mechanism-builder",
-"summary": "Explain why your solution works and others failed with a unique mechanism",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/copy-chief/headline-matrix",
-"name": "headline-matrix",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/headline-matrix",
-"summary": "Generate high-performing headline variations across different angles",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "realkimbarrett/advertising-skills/tree/main/skills/copy-chief/objection-crusher",
@@ -1953,15 +1872,6 @@
 "lane": "Business & outreach"
 },
 {
-"id": "Vladimir-Human/humanizer-ru",
-"name": "humanizer-ru",
-"owner": "Vladimir-Human",
-"url": "https://github.com/Vladimir-Human/humanizer-ru",
-"summary": "Removes AI-writing markers from Russian text",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "Bomx/distribb-skill",
 "name": "distribb-skill",
 "owner": "Bomx",
@@ -2016,15 +1926,6 @@
 "lane": "Wildcard"
 },
 {
-"id": "Nanako0129/sepia",
-"name": "sepia",
-"owner": "Nanako0129",
-"url": "https://github.com/Nanako0129/sepia",
-"summary": "De-AI writing skill fixing narrative structure before word choice",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "axelfreeman/marketing-mindset",
 "name": "marketing-mindset",
 "owner": "axelfreeman",
@@ -2041,15 +1942,6 @@
 "summary": "Research social outliers, comments, competitors, ads, and trends",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "ilyautov/humanizer-ru/tree/main/skills/humanizer-ru",
-"name": "humanizer-ru",
-"owner": "ilyautov",
-"url": "https://github.com/ilyautov/humanizer-ru/tree/main/skills/humanizer-ru",
-"summary": "Removes 64 AI-writing markers from Russian text, with scanner",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "vanshyadav1408/Omentir/tree/main/plugins/omentir/skills/linkedin-outreach",
@@ -3942,33 +3834,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "bitwize-music-studio/claude-ai-music-skills",
-"name": "claude-ai-music-skills",
-"owner": "bitwize-music-studio",
-"url": "https://github.com/bitwize-music-studio/claude-ai-music-skills",
-"summary": "Full-lifecycle AI music album production",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "Alisa0808/vibe-creating-skill",
-"name": "vibe-creating-skill",
-"owner": "Alisa0808",
-"url": "https://github.com/Alisa0808/vibe-creating-skill",
-"summary": "Rewrites a rough idea or shot script into text-to-video prompts",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "HUANGCHIHHUNGLeo/claude-real-video",
-"name": "claude-real-video",
-"owner": "HUANGCHIHHUNGLeo",
-"url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
-"summary": "Scene-aware keyframes plus transcripts so any LLM watches videos",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "Optim-Agent/optim-agent",
 "name": "optim-agent",
 "owner": "Optim-Agent",
@@ -5461,15 +5326,6 @@
 "summary": "317 skills, 65 agents, and 14 teams for Claude Code following the Agent Skills open standard across 50+ domains.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "AlterLab-IEU/AlterLab-FC-Skills",
-"name": "AlterLab-FC-Skills",
-"owner": "AlterLab-IEU",
-"url": "https://github.com/AlterLab-IEU/AlterLab-FC-Skills",
-"summary": "72 agentic skills for creative technology workflows across 11 domains.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "AlterLab-IEU/AlterLab-Academic-Skills",
@@ -10940,6 +10796,51 @@
 "owner": "Barty-Bart",
 "url": "https://github.com/Barty-Bart/motion-graphics/tree/main/skills/explainer-engaging",
 "summary": "10-30 s one-take story through a product's workflow",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "voygr-tech/placecall",
+"name": "placecall",
+"owner": "voygr-tech",
+"url": "https://github.com/voygr-tech/placecall/tree/main/skills/placecall",
+"summary": "Calls US businesses by phone and returns outcome and transcript",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Wildcard"
+},
+{
+"id": "finom/vovk",
+"name": "vovk",
+"owner": "finom",
+"url": "https://github.com/finom/vovk/tree/main/skills",
+"summary": "Next.js API routes as MCP tools and typed clients",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Building tools & sites"
+},
+{
+"id": "dy-hashiqi/VibeDS-skill",
+"name": "VibeDS-skill",
+"owner": "dy-hashiqi",
+"url": "https://github.com/dy-hashiqi/VibeDS-skill",
+"summary": "One-line storyboard script to a 16:9 explainer short on HyperFrames + GSAP (Chinese)",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "garycaogan/pixel-diary",
+"name": "pixel-diary",
+"owner": "garycaogan",
+"url": "https://github.com/garycaogan/pixel-diary",
+"summary": "Recreates 'pixel character + dialogue box' viral videos from episode JSON with HyperFrames (Chinese)",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "rahlquist/hermes-video-toolchain",
+"name": "hermes-video-toolchain",
+"owner": "rahlquist",
+"url": "https://github.com/rahlquist/hermes-video-toolchain",
+"summary": "Free/open-source video pipeline for Hermes Agent: OpenScreen capture, HyperFrames authoring, headless post-processing",
 "source": "zhuyansen/awesome-claude-video-skills",
 "lane": "Post-production"
 }

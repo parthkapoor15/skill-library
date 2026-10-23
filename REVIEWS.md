@@ -2,6 +2,65 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-23 — 26 reviewed · 1 ADD · 5 WATCH · 20 SKIP
+
+### ADD — talking-head-editor
+https://github.com/griffinwooldridge/talking-head-editor · lane: Post-production · F/L/C/O = 4/4/5/4 (17)
+
+**What it does:** Raw talking-head recording in, finished video out. DeepFilterNet voice cleanup with a capped reduction and a sync check to zero samples, Whisper in pause-separated chunks so retakes aren't merged, cuts that wait for a word's real end (it catches soft '-ts' and '-ence' tails), automatic face reframing with punch-ins, word-timed captions, and motion graphics written as pure render(t) code on HyperFrames with real sub-frame motion blur. Frame counts are asserted at every stage.
+
+**Why it's worth it for you:** The talking-head jobs agencies send him (founder pieces, explainers, interview pulls). Take selection, pause tightening and the clipped-tail check become scripts with an audit he can listen against, instead of an afternoon of blade work. Each graphic is a small JS file, so a client note like 'faster' or 'rethink that one' means editing one function and re-rendering it, not rebuilding a comp.
+
+**Watch out for:** It renders a finished mp4, not a Premiere or Resolve timeline. video-editor-assistant (10-17 ADD) is the one that lands cuts in the NLE, and this one is for jobs delivered as a file. Transcription is English-only (small.en), so Hindi needs a model swap. setup.sh pip-installs torch, whisper and DeepFilterNet into a venv, pulls GSAP from cdnjs and runs pinned npx hyperframes. It's a single commit from a new author, so it's young.
+
+### WATCH — Remotion skills (official)
+https://github.com/remotion-dev/skills · lane: Building tools & sites · F/L/C/O = 3/4/5/3 (15)
+
+Remotion's own skills for making video in React: 12 skills behind a router, including an editable Studio timeline, .cube LUT colour correction, FFmpeg silence detection and Whisper-WebGPU captions. Since 10-20 there's a version bump to 4.0.538 and one new render-performance rule (keep useCurrentFrame in the smallest component). Data-driven titles, map explainers and caption burn-ins as code he can version and re-render, with an editable Studio timeline for client tweaks. *Unchanged from last time: it pays off only once he starts a real Remotion project, and then it is an ADD. There's no licence file. The Remotion License most likely applies, which is free for individuals and small teams. The skills are copied several times inside the router folder.*
+
+### WATCH — Check Skill (coder-eval)
+https://github.com/UiPath/coder_eval/tree/main/plugins/coder-eval/skills/check-skill · lane: Wildcard · F/L/C/O = 3/3/5/4 (15)
+
+Builds labelled positive and distractor requests and measures whether a skill's description triggers it (precision, recall, F1). The repo's six commits since 10-20 are harness fixes (Docker, Codex, delegate). The check-skill folder itself is unchanged. Puts a number on whether his own skills fire once the library grows and newer skills start dropping out of the listing. *Needs the coder-eval CLI, a sandbox and a paid agent run per row (16–24 runs). It overlaps skill-creator's own trigger evals. It becomes an ADD when he maintains several custom skills and sees misfires.*
+
+### WATCH — 超级峰的视频设计方法论 (chaojifeng-video-design)
+https://github.com/mileson/chaojifeng-video-design · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
+
+A Chinese-language director's method for explainers, product demos, launch films and music visuals: a story line and audience change first, then shot jobs, a sound event map, music cue selection by section, and a delivery record that keeps 'not watched / not listened' marked as unverified. Stdlib scripts validate the plan and measure a finished film (cut points, loudness, true peak, energy dips) and audit SFX hits against the event map. Its film_probe and reference-film-study method (measure a reference's cuts, loudness and sound events, then separate what was measured from what was inferred) would help when he breaks down a reference spot for a client. *All instructions are in Chinese, and it is aimed at motion-design explainers and launch films, not his edit work. It would be an ADD if an English edition appears or he takes on product-launch or explainer jobs where the music-led planning pays off.*
+
+### WATCH — Sepia (de-AI writing)
+https://github.com/Nanako0129/sepia · lane: AI filmmaking · F/L/C/O = 3/3/5/4 (15)
+
+De-AI writing that fixes narrative structure before word choice, based on the StoryScope study. It splits work into write, review, refactor and recreate, uses a two-stage defect-list protocol, and has domain routes for fiction, journalism, release notes and tickets. It ships behavioural evals. Rescuing a treatment, synopsis or festival statement drafted with AI: a defect list first, then minimal fixes, deepest layer first. *It overlaps better-writing (10-17 ADD), and you only need one. It's prose-only, with no screenplay format. It would be an ADD if it beats better-writing head to head on one of his treatments.*
+
+### WATCH — claude-real-video
+https://github.com/HUANGCHIHHUNGLeo/claude-real-video · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
+
+Lets Claude 'watch' a video: the crv CLI pulls scene-aware keyframes into 3x3 contact sheets plus a local Whisper transcript (optional speaker labels), and the skill reads the manifest and grids. It treats on-screen text and subtitles as untrusted data. Breaking down a reference ad or a client's rough cut by asking Claude about it directly, with timings, instead of describing it by hand. *The skill is a thin wrapper around a pip package. The code shipped on PyPI isn't the repo you read, and the CLI upsells a paid 'pro' tier. Its --cookies-from-browser option (off by default, passed through to yt-dlp) reads browser login cookies. It overlaps video-use (WATCH) and the ffmpeg-skill contact sheets. It would be an ADD if the extractor shipped inside the skill.*
+
+### Skipped
+
+- [claude-video-harness](https://github.com/skailabinfo/claude-video-harness) — A Russian-language harness for vertical talking-head reels on Remotion, with a taste interview, take and false-start detection, person matting for a poster frame, and Buffer publishing. talking-head-editor (today's ADD) does the same job in English with stronger cut rules.
+- [saas-product-demo-video](https://github.com/noamdorr/saas-product-demo-video) — A Remotion playbook for 20–45 s SaaS demo films: an asset intake form, a 'vibe' read from a reference video via Gemini, and beat sync with librosa. It's sound but narrow (software product reels), and it leans on the Superpowers plugin.
+- [Claude AI Music Skills](https://github.com/bitwize-music-studio/claude-ai-music-skills) — A well-built Suno album pipeline: concept, sourced research, lyrics with prosody and pronunciation checks, mastering and promo, across 50+ skills and an MCP server. Music albums aren't his work.
+- [explainer-studio](https://github.com/reedodev/explainer-studio) — Korean-language storyboard.json to hand-drawn explainer MP4 in eight styles, with TTS through an unofficial Edge endpoint. It's a neat engine but far from Parth's work.
+- [cc-tree](https://github.com/skymanbp/cc-tree) — Recursive radial-tree exploration (12 framings per node, 12 evidence fields per child, scored and recursed to convergence) with brainstorm, attack, design and code-audit presets. It's original but very token-heavy, and nothing in his week needs it.
+- [vibe-creating-prompt](https://github.com/Alisa0808/vibe-creating-skill) — Judges whether a video-model prompt suits 'vibe' writing and rewrites it toward emotion and imagery over shot specs. cinematic-director (queued) already shapes prompts per tool, and with more rigour.
+- [slide-wright](https://github.com/arifszn/slide-wright) — Themed reveal.js decks with a two-slide approval gate and PPTX/PDF export. The Slides artifact type and the installed pptx skill already cover his pitch decks.
+- [flow-video-recorder](https://github.com/muayadjamal/flow-video-recorder) — Records narrated app walkthroughs with Playwright or Maestro on the iOS simulator, with cursor ripples, captions and TTS. It's off his lanes and failed the safety gate. ⚠️ ⚠️ Prerequisite step pipes a remote installer straight into bash (curl -Ls get.maestro.mobile.dev | bash)..
+- [sales-enablement](https://github.com/coreyhaines31/marketingskills/tree/main/skills/sales-enablement) — SaaS sales collateral for rep teams (battle cards, demo scripts); wrong shape for a filmmaker pitching agencies.
+- [AlterLab FC Skills (cdm-preproduction et al.)](https://github.com/AlterLab-IEU/AlterLab-FC-Skills) — A university pack of 70+ persona prompts ('You are PreProductionPlanner…') in a fixed 150–300-line emoji template, including cinema preproduction, postproduction and screenwriter. They're generic job descriptions with no method or tools, and DirectorSKILL already covers shot lists better.
+- [humanizer-ru (ilyautov)](https://github.com/ilyautov/humanizer-ru/tree/main/skills/humanizer-ru) — Russian-only de-AI editor with a marker scanner; careful but irrelevant to Parth.
+- [seo-audit](https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit) — Thorough technical and on-page SEO audit, but his portfolio sites don't live on search traffic.
+- [humanizer-ru (Vladimir-Human)](https://github.com/Vladimir-Human/humanizer-ru) — Russian-only de-AI editor; Parth doesn't write in Russian.
+- [revops](https://github.com/coreyhaines31/marketingskills/tree/main/skills/revops) — B2B revenue-ops and lead-scoring design; a solo freelancer has no sales pipeline to run.
+- [espresso-skill](https://github.com/LambdaTest/agent-skills/tree/main/espresso-skill) — Android Espresso test generator; he doesn't build Android apps.
+- [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) — Flutter test generator; not his stack.
+- [gauge-skill](https://github.com/LambdaTest/agent-skills/tree/main/gauge-skill) — Gauge BDD spec generator; not his stack.
+- [schwartz-awareness-mapper](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/schwartz-awareness-mapper) — Lists Schwartz's five awareness levels in 50 lines; no repo licence.
+- [mechanism-builder](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/mechanism-builder) — A 36-line 'unique mechanism' copy outline; no repo licence.
+- [headline-matrix](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/headline-matrix) — A list of seven headline angles; Claude does this unprompted.
+
 ## 2026-10-22 — 24 reviewed · 2 ADD · 3 WATCH · 19 SKIP
 
 ### ADD — Premiere Pro MCP: edit-premiere-project
@@ -92,7 +151,7 @@ Deterministic offline linter for SKILL.md, CLAUDE.md, tool definitions and syste
 - [codeception-skill](https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill) — PHP Codeception test generator. Not his stack.
 - [popups](https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups) — Conversion popups and exit-intent modals. No use for a filmmaker's site.
 
-## 2026-10-20 — 30 reviewed · 2 ADD · 5 WATCH · 23 SKIP
+## 2026-10-20 — 28 reviewed · 2 ADD · 3 WATCH · 23 SKIP
 
 ### ADD — cinematic-director (DirectorSKILL)
 https://github.com/wuwangzhang1216/DirectorSKILL · lane: AI filmmaking · F/L/C/O = 5/4/5/4 (18)
@@ -116,16 +175,6 @@ https://github.com/aedev-tools/adobe-agent-skills/tree/main/skills/after-effects
 https://github.com/tenfoldmarc/video-edit-skill · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
 
 Turns raw 9:16 talking-head clips into a finished Instagram reel. It transcribes with faster-whisper, keeps the last clean take of each line in an EDL, assembles a CFR A-roll, adds HyperFrames/GSAP overlays and SFX, and checks every cut frame by frame inside the Reels safe zone. The take-selection and dead-air pass on talking-head work: an EDL built from the transcript, plus a frame-accurate cut check on the render instead of scrubbing by eye. *Built around one creator's IG look (fixed looks, a hard-coded 'follow' insert, Apify scraping of his reels), and it renders HTML rather than producing an NLE timeline. Setup pulls npx hyperframes and remote SFX. It has no licence. It would be an ADD if the take-picking/EDL stage worked on its own and exported XML/EDL for Premiere or Resolve.*
-
-### WATCH — Remotion skills (official)
-https://github.com/remotion-dev/skills · lane: Building tools & sites · F/L/C/O = 3/4/5/3 (15)
-
-Remotion's own skills for making video in React, now 12 skills behind a router. The markup skill adds editable Studio timelines, .cube LUT colour correction, FFmpeg silence detection and Whisper-WebGPU captions. Data-driven titles, map explainers and caption burn-ins as code he can version and re-render, with an editable Studio timeline for client tweaks. *Unchanged from last time: it pays off only once he starts a real Remotion project, and then it is an ADD. There's no licence file. The Remotion License most likely applies, which is free for individuals and small teams. The skills are copied several times inside the router folder.*
-
-### WATCH — Check Skill (coder-eval)
-https://github.com/UiPath/coder_eval/tree/main/plugins/coder-eval/skills/check-skill · lane: Wildcard · F/L/C/O = 3/3/5/4 (15)
-
-Builds labelled positive and distractor requests and measures whether a skill's description triggers it (precision, recall, F1). Now sharper on description truncation, the listing budget, subagent staging and name collisions. Puts a number on whether his own skills fire once the library grows and newer skills start dropping out of the listing. *Needs the coder-eval CLI, a sandbox and a paid agent run per row (16–24 runs). It overlaps skill-creator's own trigger evals. It becomes an ADD when he maintains several custom skills and sees misfires.*
 
 ### WATCH — motion-video-director
 https://github.com/Miftahul-Islam-Efaz/Motion-graphics-skill · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
