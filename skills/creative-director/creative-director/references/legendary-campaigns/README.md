@@ -13,7 +13,7 @@ legendary-campaigns/
 ├── MOC-format.md       ← grouped by category (film/integrated/stunt_pr/...)
 ├── MOC-industry.md     ← grouped by industry vertical
 ├── MOC-budget.md       ← grouped by budget (low/medium/high)
-└── cards/
+└── cards/            (bound 5 per file as vol-NNN.md; find a card by its id: rg -n "card: <id>" cards/)
     └── {id}.md         ← 571 individual cards (flat namespace)
 ```
 

@@ -7,7 +7,12 @@
 - **Contents:** `SKILL.md`, `assets/output-templates.md`, `references/` (8 method files plus the
   571-card `legendary-campaigns/` library and its 6 indexes).
 - **Left out:** `scripts/` (3 Python helpers that regenerate the campaign indexes; SKILL.md never calls them) and the repo's README images.
-- **Local changes:** none to any file.
+- **Local changes (CC BY 4.0 adaptation):** Claude's skill uploader accepts at most 200 files, and upstream ships 593.
+  The 571 campaign cards (`references/legendary-campaigns/cards/<id>.md`) are bound five to a file as
+  `cards/vol-001.md` to `vol-115.md`, in id order, each opening with `<a id="<id>">` and `# ===== card: <id> =====`.
+  Card text is verbatim. The only edits are links to cards, which now point to `vol-NNN.md#<id>`: in the 6 MOC indexes
+  and in each card's Related section (5,487 links, all checked to resolve). The legendary-campaigns README notes the binding.
+  Nothing else was touched. 136 files in total.
 - **Safety read (2026-10-24):** all 591 markdown files and the 3 scripts were read. The scripts read and write only the skill's own card files, with no network, shell or environment access. Links point only to the author's pages and to public campaign sources (YouTube, Vimeo, D&AD and so on). The only hidden text is 3 HTML `TODO: verify brand` notes. There are no invisible characters and no instructions aimed at the host agent beyond routing its own references.
 - **Needs:** nothing. Pure instructions.
 
