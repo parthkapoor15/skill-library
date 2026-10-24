@@ -2142,7 +2142,8 @@
     "flag": "",
     "summary": "Ad-concepting engine: Pollard's idea levels, insight mining, three methods from different families (SIT/TRIZ, bisociation, inversion), and weighted scoring against a 571-campaign case library with saturation caps. It loops until an idea clears 9. Local helper scripts only maintain the library. CC-BY-4.0.",
     "why": "Writing the idea section of a director's treatment, or pitching a spec concept to an agency: it tests whether a concept is derivative before he shoots a single frame.",
-    "caveat": "Built for agency creatives, not directors: most of Parth's agency work arrives with the concept decided. Heavy (dozens of reference files). It would be an ADD once he starts pitching original concepts or spec ads, ideally paired with the treatment-writer WATCH."
+    "caveat": "Built for agency creatives, not directors: most of Parth's agency work arrives with the concept decided. Heavy (dozens of reference files). It would be an ADD once he starts pitching original concepts or spec ads, ideally paired with the treatment-writer WATCH.",
+    "adopted": "2026-10-24"
   },
   {
     "id": "SHADOWPR0/beautiful_prose",
