@@ -3,7 +3,7 @@
 - **Source:** https://github.com/wuwangzhang1216/DirectorSKILL (repo root is the skill; skill name `cinematic-director`)
 - **Author:** wangzhang-wu (wuwangzhang1216). MIT licence, kept alongside as `LICENSE`
 - **Taken at commit:** `c65ae0d` (2026-08-31, v2.1.0)
-- **Queued:** 2026-10-20. Not installed yet; waiting on Parth's "install cinematic-director"
+- **Installed:** 2026-10-24, in Parth's Claude (vault T1–T10 batch)
 - **Contents:** the parts the skill loads: `SKILL.md`, `README.md`, `references/` (13 files plus
   `director_styles/`, 22 files), `assets/` (8 templates). Repo-only material (`evals/`, CI
   workflows, `CONTRIBUTING.md`, `CHANGELOG.md`, lint config) is left out.

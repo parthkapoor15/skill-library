@@ -32,7 +32,9 @@
     "flag": "",
     "summary": "Eleven skills from a working editor: rough cuts from a timeline's own audio in Resolve and Premiere, multicam switching by audio correlation, cutting raw rushes to a client brief under a duration cap, and picking a music bed by measurement.",
     "why": "briefing-cut is literally your agency job — rushes plus a brief in, ordered selects under a cap out — and rough-cut-premiere lands a new sequence without touching the original. Scripts decide where splices land to the frame; Claude only decides what deserves cutting, and a report proves no word was clipped.",
-    "caveat": "Filler-word rules are written for Brazilian Portuguese; you'd retune them for English and Hindi. Expects the open-source davinci-resolve-mcp repo installed alongside."
+    "caveat": "Filler-word rules are written for Brazilian Portuguese; you'd retune them for English and Hindi. Expects the open-source davinci-resolve-mcp repo installed alongside.",
+    "installed": "2026-10-24",
+    "install_note": "All 11 skills installed straight from upstream. Not mirrored here because the repo has no licence."
   },
   {
     "id": "forjd/better-writing",
@@ -49,7 +51,8 @@
     "flag": "",
     "summary": "Rewrites and drafts prose so it stops sounding generated, without inventing facts. Has a light-edit mode where every word starts as kept and a change needs a named failure. Eval-tested.",
     "why": "Applications, treatments and pitch emails are where AI-flavoured prose costs you most. It audits a voice sample before imitating it and marks missing facts instead of making them up.",
-    "caveat": "Overlaps what Claude does when asked well; the gain is discipline, not a new capability."
+    "caveat": "Overlaps what Claude does when asked well; the gain is discipline, not a new capability.",
+    "adopted": "2026-10-24"
   },
   {
     "id": "isaacrowntree/color-grade-ai",
@@ -339,7 +342,7 @@
     "summary": "42 stdlib-Python FFmpeg tools behind one contract: probe first, edit, then check.py against a platform spec and look.py contact sheets before reporting. Covers lossless cuts, loudness to LUFS/true-peak targets, audio sync with drift fix, multicam, LUT and HDR-to-SDR, proxies, batch, and timeline export to FCPXML/EDL/OTIO.",
     "why": "The mechanical end of agency jobs (proxies for a folder of rushes, a -14 LUFS / -1 dBTP pass, a lav-to-camera sync, the same master cut down for Reels, Shorts and YouTube with a PASS/FAIL check on each) becomes one sentence to Claude with a five-line, measured report. It also writes an EDL or FCPXML you can open in Resolve or Premiere. It sits next to your delivery-QC app, it doesn't replace it.",
     "caveat": "Needs ffmpeg/ffprobe on whatever machine Claude runs it on. It is file-level only and doesn't drive Resolve or Premiere; video-editor-assistant (yesterday's ADD) covers those. The captioning and template defaults are aimed at social video. Transcription needs a local whisper/parakeet, which downloads its model on first use.",
-    "queued": "2026-10-18"
+    "adopted": "2026-10-24"
   },
   {
     "id": "Shanyin-ai/shanyin-director-master",
@@ -1088,7 +1091,7 @@
     "summary": "A director and previs skill. It turns a script, a brief or a single keyframe into a beat sheet, a director's book, blocking, a shot list with coverage and risk scores, keyframe prompts and image-to-video motion prompts, plus sound and edit plans. It also carries a coded failure manual (F1–F19) with a repair cost ladder and 20 optional director-style lenses.",
     "why": "It changes how he writes AI-video prompts and fixes failed ones. Each clip gets one camera move and one action that ends in a stated end state, and the same invariant text is repeated in every prompt. The prompt shape is picked to suit the tool (motion-only, full description, first/last frame, or timestamped multi-shot). A failure like 'face changed' or 'slideshow' maps to a code and the cheapest fix, instead of random re-rolls. It also covers the edit plan for cutting the clips together.",
     "caveat": "Markdown only, no scripts (about 11k lines of references, loaded only a section at a time). Most of each director-style file is in Chinese, with English summaries. The tool-capability tables are a 2026-08 snapshot and will go stale. It is clearly stronger than the four storyboard skills on WATCH, so those can probably be dropped. The history is one squashed commit, though it has a CHANGELOG at v2.1.0 and CI-checked evals.",
-    "queued": "2026-10-20"
+    "adopted": "2026-10-24"
   },
   {
     "id": "aedev-tools/adobe-agent-skills#after-effects",
@@ -1105,7 +1108,8 @@
     "flag": "",
     "summary": "Lets Claude drive After Effects on macOS. runner.sh uses osascript/JXA to make AE run an ExtendScript file, with arguments and results passed through JSON files. It ships 43 ES3 scripts: audits (project, missing footage, expression errors, fonts) and actions (relink footage, font/expression replace, comps from CSV, SRT import, batch render queue, incremental save), plus nine rule files on ExtendScript's limits.",
     "why": "Agency AE cleanup and versioning becomes a chat request: audit a handed-over project, relink footage from a new drive, swap a font across the project, conform fps or resolution on every comp, build lower-third variants from a CSV, queue 16x9 and 9x16 renders. Changes are wrapped in undo groups and risky ones dry-run first. It sits alongside his UXP and pipeline-TD work.",
-    "caveat": "macOS only, and AE's 'Allow Scripts to Write Files and Access Network' preference must be on. The skill hard-codes ~/.claude/skills/after-effects-assistant but its folder is named after-effects, so fix the name on install. Scripts Claude writes for itself run without review except for operations it treats as destructive. runner.sh doesn't escape the script path, so avoid paths with quotes. One commit from March 2026 and none since. Total 16, so it misses the adoption bar of 17."
+    "caveat": "macOS only, and AE's 'Allow Scripts to Write Files and Access Network' preference must be on. The skill hard-codes ~/.claude/skills/after-effects-assistant but its folder is named after-effects, so fix the name on install. Scripts Claude writes for itself run without review except for operations it treats as destructive. runner.sh doesn't escape the script path, so avoid paths with quotes. One commit from March 2026 and none since. Total 16, so it misses the adoption bar of 17.",
+    "adopted": "2026-10-24"
   },
   {
     "id": "tenfoldmarc/video-edit-skill",
@@ -1955,7 +1959,9 @@
     "flag": "",
     "summary": "26 dramaturgy skills distilled from 47 craft books and 23 volumes of scripts: McKee, Field, Truby, Chekhov, Ozu, Japanese, Korean and French practice, series bibles, writers' room. Each skill is a numbered principle set with checklists, and a workflow skill routes between them. The bodies are in Chinese, but it answers in whatever language you ask in.",
     "why": "Script development for the features he wants to direct: diagnosing a scene that \"doesn't turn\" (McKee's value check, beats, enter late and leave early), premise and theme tests, and series-engine bibles. It argues from named sources instead of generic story advice, which fits his first-principles taste.",
-    "caveat": "Not queued, for two reasons. The NOTICE carves the quoted book and script excerpts out of the MIT licence, so redistributing the pack isn't clean. And installing all 26 skills would put 26 descriptions on his shelf. Install it straight from the author's plugin marketplace, or pick sw-workflow, sw-scene-craft and sw-story-structure. About 850 KB of skill text in total, so expect heavy context."
+    "caveat": "Not queued, for two reasons. The NOTICE carves the quoted book and script excerpts out of the MIT licence, so redistributing the pack isn't clean. And installing all 26 skills would put 26 descriptions on his shelf. Install it straight from the author's plugin marketplace, or pick sw-workflow, sw-scene-craft and sw-story-structure. About 850 KB of skill text in total, so expect heavy context.",
+    "installed": "2026-10-24",
+    "install_note": "Installed sw-workflow, sw-scene-craft and sw-story-structure from upstream, with LICENSE and NOTICE. Not mirrored because the NOTICE excludes the quoted excerpts from the MIT licence."
   },
   {
     "id": "browser-use/video-use",
@@ -2348,7 +2354,7 @@
     "summary": "Raw talking-head recording in, finished video out. DeepFilterNet voice cleanup with a capped reduction and a sync check to zero samples, Whisper in pause-separated chunks so retakes aren't merged, cuts that wait for a word's real end (it catches soft '-ts' and '-ence' tails), automatic face reframing with punch-ins, word-timed captions, and motion graphics written as pure render(t) code on HyperFrames with real sub-frame motion blur. Frame counts are asserted at every stage.",
     "why": "The talking-head jobs agencies send him (founder pieces, explainers, interview pulls). Take selection, pause tightening and the clipped-tail check become scripts with an audit he can listen against, instead of an afternoon of blade work. Each graphic is a small JS file, so a client note like 'faster' or 'rethink that one' means editing one function and re-rendering it, not rebuilding a comp.",
     "caveat": "It renders a finished mp4, not a Premiere or Resolve timeline. video-editor-assistant (10-17 ADD) is the one that lands cuts in the NLE, and this one is for jobs delivered as a file. Transcription is English-only (small.en), so Hindi needs a model swap. setup.sh pip-installs torch, whisper and DeepFilterNet into a venv, pulls GSAP from cdnjs and runs pinned npx hyperframes. It's a single commit from a new author, so it's young.",
-    "queued": "2026-10-23"
+    "adopted": "2026-10-24"
   },
   {
     "id": "mileson/chaojifeng-video-design",

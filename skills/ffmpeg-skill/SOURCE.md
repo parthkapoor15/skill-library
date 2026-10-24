@@ -3,7 +3,7 @@
 - **Source:** https://github.com/kajisho5/ffmpeg-skill (repo root is the skill)
 - **Author:** kajisho5 — MIT licence, kept alongside as `LICENSE`
 - **Taken at commit:** `11a70aa` (2026-10-17, release 2.10.4)
-- **Queued:** 2026-10-18 — not installed yet; waiting on Parth's "install ffmpeg-skill"
+- **Installed:** 2026-10-24, in Parth's Claude (vault T1–T10 batch)
 - **Contents:** the files upstream itself ships (its `package.json` `files` list): `SKILL.md`,
   `README.md`, `scripts/` (42 tools + `_common/`), `templates/`, `references/` (4 files),
   `docs/contract.md`, `mcp/server.py`, `bin/install.js`. Repo-only material (tests, evals,

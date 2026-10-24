@@ -4,7 +4,7 @@
 - **Author:** Griffin Wooldridge — MIT licence, kept alongside as `LICENSE`. Bundled fonts
   (Fraunces, Geist, Geist Mono) are SIL OFL, see `mg/fonts/OFL.txt`.
 - **Taken at commit:** `0a73a3e` (2026-10-08)
-- **Queued:** 2026-10-23 — not installed yet; waiting on Parth's "install talking-head-editor"
+- **Installed:** 2026-10-24, in Parth's Claude (vault T1–T10 batch)
 - **Contents:** `SKILL.md`, `README.md`, `scripts/` (voice, transcribe, cut, render_cut, captions,
   compose, qa, extract_brand, setup), `references/` (5 files), `mg/` (kit, examples, fonts, grain,
   build/render/snap). Left out: `docs/demo.gif` and `.gitignore` (repo-only).
