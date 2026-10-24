@@ -1942,7 +1942,9 @@
     "flag": "",
     "summary": "Operating skill for a local Premiere Pro MCP server: a CEP and UXP bridge with 436 tools. Claude inspects the timeline first, builds an edit plan, previews it, and applies it only with a one-time confirmation token. It reads the timeline back after each change, refuses raw ExtendScript unless asked, and checks exports frame by frame. Updated 2026-10-21; telemetry stays off unless you set a PostHog key.",
     "why": "Premiere work for agencies gets done from Claude: rough cuts and selects from transcripts, cleaning up bins and metadata (Scene/Shot/Take, ALE intake), verifying a delivery export against the spec, and OTIO/XML conform checks, all against the open project with an undo-safe preview first. It also sits right next to his own UXP command palette: same host, an MCP surface he can study or extend.",
-    "caveat": "The skill does nothing without the MCP server and its CEP panel running on his Mac (installed with npx and opened in Premiere). That is a computer-side install of a large codebase I only spot-checked: endpoints, telemetry and the skill's safety rules, not all 880 files. The server's own plugin ships this skill, so install it from there instead of as a loose zip. That's why it isn't queued."
+    "caveat": "The skill does nothing without the MCP server and its CEP panel running on his Mac (installed with npx and opened in Premiere). That is a computer-side install of a large codebase I only spot-checked: endpoints, telemetry and the skill's safety rules, not all 880 files. The server's own plugin ships this skill, so install it from there instead of as a loose zip. That's why it isn't queued.",
+    "adopted": "2026-10-24",
+    "install_note": "Skill installed in Claude. The server and CEP panel still have to be installed on the Mac by Parth (Claude Desktop .mcpb + signed .zxp)."
   },
   {
     "id": "jtydhr88/screenwriting-skills",
@@ -1961,7 +1963,7 @@
     "why": "Script development for the features he wants to direct: diagnosing a scene that \"doesn't turn\" (McKee's value check, beats, enter late and leave early), premise and theme tests, and series-engine bibles. It argues from named sources instead of generic story advice, which fits his first-principles taste.",
     "caveat": "Not queued, for two reasons. The NOTICE carves the quoted book and script excerpts out of the MIT licence, so redistributing the pack isn't clean. And installing all 26 skills would put 26 descriptions on his shelf. Install it straight from the author's plugin marketplace, or pick sw-workflow, sw-scene-craft and sw-story-structure. About 850 KB of skill text in total, so expect heavy context.",
     "installed": "2026-10-24",
-    "install_note": "Installed sw-workflow, sw-scene-craft and sw-story-structure from upstream, with LICENSE and NOTICE. Not mirrored because the NOTICE excludes the quoted excerpts from the MIT licence."
+    "install_note": "All 26 skills installed from upstream with LICENSE and NOTICE. Not mirrored because the NOTICE excludes the quoted excerpts from the MIT licence."
   },
   {
     "id": "browser-use/video-use",
