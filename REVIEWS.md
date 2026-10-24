@@ -2,6 +2,49 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-24 — 26 reviewed · 1 ADD · 1 WATCH · 24 SKIP
+
+### ADD — OpenCutAgent (premiere-edit)
+https://github.com/leonardogrig/opencutagent · lane: Post-production · F/L/C/O = 5/4/4/4 (17)
+
+**What it does:** A Premiere Pro panel plus a local Node MCP engine that lets Claude edit the live timeline. It transcribes the source media, removes silences and fillers with a dry run first, and handles serial-restart retakes: Claude marks keep/cut per segment, you review the marks in the panel, then it applies them with cut points placed in the quiet between words. Big cut lists are applied through Premiere's own XML round-trip, so effects and transforms survive. Bundled skills: premiere-edit, remove-silences, setup.
+
+**Why it's worth it for you:** This is the gap every earlier talking-head WATCH was missing: the cuts land in his real Premiere sequence, not in a rendered mp4, so he keeps grading and finishing in the NLE and Cmd+Z undoes any of it. Retake clean-up on raw interviews and VO is the first pass of most agency jobs, and this turns it into a reviewable keep/cut list. He builds Premiere panels himself, so the CEP host file and the bridge are worth reading as reference too.
+
+**Watch out for:** This is an app, not a drop-in skill. It needs his Mac: a CEP panel with Premiere developer mode on (PlayerDebugMode), Node, ffmpeg, Claude Code signed in, and an ElevenLabs key for Scribe transcription (about $0.22 per hour of source, cached). An opt-in cloud mode sends media to the author's proxy instead; leave it off. Works on 100%-speed clips in flat sequences only, so no multicam or nested sequences. ppro_run_script runs arbitrary ExtendScript, and the README also offers a curl | bash one-liner; use the local ./install.sh instead. The licence is MIT plus Commons Clause, so it isn't queued here: install it from the repo on his machine.
+
+### WATCH — boring-tools
+https://github.com/brookejlacey/boring-tools · lane: Post-production · F/L/C/O = 4/3/5/3 (15)
+
+Edit video as text: cuts.tsv plus a per-shoot rebuild.sh are the project file. The chain runs VAD, per-span whisper.cpp, take grouping, face tracking on a square crop, eyeline matching across framings, measured subject edges for layout, wall-patch object removal, wall cards and captions, then verifies frame counts and A/V drift. Models are pinned by SHA-256 and the jobs run offline. Cut-down sets from one take (15/30/60, vertical and landscape) where a client note means editing one number and rerunning, with the drift check reported each time. *Overlaps talking-head-editor (queued yesterday) almost entirely, and like it renders mp4s rather than an NLE timeline. It is macOS-only with VideoToolbox defaults and tuned to one creator's ad format. It would be an ADD if cuts.tsv exported to FCPXML/EDL for Premiere or Resolve, or if it did clearly better than talking-head-editor on take selection.*
+
+### Skipped
+
+- [narration-video-director](https://github.com/indieshade/video-director-workflow) — A Chinese-language director skill for voice-over motion explainers on HyperFrames/Remotion, with 25 reference files. Thoughtful, but it covers explainer motion design, not his edit or film work, and overlaps creative-director (WATCH).
+- [motion-design-skills](https://github.com/PHANTOMTONYT/motion-design-skills) — Five HyperFrames/GSAP style recipes (kinetic type, 3D toy, cartoon, system diagrams, data charts). The motion-discipline notes are good, but it overlaps Hairline, Remotion (WATCH) and talking-head-editor's graphics, and it targets social explainers.
+- [/better](https://gist.github.com/joshp123/a1443d30fa1b7c577e74882895cea61b) — A /better prompt that asks what a top professional would do differently before redoing a task. I couldn't read the full file (gist clone blocked, page summary only) and there is no licence, so it isn't scored as safe; the idea is a one-paragraph habit, not a skill.
+- [palmier-reels](https://github.com/glebis/claude-skills/tree/main/palmier-reels) — Builds 9:16 narrative text reels from a spec through Palmier Pro's local MCP. The spec-rebuild idea is solid, but it is locked to an NLE he doesn't use and to Telegram reels.
+- [init-xcode-app](https://github.com/glebis/claude-skills/tree/main/init-xcode-app) — XcodeGen SwiftUI scaffolder with CI/release/CloudKit modules. It is useful boilerplate, but it carries the author's house conventions (bundle prefix, paths), and he already has his macOS QC app's structure.
+- [name-audition](https://github.com/glebis/claude-skills/tree/main/name-audition) — Product-name domain/collision/trademark screen. It duplicates replica-brand's naming checks.
+- [perso-dubbing](https://github.com/perso-ai/perso-dubbing-plugin) — Commercial dubbing/lip-sync API client. It sends Amplitude telemetry by default (opt-out) and tells Claude to tag the host silently and never mention it. ⚠️ ⚠️ instructs Claude to add a telemetry host tag silently and never surface it to the user; default-on Amplitude telemetry.
+- [social](https://github.com/coreyhaines31/marketingskills/tree/main/skills/social) — A broad social-content playbook for SaaS marketers. It is well organised but generic, and he doesn't run a content calendar.
+- [final-cut-pro (FCPXML)](https://github.com/madappgang/claude-code/tree/main/plugins/video-editing/skills/final-cut-pro) — An FCPXML reference sheet (Jan 2026). He doesn't cut in Final Cut Pro, and it has no tooling to validate against an NLE.
+- [video-router](https://github.com/Orkas-AI/Orkas-VideoStudio/tree/main/packages/skills/video-router) — Only routes a brief to generate/compose/edit inside the Orkas runtime; it is useless without that stack.
+- [youtube-skills](https://github.com/ZeroPointRepo/youtube-skills) — Wrappers for a paid transcript API (TranscriptAPI.com) that offer to sign up for an account and write the key into your shell profile.
+- [humanizer-zh-tw](https://github.com/nagameTW/formosa-humanizer) — Taiwanese Traditional Chinese de-AI rewriter; wrong language for his work.
+- [altitude-horizon-framework](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/altitude-horizon-framework) — PM-to-Director career framework; irrelevant to a freelance filmmaker.
+- [video-editing (muse import)](https://github.com/aicodedecode/awesome-muse-skills/tree/main/skills-imported/video-editing) — A 66-line generic talking-head cutting checklist copied into a 1,750-skill aggregator; references tools it doesn't ship.
+- [color-science](https://github.com/lebobo88/RLM-Creative/tree/main/.claude/skills/color-science) — A generic colour-space delivery table and mood-to-LUT presets wired to the author's multi-agent studio. It knows less than a working colourist, and there is no licence.
+- [ppt-generator-pro](https://github.com/op7418/NanoBanana-PPT-Skills) — Image-only slides from Gemini plus Kling transitions. It needs two API keys, hasn't been updated since January, and the Slides type does decks better.
+- [write-concisely](https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/docs/skills/write-concisely) — Strunk & White rules pasted as a list; Claude already applies these.
+- [geb-skill](https://github.com/LambdaTest/agent-skills/tree/main/geb-skill) — Groovy/Geb browser-test generator; not his stack.
+- [hyperexecute-skill](https://github.com/LambdaTest/agent-skills/tree/main/hyperexecute-skill) — Operates LambdaTest's paid HyperExecute cloud runner; vendor-specific.
+- [jasmine-skill](https://github.com/LambdaTest/agent-skills/tree/main/jasmine-skill) — Jasmine test boilerplate; Claude writes these unprompted.
+- [offer-extraction](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/offer-extraction) — 47 lines of direct-response offer clichés.
+- [generic-language-killer](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/qa/generic-language-killer) — 30-line 'remove fluff' prompt; no pattern list or examples.
+- [performance-diagnosis](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/performance-diagnosis) — 26-line ad-funnel checklist; he doesn't run paid ads.
+- [objection-crusher](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/objection-crusher) — Five-line objection prompt; nothing Claude doesn't do unasked.
+
 ## 2026-10-23 — 26 reviewed · 1 ADD · 5 WATCH · 20 SKIP
 
 ### ADD — talking-head-editor

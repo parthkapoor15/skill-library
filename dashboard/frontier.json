@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/geb-skill",
-"name": "geb-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/geb-skill",
-"summary": "Generate Geb browser automation in Groovy with Spock and page objects",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/hyperexecute-skill",
-"name": "hyperexecute-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/hyperexecute-skill",
-"summary": "Operate TestMu AI HyperExecute end-to-end: YAML, CLI runs, debugging, and CI wiring",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/jasmine-skill",
-"name": "jasmine-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/jasmine-skill",
-"summary": "Generate Jasmine BDD tests in JavaScript with spies and async support",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/jest-skill",
 "name": "jest-skill",
 "owner": "LambdaTest",
@@ -468,33 +441,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "coreyhaines31/marketingskills/tree/main/skills/social",
-"name": "social",
-"owner": "coreyhaines31",
-"url": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social",
-"summary": "Create and schedule social media content for LinkedIn, Twitter/X, and Instagram",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/foundations/offer-extraction",
-"name": "offer-extraction",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/offer-extraction",
-"summary": "Turn a product or service into a compelling, high-converting offer",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/copy-chief/objection-crusher",
-"name": "objection-crusher",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/objection-crusher",
-"summary": "Identify and neutralize buyer objections and hesitation",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "realkimbarrett/advertising-skills/tree/main/skills/operator-os/ad-angle-multiplier",
 "name": "ad-angle-multiplier",
 "owner": "realkimbarrett",
@@ -513,15 +459,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "realkimbarrett/advertising-skills/tree/main/skills/operator-os/performance-diagnosis",
-"name": "performance-diagnosis",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/performance-diagnosis",
-"summary": "Diagnose why campaigns are underperforming — low conversion, high CPL, bad ads",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "realkimbarrett/advertising-skills/tree/main/skills/orchestrators/full-funnel-campaign-orchestrator",
 "name": "full-funnel-campaign-orchestrator",
 "owner": "realkimbarrett",
@@ -529,15 +466,6 @@
 "summary": "Coordinate all skills to build a complete ads + funnel campaign end-to-end",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "realkimbarrett/advertising-skills/tree/main/skills/qa/generic-language-killer",
-"name": "generic-language-killer",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/qa/generic-language-killer",
-"summary": "Remove vague, corporate, or AI-sounding language and replace it with clear, specific, human wording",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/acquisition-channel-advisor",
@@ -556,15 +484,6 @@
 "summary": "Assess automation vs. redesign opportunities across five competencies",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/altitude-horizon-framework",
-"name": "altitude-horizon-framework",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/altitude-horizon-framework",
-"summary": "Navigate the PM→Director mindset shift covering scope, time horizons, and failure modes",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/business-health-diagnostic",
@@ -1971,15 +1890,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "nagameTW/formosa-humanizer",
-"name": "formosa-humanizer",
-"owner": "nagameTW",
-"url": "https://github.com/nagameTW/formosa-humanizer",
-"summary": "Removes AI-writing markers from Taiwan Traditional Chinese text",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "Upload-Post/upload-post-skill",
 "name": "upload-post-skill",
 "owner": "Upload-Post",
@@ -2005,15 +1915,6 @@
 "summary": "Document processing with Nutrient DWS API: convert (PDF/DOCX/XLSX/PPTX/HTML/images), extract text/tables, OCR (20+ languages), redact PII (pattern + AI), watermark, digital signatures, form filling. M",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "op7418/NanoBanana-PPT-Skills",
-"name": "NanoBanana-PPT-Skills",
-"owner": "op7418",
-"url": "https://github.com/op7418/NanoBanana-PPT-Skills",
-"summary": "AI-powered PPT generation with document analysis and styled images",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "sujunmin/agy-ppt",
@@ -2185,15 +2086,6 @@
 "summary": "Transform docs or codebases into Obsidian StudyVaults with interactive quizzes",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "NeoLabHQ/context-engineering-kit/tree/master/plugins/docs/skills/write-concisely",
-"name": "write-concisely",
-"owner": "NeoLabHQ",
-"url": "https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/docs/skills/write-concisely",
-"summary": "Applies the famous *The Elements of Style* book principles to make documentation and writing clearer and more professional by eliminating wordiness and improving structure.",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "ReScienceLab/opc-skills",
@@ -3843,24 +3735,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "Orkas-AI/Orkas-VideoStudio/tree/main/packages/skills/video-router",
-"name": "video-router",
-"owner": "Orkas-AI",
-"url": "https://github.com/Orkas-AI/Orkas-VideoStudio/tree/main/packages/skills/video-router",
-"summary": "Route video requests through deterministic agent production stages",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "perso-ai/perso-dubbing-plugin",
-"name": "perso-dubbing",
-"owner": "perso-ai",
-"url": "https://github.com/perso-ai/perso-dubbing-plugin",
-"summary": "Video translator: dubbing, lip-sync, subtitles, and short clips",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "GarethManning/education-agent-skills/tree/main/skills/original-frameworks/regenerative-project-design-orchestrator",
 "name": "regenerative-project-design-orchestrator",
 "owner": "GarethManning",
@@ -3904,15 +3778,6 @@
 "summary": "Unpacks broad competencies into assessable sub-skills and success criteria",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "ZeroPointRepo/youtube-skills",
-"name": "youtube-skills",
-"owner": "ZeroPointRepo",
-"url": "https://github.com/ZeroPointRepo/youtube-skills",
-"summary": "Agent skills for YouTube: pull video transcripts and discover videos (search, channel and playlist listings) via TranscriptAPI.",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "morluto/rea/tree/main/skills/reverse-engineer-anything",
@@ -10842,6 +10707,33 @@
 "url": "https://github.com/rahlquist/hermes-video-toolchain",
 "summary": "Free/open-source video pipeline for Hermes Agent: OpenScreen capture, HyperFrames authoring, headless post-processing",
 "source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "lebobo88/RLM-Creative/tree/main/.claude/skills/shot-list-protocol",
+"name": "shot-list-protocol",
+"owner": "lebobo88",
+"url": "https://github.com/lebobo88/RLM-Creative/tree/main/.claude/skills/shot-list-protocol",
+"summary": "Shot-list protocol for the RLM-Creative multi-agent studio",
+"source": "skillsmp.com",
+"lane": "AI filmmaking"
+},
+{
+"id": "lebobo88/RLM-Creative/tree/main/.claude/skills/creative-brief-protocol",
+"name": "creative-brief-protocol",
+"owner": "lebobo88",
+"url": "https://github.com/lebobo88/RLM-Creative/tree/main/.claude/skills/creative-brief-protocol",
+"summary": "Creative brief protocol for the RLM-Creative multi-agent studio",
+"source": "skillsmp.com",
+"lane": "Business & outreach"
+},
+{
+"id": "glebis/claude-skills/tree/main/transcript-analyzer",
+"name": "transcript-analyzer",
+"owner": "glebis",
+"url": "https://github.com/glebis/claude-skills/tree/main/transcript-analyzer",
+"summary": "Analyse meeting or interview transcripts",
+"source": "web search (glebis/claude-skills)",
 "lane": "Post-production"
 }
 ]
