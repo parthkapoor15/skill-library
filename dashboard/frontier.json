@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/jest-skill",
-"name": "jest-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/jest-skill",
-"summary": "Generate Jest unit and integration tests in JS/TS with mocking and snapshots",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/junit-5-skill",
-"name": "junit-5-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill",
-"summary": "Generate JUnit 5 unit and integration tests in Java with Mockito",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/kanecli-skill",
-"name": "kanecli-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/kanecli-skill",
-"summary": "Generate and run browser tests from natural-language objectives via kane-cli",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/karma-skill",
 "name": "karma-skill",
 "owner": "LambdaTest",
@@ -459,15 +432,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "realkimbarrett/advertising-skills/tree/main/skills/orchestrators/full-funnel-campaign-orchestrator",
-"name": "full-funnel-campaign-orchestrator",
-"owner": "realkimbarrett",
-"url": "https://github.com/realkimbarrett/advertising-skills/tree/main/skills/orchestrators/full-funnel-campaign-orchestrator",
-"summary": "Coordinate all skills to build a complete ads + funnel campaign end-to-end",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/acquisition-channel-advisor",
 "name": "acquisition-channel-advisor",
 "owner": "deanpeters",
@@ -486,33 +450,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/business-health-diagnostic",
-"name": "business-health-diagnostic",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/business-health-diagnostic",
-"summary": "Diagnose SaaS health, identify red flags, and prioritize recovery actions",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/company-research",
-"name": "company-research",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/company-research",
-"summary": "Deep-dive competitor or company analysis",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/customer-journey-map",
-"name": "customer-journey-map",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/customer-journey-map",
-"summary": "Map customer experience across touchpoints using the NNGroup framework",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/eol-message",
 "name": "eol-message",
 "owner": "deanpeters",
@@ -520,15 +457,6 @@
 "summary": "Communicate product or feature deprecation gracefully",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/epic-hypothesis",
-"name": "epic-hypothesis",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/epic-hypothesis",
-"summary": "Turn initiatives into testable hypotheses with measurable success metrics",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/finance-metrics-quickref",
@@ -565,15 +493,6 @@
 "summary": "Define lightweight validation experiments to test hypotheses",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/positioning-statement",
-"name": "positioning-statement",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/positioning-statement",
-"summary": "Define target audience, problem solved, and differentiation using Geoffrey Moore's framework",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/press-release",
@@ -2214,15 +2133,6 @@
 "lane": "Business & outreach"
 },
 {
-"id": "wgwtest/novel-writing",
-"name": "novel-writing",
-"owner": "wgwtest",
-"url": "https://github.com/wgwtest/novel-writing",
-"summary": "Plans and revises fiction with viewpoint, dialogue, and style checks.",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "cyperx84/claude-skills-mental-models",
 "name": "claude-skills-mental-models",
 "owner": "cyperx84",
@@ -2230,15 +2140,6 @@
 "summary": "Drop your own mental models in as files; 21 included",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "manavmishra/ZeroSlop/blob/main/SKILL.md",
-"name": "zero-slop",
-"owner": "manavmishra",
-"url": "https://github.com/manavmishra/ZeroSlop/blob/main/SKILL.md",
-"summary": "Edits AI-sounding prose while preserving facts, voice, and formatting",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "Atomic-Mail/atomic-mail-agentic/tree/main/integrations/skill/atomicmail",
@@ -3816,24 +3717,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "renezander030/capcut-cli/tree/master/skills/capcut-edit",
-"name": "capcut-edit",
-"owner": "renezander030",
-"url": "https://github.com/renezander030/capcut-cli/tree/master/skills/capcut-edit",
-"summary": "Edit CapCut and JianYing video projects from any agent",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "MartinDelophy/ai-video-editor/tree/main/skills/edit-timeline-studio",
-"name": "edit-timeline-studio",
-"owner": "MartinDelophy",
-"url": "https://github.com/MartinDelophy/ai-video-editor/tree/main/skills/edit-timeline-studio",
-"summary": "Create editable video timelines with captions, voiceovers, and verified exports.",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "Tencent/AI-Infra-Guard/tree/main/skills/aig-agent-redteam",
 "name": "aig-agent-redteam",
 "owner": "Tencent",
@@ -4392,15 +4275,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "tasteray/skills/tree/main/elicitation",
-"name": "elicitation",
-"owner": "tasteray",
-"url": "https://github.com/tasteray/skills/tree/main/elicitation",
-"summary": "Psychological profiling through natural conversation using narrative identity and Motivational Interviewing techniques.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "tasteray/skills/tree/main/recommendations",
 "name": "recommendations",
 "owner": "tasteray",
@@ -4642,15 +4516,6 @@
 "summary": "Manage indexed Markdown knowledge bases for agents with scoped retrieval and deterministic indexes.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "michalparkola/tapestry-skills-for-claude-code/tree/main/youtube-transcript",
-"name": "youtube-transcript",
-"owner": "michalparkola",
-"url": "https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/youtube-transcript",
-"summary": "Fetch transcripts from YouTube videos and prepare summaries.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "sanjay3290/ai-skills/tree/main/skills/elevenlabs",
@@ -10735,5 +10600,41 @@
 "summary": "Analyse meeting or interview transcripts",
 "source": "web search (glebis/claude-skills)",
 "lane": "Post-production"
+},
+{
+"id": "apify/awesome-skills/tree/main/skills/apify-reddit-scraper",
+"name": "apify-reddit-scraper",
+"owner": "harshmaur",
+"url": "https://github.com/apify/awesome-skills/tree/main/skills/apify-reddit-scraper",
+"summary": "Scrape Reddit posts, comments and subreddits without an API key",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Building tools & sites"
+},
+{
+"id": "Aurite-ai/agent-verifier",
+"name": "agent-verifier",
+"owner": "aurite-ai",
+"url": "https://github.com/Aurite-ai/agent-verifier",
+"summary": "Reviews AI agent code for secrets, unbounded loops, hallucinated tools",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Building tools & sites"
+},
+{
+"id": "MetaMask/agent-skills/tree/main/skills/metamask-agent-wallet",
+"name": "metamask-agent-wallet",
+"owner": "MetaMask",
+"url": "https://github.com/MetaMask/agent-skills/tree/main/skills/metamask-agent-wallet",
+"summary": "Official MetaMask self-custodial wallet: swaps, bridges, perps, x402 payments",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Wildcard"
+},
+{
+"id": "nexscope-ai/eCommerce-Skills",
+"name": "eCommerce-Skills",
+"owner": "nexscope-ai",
+"url": "https://github.com/nexscope-ai/eCommerce-Skills",
+"summary": "150+ ecommerce skills for Amazon, Shopify, Etsy, TikTok sellers",
+"source": "VoltAgent/awesome-claude-skills",
+"lane": "Business & outreach"
 }
 ]

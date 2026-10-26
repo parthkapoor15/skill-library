@@ -2,6 +2,36 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-26 — 21 reviewed · 0 ADD · 1 WATCH · 20 SKIP
+
+### WATCH — Video Editor Skills (DaVinci Resolve)
+https://github.com/appariciojunior/video-editor-skills · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
+
+Twelve short, code-free skills that make Claude a first-pass editor in Resolve Studio 21. They cover transcript cuts, vlog pacing, B-roll, loudness, captions, Remotion overlays and YouTube Deliver settings. Each lesson comes from a real edit, and LEARNINGS.md explains them. Examples: StartRendering([job], False) is the only form that starts a scripted render, and the Rec.709-A tag stops the faded look on YouTube. The resolve-scripting, youtube-export and voice-and-audio notes would save Parth real debugging time the next time a script drives Resolve: silent setters, render jobs stuck at Ready, SRT import offsets, the AI Music Remixer muting a track. *Two things block an ADD. The licence is CC BY-NC 4.0, which bars use in paid work. And rough-cut, resolve-scripting and music cues overlap the edunascimentt set Parth already has installed. It would become an ADD if the author relicenses it, or if the unique notes (export colour tags, render-job traps, audio diagnosis) were contributed to a permissively licensed skill.*
+
+### Skipped
+
+- [zero-slop](https://github.com/manavmishra/ZeroSlop/blob/main/SKILL.md) — A measured de-slop editor (MIT) with local Python scorers and fidelity checks. Its only network call is a GitHub release check, and an opt-in remote API is clearly separated. It does the same job as the adopted better-writing skill, and is not clearly better for Parth's short pitches and emails. The repo is also heavy, with growth, distribution and MCP folders.
+- [capcut-edit](https://github.com/renezander030/capcut-cli/tree/master/skills/capcut-edit) — A well-built CLI skill (MIT) that edits CapCut and JianYing drafts. It has transactional batch writes, .bak snapshots and tested shell recipes. Parth cuts in Premiere and Resolve, though, so the CapCut draft format is the wrong target for his work.
+- [edit-timeline-studio](https://github.com/MartinDelophy/ai-video-editor/tree/main/skills/edit-timeline-studio) — A very large skill that drives one browser editor, Timeline Studio, through its own .timeline format, command layer and local model routing. Its discipline is good: diff before apply, and every caption tied to audible speech. None of it carries over to a Premiere or Resolve timeline.
+- [novel-writing](https://github.com/wgwtest/novel-writing) — A careful prose-fiction skill covering scene causality, character knowledge and manuscript versioning. It rules out screenplay work in so many words, and Parth's 26 installed screenwriting skills already cover story craft for his medium.
+- [davinci-resolve (offload-harness)](https://github.com/dmmdea/offload-harness/tree/main/skill/davinci-resolve) — The author's personal operations log for driving Resolve on their own editing rig. It covers SSH into a named Windows box, launching Resolve in another user's session through Task Scheduler, and a private CLI and sidecar that ship only in another repo. The Resolve 21.1 API catalogue in references/ is useful, but the skill can't run anywhere else.
+- [company-research](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/company-research) — A company brief framed for PM interviews (executive quotes, product strategy). An agency brief before a pitch is the nearest use, and deep-research already covers it.
+- [alterlab-cdm-film-pitch](https://github.com/AlterLab-IEU/AlterLab-FC-Skills/tree/main/skills/cdm/alterlab-cdm-film-pitch) — A persona prompt ('You are FilmPitchDeveloper') with emoji headings and a list of deliverables (treatment, lookbook, deck, grant). It has no method beyond generic advice. The installed sw-industry-business and sw-series-engine-bible skills already cover pitches and treatments with real sources.
+- [youtube-transcript](https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/youtube-transcript) — Downloads YouTube captions with yt-dlp and falls back to Whisper. The installed watch skill already does this and also analyses pacing and frames.
+- [davinci-resolve (Major-AI-Skills)](https://github.com/alivirgo/Major-AI-Skills/tree/master/skills/davinci-resolve) — A generic Resolve API overview from a mass-produced pack of 413 skills. Some of its advice is wrong: it says to poll IsRenderingInProgress, which field reports show can be False before a render starts. The appariciojunior and installed resolve-scripting skills are far better.
+- [melt-mlt](https://github.com/sanand0/scripts/tree/main/agents-archive/melt-mlt) — A melt / MLT command-line editor reference. The author has moved it to agents-archive, and MLT isn't part of Parth's pipeline.
+- [elicitation](https://github.com/tasteray/skills/tree/main/elicitation) — A conversational kit for psychological profiling (narrative identity, motivational interviewing). It serves none of Parth's lanes.
+- [kanecli-skill](https://github.com/LambdaTest/agent-skills/tree/main/kanecli-skill) — A vendor skill for LambdaTest's kane-cli. It tells the agent never to use Playwright or Selenium directly and never to write tests by hand, which hijacks every browser task toward a paid grid.
+- [business-health-diagnostic](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/business-health-diagnostic) — A SaaS metrics health check (MRR, churn, CAC). It doesn't apply to a freelance post-production business.
+- [positioning-statement](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/positioning-statement) — A Geoffrey Moore positioning-statement template. It is a one-off exercise that Claude handles unprompted, and it is written for B2B SaaS rather than a freelancer's positioning.
+- [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) — A generic Jest test-writing playbook. It adds nothing to what Claude already does, and Parth's tools are not test-suite heavy.
+- [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) — A JUnit 5 and Mockito playbook. Parth doesn't work in Java.
+- [customer-journey-map](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/customer-journey-map) — A standard NNGroup journey-map template for product teams.
+- [epic-hypothesis](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/epic-hypothesis) — Turns product epics into testable hypotheses. This is PM process with no bearing on Parth's work.
+- [subtitle-craft](https://github.com/openakita/openakita) — Listed on claudskills.com, but plugins/subtitle-craft no longer exists in the current repo, so there was nothing to review.
+- [full-funnel-campaign-orchestrator](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/orchestrators/full-funnel-campaign-orchestrator) — A 30-line list of sibling skill names to call in order, with no method of its own.
+
 ## 2026-10-24 — 26 reviewed · 1 ADD · 1 WATCH · 24 SKIP
 
 ### ADD — OpenCutAgent (premiere-edit)
