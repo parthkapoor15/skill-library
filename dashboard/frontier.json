@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/karma-skill",
-"name": "karma-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/karma-skill",
-"summary": "Generate Karma test-runner configs for browser-based JS testing",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/laravel-dusk-skill",
-"name": "laravel-dusk-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/laravel-dusk-skill",
-"summary": "Generate Laravel Dusk Chrome-based browser tests in PHP",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/lettuce-skill",
-"name": "lettuce-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/lettuce-skill",
-"summary": "Generate Lettuce BDD tests for Python (legacy; prefer Behave)",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/mocha-skill",
 "name": "mocha-skill",
 "owner": "LambdaTest",
@@ -459,33 +432,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/finance-metrics-quickref",
-"name": "finance-metrics-quickref",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/finance-metrics-quickref",
-"summary": "Reference guide for 32+ SaaS finance metrics with formulas and benchmarks",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/jobs-to-be-done",
-"name": "jobs-to-be-done",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/jobs-to-be-done",
-"summary": "Understand customer objectives using the JTBD framework",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/pestel-analysis",
-"name": "pestel-analysis",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/pestel-analysis",
-"summary": "Analyze external factors across Political, Economic, Social, Tech, Environmental, and Legal dimensions",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/pol-probe",
 "name": "pol-probe",
 "owner": "deanpeters",
@@ -511,15 +457,6 @@
 "summary": "Frame customer problems with evidence before jumping to solutions",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/proto-persona",
-"name": "proto-persona",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/proto-persona",
-"summary": "Create hypothesis-driven personas before conducting full research",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/recommendation-canvas",
@@ -567,15 +504,6 @@
 "lane": "Business & outreach"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/director-readiness-advisor",
-"name": "director-readiness-advisor",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/director-readiness-advisor",
-"summary": "Coach the PM→Director transition across four key situations",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/discovery-interview-prep",
 "name": "discovery-interview-prep",
 "owner": "deanpeters",
@@ -619,15 +547,6 @@
 "summary": "Generate opportunities and solutions and recommend proof-of-concept tests",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/positioning-workshop",
-"name": "positioning-workshop",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/positioning-workshop",
-"summary": "Guide positioning definition with adaptive discovery questions",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/prioritization-advisor",
@@ -4428,15 +4347,6 @@
 "lane": "Business & outreach"
 },
 {
-"id": "geekjourneyx/md2wechat-skill",
-"name": "md2wechat",
-"owner": "geekjourneyx",
-"url": "https://github.com/geekjourneyx/md2wechat-skill",
-"summary": "Convert Markdown into WeChat Official Account drafts with preview, image, and cover handling.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "salespeak-ai/buyer-eval-skill",
 "name": "buyer-eval",
 "owner": "salespeak-ai",
@@ -4518,24 +4428,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "sanjay3290/ai-skills/tree/main/skills/elevenlabs",
-"name": "elevenlabs",
-"owner": "sanjay3290",
-"url": "https://github.com/sanjay3290/ai-skills/tree/main/skills/elevenlabs",
-"summary": "Text-to-speech narration and two-host podcast generation from documents using ElevenLabs API.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "sanjay3290/ai-skills/tree/main/skills/google-tts",
-"name": "google-tts",
-"owner": "sanjay3290",
-"url": "https://github.com/sanjay3290/ai-skills/tree/main/skills/google-tts",
-"summary": "Text-to-speech narration and podcast generation using Google Cloud TTS.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "smerchek/claude-epub-skill",
 "name": "claude-epub-skill",
 "owner": "smerchek",
@@ -4543,15 +4435,6 @@
 "summary": "Convert markdown documents, chat summaries, or research reports into a downloadable epub file that can be sent to Kindle.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Business & outreach"
-},
-{
-"id": "Square-Zero-Labs/video-prompting-skill",
-"name": "video-prompting-skill",
-"owner": "Square-Zero-Labs",
-"url": "https://github.com/Square-Zero-Labs/video-prompting-skill",
-"summary": "Draft and refine prompts for video generation models (LTX-2, Sora, Veo 3, etc.)",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "uriva/find-scene-skill",
@@ -4568,15 +4451,6 @@
 "owner": "deapi-ai",
 "url": "https://github.com/deapi-ai/claude-code-skills",
 "summary": "AI media toolkit: generate images (Flux), text-to-speech, transcribe YouTube/audio, OCR, video generation, upscale, and remove backgrounds via deAPI. Works with Cursor, Windsurf & Continue.dev.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "digitalsamba/claude-code-video-toolkit",
-"name": "Claude Code Video Toolkit",
-"owner": "digitalsamba",
-"url": "https://github.com/digitalsamba/claude-code-video-toolkit",
-"summary": "AI-native video production workspace for Claude Code with Remotion, ElevenLabs, FFmpeg, and Playwright skills.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Post-production"
 },
@@ -4633,15 +4507,6 @@
 "summary": "Turn any idea into a cinematic, model-ready video prompt for Sora, Kling, Veo, or Seedance.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Post-production"
-},
-{
-"id": "Bria-AI/bria-skill/tree/main/skills/bria-ai",
-"name": "bria-ai",
-"owner": "Bria-AI",
-"url": "https://github.com/Bria-AI/bria-skill/tree/main/skills/bria-ai",
-"summary": "Generate, edit, and remove image backgrounds via the Bria.ai API — text-to-image, natural-language edits, and transparent PNGs.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "huifer/Claude-Ally-Health",
@@ -5227,15 +5092,6 @@
 "summary": "Import, export, and organize Mubu outlines and Markdown through an unofficial API.",
 "source": "karanb192/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "kcy4334-lgtm/translate-book-arxiv",
-"name": "translate-book",
-"owner": "kcy4334-lgtm",
-"url": "https://github.com/kcy4334-lgtm/translate-book-arxiv",
-"summary": "Translate papers and books with a LaTeX-source route for preserving arXiv equations and tables.",
-"source": "karanb192/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "vostride/agent-qa/tree/main/skills/agent-qa-authoring",
@@ -7974,15 +7830,6 @@
 "lane": "Post-production"
 },
 {
-"id": "Neelshah1810/Claude-Video-Skills",
-"name": "Claude-Video-Skills",
-"owner": "Neelshah1810",
-"url": "https://github.com/Neelshah1810/Claude-Video-Skills",
-"summary": "11 Claude skills that make professional motion-graphics videos (launch films, explainers, social ads, data stories) as HTML + MP4. Works with Claude and Claude Code.",
-"source": "zhuyansen/awesome-claude-video-skills",
-"lane": "Post-production"
-},
-{
 "id": "magichourhq/skills",
 "name": "skills",
 "owner": "magichourhq",
@@ -8114,15 +7961,6 @@
 "owner": "iart-ai",
 "url": "https://github.com/iart-ai/text-message-video-skills",
 "summary": "Text-message animation skills for AI coding agents — turn a chat script into a scroll-stopping iMessage/WhatsApp/SMS conversation video, rendered from a messages array.",
-"source": "zhuyansen/awesome-claude-video-skills",
-"lane": "Post-production"
-},
-{
-"id": "feitangyuan/onetake",
-"name": "onetake",
-"owner": "feitangyuan",
-"url": "https://github.com/feitangyuan/onetake",
-"summary": "Motion films that never cut to the next slide: every beat grows out of the one before, one continuous camera, continuity measured by an oracle. Product launch films and feature demos, made with a coding agent.",
 "source": "zhuyansen/awesome-claude-video-skills",
 "lane": "Post-production"
 },
@@ -8717,15 +8555,6 @@
 "owner": "GTKottman",
 "url": "https://github.com/GTKottman/mortiflix-oss",
 "summary": "A motion design studio on your own machine: Claude makes the video step by step, you approve every stage. Bring your own Claude Code or API key.",
-"source": "zhuyansen/awesome-claude-video-skills",
-"lane": "Post-production"
-},
-{
-"id": "vincentsch/explainroo",
-"name": "explainroo",
-"owner": "vincentsch",
-"url": "https://github.com/vincentsch/explainroo",
-"summary": "Explainer videos and product demos made by your AI agent. Free and open source: a local voice (Kokoro), word timing (Whisper) and a canvas renderer turn a script into a narrated MP4.",
 "source": "zhuyansen/awesome-claude-video-skills",
 "lane": "Post-production"
 },
@@ -10636,5 +10465,158 @@
 "summary": "150+ ecommerce skills for Amazon, Shopify, Etsy, TikTok sellers",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Business & outreach"
+},
+{
+"id": "actionow-ai/vvv",
+"name": "vvv",
+"owner": "actionow-ai",
+"url": "https://github.com/actionow-ai/vvv",
+"summary": "Build a video template once, reuse it across coding agents. Editable Remotion templates and an Agent Skill for Claude Code, Codex and 25+ agents.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "Hainrixz/editor-pro-max",
+"name": "editor-pro-max",
+"owner": "Hainrixz",
+"url": "https://github.com/Hainrixz/editor-pro-max",
+"summary": "AI-powered video editor by @soyenriquerocha — built with Remotion + Claude Code. Describe videos in natural language, get professional MP4s. 25 compo…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "Moessif/code-video-showcase",
+"name": "code-video-showcase",
+"owner": "Moessif",
+"url": "https://github.com/Moessif/code-video-showcase",
+"summary": "A pure-code beat-synced showcase-video Agent Skill: HTML/Canvas/SVG/Three.js frame-by-frame + Python numpy/scipy score + FFmpeg. No generative models.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "0xS4N4TG/kinetograph",
+"name": "kinetograph",
+"owner": "0xS4N4TG",
+"url": "https://github.com/0xS4N4TG/kinetograph",
+"summary": "A blazingly fast programmatic video engine, made for agents.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "LordVayron/video-factory",
+"name": "video-factory",
+"owner": "LordVayron",
+"url": "https://github.com/LordVayron/video-factory",
+"summary": "An AI video studio your coding agent installs and runs: UGC ads, micro-dramas, sitcoms, launch films, fantasy shorts, hour-long meditations. Claude C…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "8533502-dev/deepseek-opus-motion-skill",
+"name": "deepseek-opus-motion-skill",
+"owner": "8533502-dev",
+"url": "https://github.com/8533502-dev/deepseek-opus-motion-skill",
+"summary": "让 DeepSeek 用和 Claude Opus 5.5 同样的提示词做出接近的 Remotion 动效视频 · A skill for Opus-parity motion design",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "MakeMyClip/editor",
+"name": "editor",
+"owner": "MakeMyClip",
+"url": "https://github.com/MakeMyClip/editor",
+"summary": "AI-native video editor — talk to make video. Trim, zoom, caption, and assemble clips from any AI agent (Claude, Cursor, Copilot). Delivered as an MCP…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "siegerts/skill-canvas-video",
+"name": "skill-canvas-video",
+"owner": "siegerts",
+"url": "https://github.com/siegerts/skill-canvas-video",
+"summary": "Agent skill for creating animated videos using HTML5 Canvas and JavaScript, exportable to MP4.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "AI filmmaking"
+},
+{
+"id": "Teseife/diffusion-studio-codex",
+"name": "diffusion-studio-codex",
+"owner": "Teseife",
+"url": "https://github.com/Teseife/diffusion-studio-codex",
+"summary": "Independent Codex and Claude Code plugin for local video editing with Diffusion Studio.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "isabellagreco1997/script-to-video",
+"name": "script-to-video",
+"owner": "isabellagreco1997",
+"url": "https://github.com/isabellagreco1997/script-to-video",
+"summary": "Turn a script into a narrated, word-synced explainer video (16:9 YouTube or 9:16 Reels/Shorts). Free local Kokoro voice, licensed web images, clips,…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "AI filmmaking"
+},
+{
+"id": "mathruffian-dot/claude-motion-explainer-images",
+"name": "claude-motion-explainer-images",
+"owner": "mathruffian-dot",
+"url": "https://github.com/mathruffian-dot/claude-motion-explainer-images",
+"summary": "圖片加強版：用一句話讓 coding agent 做出有授權照片與 AI 示意圖的原理解說動畫（HyperFrames + 中文旁白）｜Explainer animations with a licensed-photo and generated-image layer",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "Ali-Aria/aria-animator",
+"name": "aria-animator",
+"owner": "Ali-Aria",
+"url": "https://github.com/Ali-Aria/aria-animator",
+"summary": "阿梨动画机（Aria Animator）：使用 Remotion、豆包配音和霞鹜文楷制作可编辑动画讲解视频的 AI Agent Skill。",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "arthurkatcher/explainer-video",
+"name": "explainer-video",
+"owner": "arthurkatcher",
+"url": "https://github.com/arthurkatcher/explainer-video",
+"summary": "Agent skill: motion-graphics explainer videos made entirely in code (Remotion + numpy music)",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "RohanRatwani/explainer-video-opus-5.5",
+"name": "explainer-video-opus-5.5",
+"owner": "RohanRatwani",
+"url": "https://github.com/RohanRatwani/explainer-video-opus-5.5",
+"summary": "Claude Code skill: turn a topic into a motion-design explainer video (YouTube 16:9 or Shorts) with an AI voice or your own, every animation timed to…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "davidbfrogman/davecto-cutroom",
+"name": "davecto-cutroom",
+"owner": "davidbfrogman",
+"url": "https://github.com/davidbfrogman/davecto-cutroom",
+"summary": "Edit your talking-head videos with Claude: a local editor, a notes loop, captions and animations in your own brand. Claude Code plugin for macOS.",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "kelano86/what-if-animation",
+"name": "what-if-animation",
+"owner": "kelano86",
+"url": "https://github.com/kelano86/what-if-animation",
+"summary": "A free Claude Code skill: one topic line in, a finished 15-25 s What If animated episode out. Every frame drawn in code (SVG + Remotion); voice and s…",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "liuliu-66-create/ll-video-motion",
+"name": "ll-video-motion",
+"owner": "liuliu-66-create",
+"url": "https://github.com/liuliu-66-create/ll-video-motion",
+"summary": "Turn Chinese copy into local Remotion motion graphics with a Codex Skill",
+"source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
 }
 ]

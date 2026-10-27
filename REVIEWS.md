@@ -2,6 +2,54 @@
 
 Newest first. Generated from `reviews.json` by `tools/render.py` — see `SCOUT.md` for how verdicts are reached.
 
+## 2026-10-27 — 23 reviewed · 0 ADD · 5 WATCH · 18 SKIP
+
+### WATCH — Remotion skills (official)
+https://github.com/remotion-dev/skills · lane: Building tools & sites · F/L/C/O = 3/4/5/3 (15)
+
+Remotion's own skills for making video in React: 12 skills behind a router, including an editable Studio timeline, .cube LUT colour correction, FFmpeg silence detection and Whisper-WebGPU captions. The only change on 10-26 is a version bump in the skill templates; the content is the same. Data-driven titles, map explainers and caption burn-ins as code he can version and re-render, with an editable Studio timeline for client tweaks. *Unchanged from last time: it pays off only once he starts a real Remotion project, and then it is an ADD. There's no licence file. The Remotion License most likely applies, which is free for individuals and small teams. The skills are copied several times inside the router folder.*
+
+### WATCH — Axiom (Apple OS development)
+https://github.com/CharlesWiltgen/Axiom · lane: Building tools & sites · F/L/C/O = 4/3/5/3 (15)
+
+A large, actively maintained Apple-platform plugin: 285 skills (including axiom-macos for windows, menus, sandboxing, notarization and AppKit bridging), 42 agents, hooks, and six arm64 CLI tools (axbuild, xclog, xcsym, xcui, xcprof, xcproject). The 10-26 release is v27.6.2: CloudKit Web Services request signing, plus corrected background-execution scheduling guidance. Nothing changes on the macOS side. When he next works on the macOS delivery-spec QC app: sandbox and security-scoped bookmark access to client drives, Developer ID notarization, and axbuild's short error summary instead of a truncated xcodebuild log. *It's a plugin, not one skill: 285 skill descriptions would crowd his shelf and it uses 'You MUST use this skill' triggers. It becomes an ADD when he's actively building the QC app again, installed as just axiom-macos plus axiom-swiftui with the tools built from source.*
+
+### WATCH — 超级峰的视频设计方法论 (chaojifeng-video-design)
+https://github.com/mileson/chaojifeng-video-design · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
+
+A Chinese-language director's method for explainers, product demos, launch films and music visuals: story line and audience change first, then shot jobs, sound event map, music cue selection and a delivery record that marks unwatched work as unverified. The 10-26 refactor split it into DIRECTOR.md and TECHNIQUE.md and added 59 "Opuscar" style packs with demo kits and an offline style gallery. The repo grew to about 1,700 files. Some demo build scripts download public assets (Google Fonts, Wikimedia, NASA GIBS, Library of Congress) to match each style, which is consistent with what they are for. Its film_probe and reference-film-study method (measure a reference's cuts, loudness and sound events, then separate what was measured from what was inferred) would help when he breaks down a reference spot for a client. *Still Chinese-only, and now much heavier. The style library is aimed at motion-design explainers, not his edit work. It would be an ADD if an English edition ships or he takes on explainer and launch-film jobs.*
+
+### WATCH — onetake
+https://github.com/feitangyuan/onetake · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
+
+Short product motion films as one HTML composition where every value is a function of time. It has a library of measured moves (springs, carries, contact, camera), real shutter motion blur, synthesised SFX in one shared room, and an "oracle" that rejects a cut that reads as a slideshow, by checking whether each beat grows out of the last, before anyone watches it. It is bilingual (CN/EN) and grew out of six documented rejected and accepted films. A 15–30 s launch teaser for one of his own tools (the QC app, the UXP palette). The slideshow oracle is a new idea: an automated check for the "PPT feel" he would otherwise only catch by eye. *The licence is PolyForm Noncommercial, so it can't be adopted and can't be used on client work. It also overlaps hairline and the installed motion skills. It becomes an ADD if it is relicensed permissively.*
+
+### WATCH — video-prompting
+https://github.com/Square-Zero-Labs/video-prompting-skill · lane: AI filmmaking · F/L/C/O = 4/3/4/3 (14)
+
+A router skill with source-cited prompt guides for ten video models: Seedance 2.0/2.5, MiniMax H3 (including first/last-frame and full-reference modes), LTX-2/2.3/2.5 (multi-shot, screenplay dialogue, Dub-It), Wan 2.2, Wan Animate 2, Veo 3 and Ovi. It also has a character-sheet → anchor-still → i2v workflow and keeps duration and settings out of the prompt text. Pure markdown, Apache-2.0, updated 10-23. When he generates on LTX-2.5 or MiniMax H3, it gives a model-specific prompt format. His installed prompt skills are Seedance-first (Shotcaller) or generic (ai-prompt-builder). *For Seedance it overlaps Shotcaller, which is deeper, and for character sheets it overlaps Castkit. It becomes an ADD the day he actually works in LTX-2.5, MiniMax H3 or Wan Animate.*
+
+### Skipped
+
+- [claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) — A whole Claude Code workspace (744 files) for script → voiceover → music → generated clips → Remotion render, with sub-skills for LTX-2, ElevenLabs, ACE-Step, Qwen-Edit and RunPod GPU jobs. It is a project template rather than a skill, and it is aimed at SaaS release and demo videos. Its useful parts (Remotion, ffmpeg, ElevenLabs) duplicate what he has or is already watching.
+- [explainroo](https://github.com/vincentsch/explainroo) — A Node CLI that renders a narrated explainer MP4 from a script and a scenes.js file, with an on-device voice model (no API key) and word-level timing. The list that ran 16 video skills head to head rated it the fastest of them. Its install step clones the repo and runs npm install, which is a documented integration. Animated explainers are not his work, and Remotion (WATCH) covers code-driven video better.
+- [bria-ai](https://github.com/Bria-AI/bria-skill/tree/main/skills/bria-ai) — The vendor's own skill for the Bria.ai image API: generation, editing, background removal, packshots and catalogue batches. It needs a Bria API key and only calls Bria hosts. It is built for e-commerce product imagery, and its "ALWAYS use this skill" trigger would grab every image request away from his Morphic/Castkit/Scenecraft setup.
+- [elevenlabs](https://github.com/sanjay3290/ai-skills/tree/main/skills/elevenlabs) — Turns a document into ElevenLabs narration or a two-host podcast through a Python script that needs ELEVENLABS_API_KEY. It talks only to api.elevenlabs.io. A document-to-podcast tool is not temp VO or scratch narration for an edit, and the Morphic connector already covers speech generation.
+- [translate-book](https://github.com/kcy4334-lgtm/translate-book-arxiv) — Translates arXiv papers (reading the LaTeX source, so equations survive) and whole PDF/DOCX/EPUB books with parallel sub-agents, then builds HTML/DOCX/EPUB/PDF. It is well engineered but unrelated to his lanes.
+- [Claude-Video-Skills (11 skills)](https://github.com/Neelshah1810/Claude-Video-Skills) — Eleven near-identical skills (launch film, brand film, explainer, social ad, data story and more) that each build a self-contained HTML motion film with kinetic type and a synthesised score, verified frame by frame. They are templated variants of one engine, and they overlap the motion and promo skills he already has (hairline, after-effects, premiere-motion-graphics, ai-video-from-brief). Eleven descriptions would crowd his shelf.
+- [google-tts](https://github.com/sanjay3290/ai-skills/tree/main/skills/google-tts) — The same document-to-narration/podcast script as the elevenlabs skill, pointed at Google Cloud TTS with an API key. It adds nothing for editing work.
+- [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) — Runs a Go CLI that formats Markdown for WeChat Official Accounts and uploads drafts there, plus Zhihu/CSDN/Toutiao. It is aimed at the Chinese publishing platforms, and he doesn't publish on any of them.
+- [positioning-workshop](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/positioning-workshop) — A one-question-at-a-time interview that ends in a Geoffrey Moore positioning statement. It is closest to his "pipeline TD" positioning work, but it is the generic Moore template Claude can run unprompted, and the CC BY-NC-SA licence rules out adoption.
+- [jobs-to-be-done](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/jobs-to-be-done) — A standard JTBD interview template for product managers. Claude already knows the framework, and it doesn't change how he pitches or scopes a job.
+- [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) — A generator for Karma JS test-runner configs, a legacy Angular-era tool. He doesn't use it.
+- [laravel-dusk-skill](https://github.com/LambdaTest/agent-skills/tree/main/laravel-dusk-skill) — Generates Laravel Dusk (PHP) browser tests and points them at the LambdaTest cloud grid. It is off his stack.
+- [finance-metrics-quickref](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/finance-metrics-quickref) — A quick reference for 32 SaaS finance metrics (ARR, NRR, CAC payback and so on). That is not freelance post-production business, and the licence is CC BY-NC-SA.
+- [pestel-analysis](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/pestel-analysis) — A PESTEL macro-environment worksheet for product strategy. It has nothing to do with his work.
+- [proto-persona](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/proto-persona) — A hypothesis-persona template for PMs. It is a textbook exercise in a skill wrapper.
+- [director-readiness-advisor](https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/director-readiness-advisor) — Coaching for the PM-to-Director career step inside a corporate product org. Despite the name, it has nothing to do with film directing.
+- [lettuce-skill](https://github.com/LambdaTest/agent-skills/tree/main/lettuce-skill) — Generates Lettuce BDD tests for Python. The skill itself calls Lettuce legacy and recommends Behave instead.
+- [motion-video-director](https://github.com/Miftahul-Islam-Efaz/Motion-graphics-skill) — The repo is no longer public (10-27: the clone asks for credentials), so there is nothing left to review or install. Before that it was WATCH: a director/motion/sound workflow for code-rendered video, under a commercial single-user licence.
+
 ## 2026-10-26 — 21 reviewed · 0 ADD · 1 WATCH · 20 SKIP
 
 ### WATCH — Video Editor Skills (DaVinci Resolve)
@@ -75,7 +123,7 @@ Edit video as text: cuts.tsv plus a per-shoot rebuild.sh are the project file. T
 - [performance-diagnosis](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/performance-diagnosis) — 26-line ad-funnel checklist; he doesn't run paid ads.
 - [objection-crusher](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/objection-crusher) — Five-line objection prompt; nothing Claude doesn't do unasked.
 
-## 2026-10-23 — 26 reviewed · 1 ADD · 5 WATCH · 20 SKIP
+## 2026-10-23 — 24 reviewed · 1 ADD · 3 WATCH · 20 SKIP
 
 ### ADD — talking-head-editor
 https://github.com/griffinwooldridge/talking-head-editor · lane: Post-production · F/L/C/O = 4/4/5/4 (17)
@@ -86,20 +134,10 @@ https://github.com/griffinwooldridge/talking-head-editor · lane: Post-productio
 
 **Watch out for:** It renders a finished mp4, not a Premiere or Resolve timeline. video-editor-assistant (10-17 ADD) is the one that lands cuts in the NLE, and this one is for jobs delivered as a file. Transcription is English-only (small.en), so Hindi needs a model swap. setup.sh pip-installs torch, whisper and DeepFilterNet into a venv, pulls GSAP from cdnjs and runs pinned npx hyperframes. It's a single commit from a new author, so it's young.
 
-### WATCH — Remotion skills (official)
-https://github.com/remotion-dev/skills · lane: Building tools & sites · F/L/C/O = 3/4/5/3 (15)
-
-Remotion's own skills for making video in React: 12 skills behind a router, including an editable Studio timeline, .cube LUT colour correction, FFmpeg silence detection and Whisper-WebGPU captions. Since 10-20 there's a version bump to 4.0.538 and one new render-performance rule (keep useCurrentFrame in the smallest component). Data-driven titles, map explainers and caption burn-ins as code he can version and re-render, with an editable Studio timeline for client tweaks. *Unchanged from last time: it pays off only once he starts a real Remotion project, and then it is an ADD. There's no licence file. The Remotion License most likely applies, which is free for individuals and small teams. The skills are copied several times inside the router folder.*
-
 ### WATCH — Check Skill (coder-eval)
 https://github.com/UiPath/coder_eval/tree/main/plugins/coder-eval/skills/check-skill · lane: Wildcard · F/L/C/O = 3/3/5/4 (15)
 
 Builds labelled positive and distractor requests and measures whether a skill's description triggers it (precision, recall, F1). The repo's six commits since 10-20 are harness fixes (Docker, Codex, delegate). The check-skill folder itself is unchanged. Puts a number on whether his own skills fire once the library grows and newer skills start dropping out of the listing. *Needs the coder-eval CLI, a sandbox and a paid agent run per row (16–24 runs). It overlaps skill-creator's own trigger evals. It becomes an ADD when he maintains several custom skills and sees misfires.*
-
-### WATCH — 超级峰的视频设计方法论 (chaojifeng-video-design)
-https://github.com/mileson/chaojifeng-video-design · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
-
-A Chinese-language director's method for explainers, product demos, launch films and music visuals: a story line and audience change first, then shot jobs, a sound event map, music cue selection by section, and a delivery record that keeps 'not watched / not listened' marked as unverified. Stdlib scripts validate the plan and measure a finished film (cut points, loudness, true peak, energy dips) and audit SFX hits against the event map. Its film_probe and reference-film-study method (measure a reference's cuts, loudness and sound events, then separate what was measured from what was inferred) would help when he breaks down a reference spot for a client. *All instructions are in Chinese, and it is aimed at motion-design explainers and launch films, not his edit work. It would be an ADD if an English edition appears or he takes on product-launch or explainer jobs where the music-led planning pays off.*
 
 ### WATCH — Sepia (de-AI writing)
 https://github.com/Nanako0129/sepia · lane: AI filmmaking · F/L/C/O = 3/3/5/4 (15)
@@ -191,12 +229,7 @@ Local SAM 2.1 rotoscoping in one SKILL.md. It picks the model size from the mach
 - [cutaway](https://github.com/half144/cutaway) — Repo is no longer public (clone refused), so there's nothing to review.
 - [avatar-extraction](https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/avatar-extraction) — A 40-line buyer-persona template with no method behind it, and no repo licence.
 
-## 2026-10-21 — 20 reviewed · 0 ADD · 2 WATCH · 18 SKIP
-
-### WATCH — Axiom (Apple OS development)
-https://github.com/CharlesWiltgen/Axiom · lane: Building tools & sites · F/L/C/O = 4/3/5/3 (15)
-
-A large, actively maintained Apple-platform plugin: 285 skills (including axiom-macos for windows, menus, sandboxing, notarization and AppKit bridging), 42 agents, hooks, and six arm64 CLI tools (axbuild, xclog, xcsym, xcui, xcprof, xcproject) that give Claude short build, crash and profiling summaries. The tools ship as prebuilt Mach-O binaries. Their Go and Swift source is in the repo, but I couldn't check that the binaries match it. When he next works on the macOS delivery-spec QC app: sandbox and security-scoped bookmark access to client drives, Developer ID notarization, and axbuild's short error summary instead of a truncated xcodebuild log. *It's a plugin, not one skill: 285 skill descriptions would crowd his shelf and it uses 'You MUST use this skill' triggers. It becomes an ADD when he's actively building the QC app again, installed as just axiom-macos plus axiom-swiftui with the tools built from source.*
+## 2026-10-21 — 19 reviewed · 0 ADD · 1 WATCH · 18 SKIP
 
 ### WATCH — LintLang
 https://github.com/hermes-labs-ai/lintlang · lane: Building tools & sites · F/L/C/O = 3/3/5/3 (14)
@@ -224,7 +257,7 @@ Deterministic offline linter for SKILL.md, CLAUDE.md, tool definitions and syste
 - [codeception-skill](https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill) — PHP Codeception test generator. Not his stack.
 - [popups](https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups) — Conversion popups and exit-intent modals. No use for a filmmaker's site.
 
-## 2026-10-20 — 28 reviewed · 2 ADD · 3 WATCH · 23 SKIP
+## 2026-10-20 — 27 reviewed · 2 ADD · 2 WATCH · 23 SKIP
 
 ### ADD — cinematic-director (DirectorSKILL)
 https://github.com/wuwangzhang1216/DirectorSKILL · lane: AI filmmaking · F/L/C/O = 5/4/5/4 (18)
@@ -248,11 +281,6 @@ https://github.com/aedev-tools/adobe-agent-skills/tree/main/skills/after-effects
 https://github.com/tenfoldmarc/video-edit-skill · lane: Post-production · F/L/C/O = 3/3/5/4 (15)
 
 Turns raw 9:16 talking-head clips into a finished Instagram reel. It transcribes with faster-whisper, keeps the last clean take of each line in an EDL, assembles a CFR A-roll, adds HyperFrames/GSAP overlays and SFX, and checks every cut frame by frame inside the Reels safe zone. The take-selection and dead-air pass on talking-head work: an EDL built from the transcript, plus a frame-accurate cut check on the render instead of scrubbing by eye. *Built around one creator's IG look (fixed looks, a hard-coded 'follow' insert, Apify scraping of his reels), and it renders HTML rather than producing an NLE timeline. Setup pulls npx hyperframes and remote SFX. It has no licence. It would be an ADD if the take-picking/EDL stage worked on its own and exported XML/EDL for Premiere or Resolve.*
-
-### WATCH — motion-video-director
-https://github.com/Miftahul-Islam-Efaz/Motion-graphics-skill · lane: Post-production · F/L/C/O = 4/3/4/3 (14)
-
-A director, motion-designer and sound-designer workflow for code-rendered video. Per-project taste and progress files, one beats.json driving both visuals and SFX, deterministic Playwright canvas renders, contact-sheet previews before export, and loudness/peak QA. Promo or motion pieces for his own tools and clients: one cue file drives animation and sound, and references get broken into timed contact sheets first. *Commercial single-user licence despite the public repo, so he'd need to buy it or get the author's OK. It overlaps the installed animation skills. It would be an ADD if relicensed and proven on a real promo.*
 
 ### WATCH — cold-email
 https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email · lane: Business & outreach · F/L/C/O = 3/3/5/3 (14)
