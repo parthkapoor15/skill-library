@@ -8,7 +8,7 @@ no to the rest with a reason.
 
 ## How it works
 
-Every day a scheduled Claude run:
+Every Sunday evening a scheduled Claude run:
 
 1. Reads `SCOUT.md` (the playbook — edit it to change what the scout cares about).
 2. Sweeps the sources listed there for skills published or updated since the last run.

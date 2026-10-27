@@ -56,7 +56,7 @@ downloaded** — not scripts, not installers, not `npm install`. Read only.
 Cap the sweep at ~40 candidates per run. Prefer depth on the promising ones over
 breadth on everything.
 
-## The daily tower walk
+## The tower walk
 
 Every run also walks the towers: open the next 15 skills from `dashboard/frontier.json`,
 working through the lanes in Parth's order (Post-production, AI filmmaking, Building
@@ -129,7 +129,7 @@ install ready, not done — the summary names the queued skill and says
 session, install the zip from `dist/` (Customize → Skills → + → Upload a skill),
 then change `queued` to `adopted` and commit.
 
-One a day at most, on purpose: every installed skill's description competes for
+One per run at most, on purpose: every installed skill's description competes for
 Claude's attention, so a crowded shelf makes all of them fire worse.
 
 ## Recording verdicts
