@@ -1,32 +1,5 @@
 [
 {
-"id": "LambdaTest/agent-skills/tree/main/mocha-skill",
-"name": "mocha-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill",
-"summary": "Generate Mocha tests in JavaScript with Chai and Sinon",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/mstest-skill",
-"name": "mstest-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/mstest-skill",
-"summary": "Generate MSTest tests in C# for .NET",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
-"id": "LambdaTest/agent-skills/tree/main/nemojs-skill",
-"name": "nemojs-skill",
-"owner": "LambdaTest",
-"url": "https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill",
-"summary": "Generate Nemo.js Selenium-based tests for Node.js",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Building tools & sites"
-},
-{
 "id": "LambdaTest/agent-skills/tree/main/nightwatchjs-skill",
 "name": "nightwatchjs-skill",
 "owner": "LambdaTest",
@@ -441,33 +414,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/press-release",
-"name": "press-release",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/press-release",
-"summary": "Clarify product vision with a future press release using Amazon's Working Backwards method",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/problem-statement",
-"name": "problem-statement",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/problem-statement",
-"summary": "Frame customer problems with evidence before jumping to solutions",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/recommendation-canvas",
-"name": "recommendation-canvas",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/recommendation-canvas",
-"summary": "Document AI-powered product recommendations",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Business & outreach"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/saas-economics-efficiency-metrics",
 "name": "saas-economics-efficiency-metrics",
 "owner": "deanpeters",
@@ -549,15 +495,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/prioritization-advisor",
-"name": "prioritization-advisor",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/prioritization-advisor",
-"summary": "Recommend the right prioritization framework (RICE, ICE, Kano, etc.) for your situation",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/problem-framing-canvas",
 "name": "problem-framing-canvas",
 "owner": "deanpeters",
@@ -574,24 +511,6 @@
 "summary": "Project market size with real-world data and citations",
 "source": "VoltAgent/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/vp-cpo-readiness-advisor",
-"name": "vp-cpo-readiness-advisor",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/vp-cpo-readiness-advisor",
-"summary": "Coach the Director→VP/CPO transition including a CEO interview framework",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
-},
-{
-"id": "deanpeters/Product-Manager-Skills/tree/main/skills/workshop-facilitation",
-"name": "workshop-facilitation",
-"owner": "deanpeters",
-"url": "https://github.com/deanpeters/Product-Manager-Skills/tree/main/skills/workshop-facilitation",
-"summary": "Add step-by-step facilitation with numbered recommendations to any workshop",
-"source": "VoltAgent/awesome-claude-skills",
-"lane": "Wildcard"
 },
 {
 "id": "deanpeters/Product-Manager-Skills/tree/main/skills/discovery-process",
@@ -4446,24 +4365,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "deapi-ai/claude-code-skills",
-"name": "claude-code-skills",
-"owner": "deapi-ai",
-"url": "https://github.com/deapi-ai/claude-code-skills",
-"summary": "AI media toolkit: generate images (Flux), text-to-speech, transcribe YouTube/audio, OCR, video generation, upscale, and remove backgrounds via deAPI. Works with Cursor, Windsurf & Continue.dev.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
-"id": "polaroteam/moltdj-skill",
-"name": "moltdj",
-"owner": "polaroteam",
-"url": "https://github.com/polaroteam/moltdj-skill",
-"summary": "AI music and podcast platform for autonomous agents — generate tracks, discover, earn tips and royalties.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
-},
-{
 "id": "csthink/dashmotion",
 "name": "Dashmotion",
 "owner": "csthink",
@@ -4471,15 +4372,6 @@
 "summary": "A Claude skill that turns a description or Mermaid source into a self-contained animated technical diagram.",
 "source": "BehiSecc/awesome-claude-skills",
 "lane": "Wildcard"
-},
-{
-"id": "iart-ai/motion-skills",
-"name": "Motion Graphics Skills",
-"owner": "iart-ai",
-"url": "https://github.com/iart-ai/motion-skills",
-"summary": "50 skills across 14 installable packs for motion graphics, animation & video.",
-"source": "BehiSecc/awesome-claude-skills",
-"lane": "Post-production"
 },
 {
 "id": "Alisa0808/vox-director",
@@ -5841,15 +5733,6 @@
 "lane": "Building tools & sites"
 },
 {
-"id": "EliaTolin/docs-to-book-skills/tree/main/docs-to-book",
-"name": "docs-to-book",
-"owner": "EliaTolin",
-"url": "https://github.com/EliaTolin/docs-to-book-skills/tree/main/docs-to-book",
-"summary": "Crawl technical documentation and compile an offline PDF book with Typst, optionally translated.",
-"source": "karanb192/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "bekservice/Famulor-Skill/tree/main/claude-store/skills/famulor-assistants-history",
 "name": "famulor-assistants-history",
 "owner": "bekservice",
@@ -5985,15 +5868,6 @@
 "lane": "Post-production"
 },
 {
-"id": "rickyworld/rigmeshy-by-ricky/tree/master/meshy-pose-rigging",
-"name": "meshy-pose-rigging",
-"owner": "rickyworld",
-"url": "https://github.com/rickyworld/rigmeshy-by-ricky/tree/master/meshy-pose-rigging",
-"summary": "Prepare character references and work through Meshy auto-rigging and export troubleshooting.",
-"source": "karanb192/awesome-claude-skills",
-"lane": "AI filmmaking"
-},
-{
 "id": "karuha-m/publishport-skill/tree/main/skills/publishport",
 "name": "publishport",
 "owner": "karuha-m",
@@ -6019,15 +5893,6 @@
 "summary": "Generate media and run model jobs through the RunAPI CLI; requires configured billing and authentication.",
 "source": "karanb192/awesome-claude-skills",
 "lane": "Building tools & sites"
-},
-{
-"id": "swaylq/ruxi-skill",
-"name": "ruxi-skill",
-"owner": "swaylq",
-"url": "https://github.com/swaylq/ruxi-skill",
-"summary": "Build a single-file visual novel from selected book scenes with source-linked choices.",
-"source": "karanb192/awesome-claude-skills",
-"lane": "AI filmmaking"
 },
 {
 "id": "screenbrowser/skill/tree/main/skills/screenbrowser",
@@ -10617,6 +10482,861 @@
 "url": "https://github.com/liuliu-66-create/ll-video-motion",
 "summary": "Turn Chinese copy into local Remotion motion graphics with a Codex Skill",
 "source": "zhuyansen/awesome-claude-video-skills",
+"lane": "Post-production"
+},
+{
+"id": "wunderlabs-dev/claudebin.com",
+"name": "source",
+"owner": "wunderlabs-dev",
+"url": "https://github.com/wunderlabs-dev/claudebin.com/",
+"summary": "(no description on the list or repo)",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Wildcard"
+},
+{
+"id": "777genius/agent-notifications",
+"name": "777genius/agent-notifications",
+"owner": "777genius",
+"url": "https://github.com/777genius/agent-notifications/tree/main/skills/agent-notifications",
+"summary": "Send desktop attention and progress alerts during agent tasks",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "Cap-go/capgo-skills",
+"name": "Cap-go/capgo-skills",
+"owner": "Cap-go",
+"url": "https://github.com/Cap-go/capgo-skills",
+"summary": "Capacitor app upgrades, live updates, native builds and migrations",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "JayPokale/Chisle",
+"name": "JayPokale/chisle",
+"owner": "JayPokale",
+"url": "https://github.com/JayPokale/Chisle/tree/main/skills/chisle",
+"summary": "Cuts agent tokens: terse prose, lean code, trimmed tool output",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "beastlabai/multi-llm-plugin",
+"name": "beastlabai/multi-llm",
+"owner": "beastlabai",
+"url": "https://github.com/beastlabai/multi-llm-plugin/tree/master/skills/multi-llm",
+"summary": "Reviews plans, code, and commits with multiple coding CLIs.",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "edonadei/caliper",
+"name": "edonadei/evaluate-skill",
+"owner": "edonadei",
+"url": "https://github.com/edonadei/caliper/tree/main/skills/evaluate-skill",
+"summary": "Measures skill reliability with repeated runs, with and without it",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "emotixco/claude-skills-founder",
+"name": "emotixco/claude-skills-founder",
+"owner": "emotixco",
+"url": "https://github.com/emotixco/claude-skills-founder",
+"summary": "Validate ideas, research competitors, price, pitch, and plan launches.",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Business & outreach"
+},
+{
+"id": "first-fluke/oh-my-agent",
+"name": "first-fluke/oh-my-agent",
+"owner": "first-fluke",
+"url": "https://github.com/first-fluke/oh-my-agent",
+"summary": "Harness skills linked into Claude Code, Codex, Cursor and more",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "fullselfbrowsing/FSB",
+"name": "fullselfbrowsing/fsb",
+"owner": "fullselfbrowsing",
+"url": "https://github.com/fullselfbrowsing/FSB/tree/main/skills/fsb",
+"summary": "Drive your signed-in Chromium browser through FSB's MCP tools",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "hyperb1iss/unifly",
+"name": "hyperb1iss/unifly",
+"owner": "hyperb1iss",
+"url": "https://github.com/hyperb1iss/unifly/tree/main/skills/unifly",
+"summary": "Inspect and manage Ubiquiti UniFi networks through the unifly CLI",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "karero/croftweaver",
+"name": "karero/croftweaver",
+"owner": "karero",
+"url": "https://github.com/karero/croftweaver",
+"summary": "Builds small-business websites, then keeps improving their SEO and GEO",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Business & outreach"
+},
+{
+"id": "kklimuk/docx-cli",
+"name": "kklimuk/docx-cli",
+"owner": "kklimuk",
+"url": "https://github.com/kklimuk/docx-cli",
+"summary": "Work on .docx files at ~1/2 cost of other skills.",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "luchasarie/bro-skill",
+"name": "luchasarie/bro",
+"owner": "luchasarie",
+"url": "https://github.com/luchasarie/bro-skill",
+"summary": "Re-explains the last reply in plain language",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Wildcard"
+},
+{
+"id": "radres/call-me",
+"name": "radres/call-me",
+"owner": "radres",
+"url": "https://github.com/radres/call-me/tree/main/skill",
+"summary": "Agent phones your iPhone and returns your spoken answer",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "rlaope/oh-my-hermes",
+"name": "rlaope/oh-my-hermes",
+"owner": "rlaope",
+"url": "https://github.com/rlaope/oh-my-hermes",
+"summary": "Workflow skills, project memory, and model routing for Hermes Agent",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "wiltodelta/remove-ai-watermarks",
+"name": "wiltodelta/remove-ai-watermarks",
+"owner": "wiltodelta",
+"url": "https://github.com/wiltodelta/remove-ai-watermarks/tree/main/skills/remove-ai-watermarks",
+"summary": "Remove AI watermarks and provenance metadata from images you own",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "AI filmmaking"
+},
+{
+"id": "ysskrishna/ai-agent-skills",
+"name": "ysskrishna/ai-agent-skills",
+"owner": "ysskrishna",
+"url": "https://github.com/ysskrishna/ai-agent-skills",
+"summary": "Structured thinking skills: five whys, pre-mortem, trade-offs",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "zilliztech/milvus-skill",
+"name": "zilliztech/milvus-skill",
+"owner": "zilliztech",
+"url": "https://github.com/zilliztech/milvus-skill",
+"summary": "Manage Milvus collections, indexes, vector searches, and RAG workflows",
+"source": "karanb192/awesome-claude-skills commits 2026-10-28..29",
+"lane": "Building tools & sites"
+},
+{
+"id": "modeinspect/design-engineer-skills",
+"name": "Design Engineer Skills",
+"owner": "modeinspect",
+"url": "https://github.com/modeinspect/design-engineer-skills",
+"summary": "Repo setup, component impact, visual QA, reviewable UI pull requests, design review of PRs and design system scoring for designers.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "getvibekits/vibe-coding-rules",
+"name": "Vibe Coding Rules skills",
+"owner": "getvibekits",
+"url": "https://github.com/getvibekits/vibe-coding-rules/tree/main/skills",
+"summary": "Explain errors, add a page, commit, review changes, apply design rules, guard database changes, and run an SEO check.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "pchewlo/aeo-check",
+"name": "aeo-check",
+"owner": "pchewlo",
+"url": "https://github.com/pchewlo/aeo-check/tree/main/.claude/skills/aeo-check",
+"summary": "Lint a site's code or live URL for what blocks AI search and agents, fix findings in framework order, then re-run to confirm.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "agentsvc/skills",
+"name": "agentsvc.io skills",
+"owner": "agentsvc",
+"url": "https://github.com/agentsvc/skills",
+"summary": "Speech to text, web pages to Markdown, email checks, token safety, and document text through paid agentsvc.io APIs.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "CalebAnderson-Coder/ai-agency-os-starter",
+"name": "ai-agency-os-starter",
+"owner": "CalebAnderson-Coder",
+"url": "https://github.com/CalebAnderson-Coder/ai-agency-os-starter",
+"summary": "Keep each client's voice, claims and scope isolated, and check client requests against the SOW before doing unbilled work.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "laulauraluo/ai-code-review-triage",
+"name": "ai-code-review-triage",
+"owner": "laulauraluo",
+"url": "https://github.com/laulauraluo/ai-code-review-triage/tree/main/skills/ai-code-review-triage",
+"summary": "Review AI-written PRs in three passes: fresh-context bug hunt, context checks (units, history, callers), and a scoped sign-off.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "johnisanerd/claude-skill-account-mapping",
+"name": "apify-account-mapping",
+"owner": "johnisanerd",
+"url": "https://github.com/johnisanerd/claude-skill-account-mapping/tree/main/apify-account-mapping",
+"summary": "Map the people currently in named roles at each target account through paid Apify actors.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "LeulAria/Aria-Icons",
+"name": "aria-icons",
+"owner": "LeulAria",
+"url": "https://github.com/LeulAria/Aria-Icons/tree/main/skills",
+"summary": "Search ~1.4M open-source SVG icons and add them as SVG or React/Vue/Svelte/Solid components",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "umutyesildal/berlin-job-search",
+"name": "berlin-job-search",
+"owner": "umutyesildal",
+"url": "https://github.com/umutyesildal/berlin-job-search/tree/main/skills/berlin-job-search",
+"summary": "Search Berlin and German job boards, check German and Blue Card requirements, and draft a Lebenslauf or English CV without inventing claims.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "kochetkov-ma/claude-brewcode",
+"name": "brewpage-publish",
+"owner": "kochetkov-ma",
+"url": "https://github.com/kochetkov-ma/claude-brewcode/tree/main/skills/brewpage-publish",
+"summary": "Publish text, Markdown, HTML, a file or a folder as a site to brewpage.app and return a shareable link, no account.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "AlexanderCato/check-blindspot",
+"name": "check-blindspot",
+"owner": "AlexanderCato",
+"url": "https://github.com/AlexanderCato/check-blindspot",
+"summary": "Check a belief against the evidence: argue both sides, name the fact that would settle it, and flag overconfidence.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Wildcard"
+},
+{
+"id": "cliptude/cliptude",
+"name": "cliptude-plan",
+"owner": "cliptude",
+"url": "https://github.com/cliptude/cliptude/tree/main/mcp_server/skills/cliptude-plan",
+"summary": "Plan every shot of a YouTube documentary, then have Cliptude voice, source and render it.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Post-production"
+},
+{
+"id": "Clousd-Android/clousd-sdk",
+"name": "clousd",
+"owner": "Clousd-Android",
+"url": "https://github.com/Clousd-Android/clousd-sdk/tree/main/skills/clousd",
+"summary": "Test Android apps on cloud phones: run plain-language tasks or drive the screen step by step.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "commentkeyword/agent-toolkit",
+"name": "comment-to-dm-cta",
+"owner": "commentkeyword",
+"url": "https://github.com/commentkeyword/agent-toolkit/tree/main/skills/comment-to-dm-cta",
+"summary": "Plan the \"comment KEYWORD\" CTA of an Instagram Reel and create its auto-DM in CommentKeyword, which requires an account and API token.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Post-production"
+},
+{
+"id": "cooper-email/cooper-email",
+"name": "cooper-email",
+"owner": "cooper-email",
+"url": "https://github.com/cooper-email/cooper-email/tree/main/skills/cooper-email",
+"summary": "Send, read, and search mail from the agent's own inbox, and wait for replies or verification codes, through Cooper Email MCP or HTTP.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "datawebot/datawebot-mcp",
+"name": "datawebot",
+"owner": "datawebot",
+"url": "https://github.com/datawebot/datawebot-mcp/tree/main/skills/datawebot",
+"summary": "Find products across online shops and every seller's price with direct links through the hosted datawebot MCP server.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "heydeacon/skills",
+"name": "deacon-install",
+"owner": "heydeacon",
+"url": "https://github.com/heydeacon/skills/tree/main/skills/deacon-install",
+"summary": "Add the Deacon AI support widget to a site or app, pass in the signed-in user, and check a live page loads it.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "luchasarie/feedback-loop",
+"name": "feedback",
+"owner": "luchasarie",
+"url": "https://github.com/luchasarie/feedback-loop/tree/main/skills/feedback",
+"summary": "Turn frustration with an agent into an evidence-backed improvement plan that changes nothing until you approve it.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "roman-s8o/workflow-pack-free",
+"name": "fresh-review",
+"owner": "roman-s8o",
+"url": "https://github.com/roman-s8o/workflow-pack-free/tree/main/.claude/skills/fresh-review",
+"summary": "Review code or a plan against acceptance criteria with an agent that has not seen the conversation, then label each finding.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "danybgoode/golden-frijoles",
+"name": "golden-frijoles",
+"owner": "danybgoode",
+"url": "https://github.com/danybgoode/golden-frijoles",
+"summary": "Turn ideas into bets with a target and read date, ship them behind flags and A/B tests, and report whether each paid off.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "luchasarie/guided-goal",
+"name": "guided-goal",
+"owner": "luchasarie",
+"url": "https://github.com/luchasarie/guided-goal/tree/main/skills/guided-goal",
+"summary": "Turn rough intent into a completion contract with success criteria, verification, boundaries and stop conditions before work starts.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Wildcard"
+},
+{
+"id": "Lihaila/hitpost-skill",
+"name": "hitpost",
+"owner": "Lihaila",
+"url": "https://github.com/Lihaila/hitpost-skill/tree/main/skills/hitpost",
+"summary": "Write three X posts or threads per idea, length-checked the way X counts, with share links.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "Shushant17711/impresario",
+"name": "impresario",
+"owner": "Shushant17711",
+"url": "https://github.com/Shushant17711/impresario",
+"summary": "Invent a subject-specific concept and build an animated website from one sentence, then screenshot and revise it.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "parinshahAIbuilder/ipo-offer-document-review",
+"name": "ipo-offer-document-review",
+"owner": "parinshahAIbuilder",
+"url": "https://github.com/parinshahAIbuilder/ipo-offer-document-review",
+"summary": "Review Indian IPO offer documents (DRHP/RHP) against SEBI ICDR, LODR, Companies Act and Ind AS for disclosure gaps.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "landedjobs/ai-job-hunt-os",
+"name": "jd-decoder",
+"owner": "landedjobs",
+"url": "https://github.com/landedjobs/ai-job-hunt-os/tree/main/skills/jd-decoder",
+"summary": "Read a job posting for real requirements, salary signals, and ghost-listing risk before applying.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "kanibal-studio/least-cost-capable",
+"name": "least-cost-capable",
+"owner": "kanibal-studio",
+"url": "https://github.com/kanibal-studio/least-cost-capable",
+"summary": "Pick the lowest declared cost rank among models that have the capabilities a task needs.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "light-cloud-com/skills",
+"name": "light-cloud-deploy",
+"owner": "light-cloud-com",
+"url": "https://github.com/light-cloud-com/skills/tree/main/skills/light-cloud-deploy",
+"summary": "Deploy a repo or local folder to Light Cloud, add a database, and read logs or roll back.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "airdropfi/autoshort-skills",
+"name": "make-faceless-video",
+"owner": "airdropfi",
+"url": "https://github.com/airdropfi/autoshort-skills/tree/main/skills/make-faceless-video",
+"summary": "Draft, price-check and render faceless short videos through the AutoShort or StoryShort MCP server; needs an account with credits.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Post-production"
+},
+{
+"id": "DarkWorldCoder/market-mirror",
+"name": "market-mirror",
+"owner": "DarkWorldCoder",
+"url": "https://github.com/DarkWorldCoder/market-mirror/tree/main/plugin/skills/market-mirror",
+"summary": "Test ads, prices and sales pitches on simulated buyers and get a go / iterate / no-go report.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "neuman/nopekit",
+"name": "nopekit",
+"owner": "neuman",
+"url": "https://github.com/neuman/nopekit/tree/main/skills/nopekit",
+"summary": "Turn physical design claims into checks that must prove they can fail, for CAD, 3D printing, structures, and thermal.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "levelcfo/open-finance-skills",
+"name": "open-finance-skills",
+"owner": "levelcfo",
+"url": "https://github.com/levelcfo/open-finance-skills",
+"summary": "Review SMB month-end closes, bank reconciliations, 13-week cash forecasts, and 1099 readiness with 20 finance skills.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "agentkitco/agentkit-dev-skills",
+"name": "prove-it-ran",
+"owner": "agentkitco",
+"url": "https://github.com/agentkitco/agentkit-dev-skills/tree/main/skills/prove-it-ran",
+"summary": "Show evidence that tests and builds actually ran and covered the change before calling work done.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "chromoany/readme-atlas",
+"name": "readme-atlas",
+"owner": "chromoany",
+"url": "https://github.com/chromoany/readme-atlas",
+"summary": "Write, rewrite, review, and translate project READMEs from repository evidence, dropping claims the repository cannot support.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "VishiATChoudhary/reels",
+"name": "reels-setup",
+"owner": "VishiATChoudhary",
+"url": "https://github.com/VishiATChoudhary/reels/tree/main/skills/reels-setup",
+"summary": "Install and verify a Remotion studio that builds 9:16 story reels cut to a song's drop.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Post-production"
+},
+{
+"id": "korey2028-prog/resume-claim-guard",
+"name": "resume-claim-guard",
+"owner": "korey2028-prog",
+"url": "https://github.com/korey2028-prog/resume-claim-guard",
+"summary": "Interviews candidates to lock a verified fact sheet before tailoring resumes to job descriptions.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "darajoukar/reveal-rtl",
+"name": "rtl-slides",
+"owner": "darajoukar",
+"url": "https://github.com/darajoukar/reveal-rtl/tree/main/plugins/reveal-rtl/skills/rtl-slides",
+"summary": "Build right-to-left Persian and Arabic reveal.js presentations with localized digits, Jalali/Hijri dates, and PDF/PNG export.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "abdelrhman2007/scrollytelling-brand-site",
+"name": "scrollytelling-brand-site",
+"owner": "abdelrhman2007",
+"url": "https://github.com/abdelrhman2007/scrollytelling-brand-site/tree/main/skills/scrollytelling-brand-site",
+"summary": "Build scroll-told company websites with WebGL print-on-scroll 3D, performance budgets, responsive QA, and an optional CMS.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "alapha888/session-handoff-kit",
+"name": "session-handoff",
+"owner": "alapha888",
+"url": "https://github.com/alapha888/session-handoff-kit",
+"summary": "Toolkit for coding agents providing a SKILL.md protocol, context-hygiene checklist, and handoff-note template for structured session transitions.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "zhuyansen/site-traffic-teardown",
+"name": "site-traffic-teardown",
+"owner": "zhuyansen",
+"url": "https://github.com/zhuyansen/site-traffic-teardown/tree/main/skills/site-traffic-teardown",
+"summary": "Find a site's competitors and compare traffic, channel mix, keywords, backlinks, and DR, then name three growth opportunities; paid AIsa data.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "kvozianov/skill-freshness",
+"name": "skill-freshness",
+"owner": "kvozianov",
+"url": "https://github.com/kvozianov/skill-freshness",
+"summary": "Audit skills across Claude Code, Codex, Cursor and other agents for broken, outdated, duplicate or now built-in ones, with sources.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "jack-reson8/skill-skill",
+"name": "skill-skill",
+"owner": "jack-reson8",
+"url": "https://github.com/jack-reson8/skill-skill/tree/main/plugins/skill-skill/skills/skill-skill",
+"summary": "Write skills that change the output, then lint them against the Agent Skills spec with a health score.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "fclairamb/solidping-plugin",
+"name": "solidping-monitoring",
+"owner": "fclairamb",
+"url": "https://github.com/fclairamb/solidping-plugin/tree/main/skills/solidping-monitoring",
+"summary": "Find why an uptime check fails, read incidents, and add checks through the SolidPing MCP server.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "DataOrigin/trade-show-prep-skill",
+"name": "trade-show-prep",
+"owner": "DataOrigin",
+"url": "https://github.com/DataOrigin/trade-show-prep-skill/tree/main/skills/trade-show-prep",
+"summary": "Plan a B2B trade show, draft meeting requests, qualify booth leads, and write follow-ups.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "kevinmmiddleton/unpaid-intern",
+"name": "unpaid-intern",
+"owner": "kevinmmiddleton",
+"url": "https://github.com/kevinmmiddleton/unpaid-intern/tree/main/skills/unpaid-intern",
+"summary": "Turn meeting transcripts, docs, and tickets into a morning briefing, meeting prep, and follow-ups in plain files you own.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Business & outreach"
+},
+{
+"id": "edtrackai/ship-ready-skills",
+"name": "unthrottled-route-check",
+"owner": "edtrackai",
+"url": "https://github.com/edtrackai/ship-ready-skills/tree/main/skills/unthrottled-route-check",
+"summary": "Flag Next.js API routes that call OpenAI, Anthropic or Stripe Checkout with no rate limiter before abuse runs up the bill.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "igamingsychov/watch-igaming",
+"name": "watch-igaming",
+"owner": "igamingsychov",
+"url": "https://github.com/igamingsychov/watch-igaming",
+"summary": "Review a video link or local screen recording with transcript and scene-change frames, then build a QA table, UX audit or meeting minutes.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Post-production"
+},
+{
+"id": "C-s-salute/weread-trial-card-list",
+"name": "weread-trial-card-list",
+"owner": "C-s-salute",
+"url": "https://github.com/C-s-salute/weread-trial-card-list",
+"summary": "Scrape WeRead category and rank pages into a deduplicated list of trial-card readable books, exported as HTML and Excel.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Wildcard"
+},
+{
+"id": "Ali-expandings/wise-men-flash",
+"name": "wise-men-flash",
+"owner": "Ali-expandings",
+"url": "https://github.com/Ali-expandings/wise-men-flash",
+"summary": "Put a hard decision to three subagents, one a Devil's Advocate, and get one checked memo that keeps the best case against it.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "miyannishar/wreck-it",
+"name": "wreck-it",
+"owner": "miyannishar",
+"url": "https://github.com/miyannishar/wreck-it/tree/main/skills/wreck-it",
+"summary": "Test a local web app like real users and chaos monkeys, then report reproduced bugs with screenshots, source locations and regression tests.",
+"source": "VoltAgent/awesome-claude-skills commits 2026-10-27..30",
+"lane": "Building tools & sites"
+},
+{
+"id": "Clipizo/textizo_skill",
+"name": "textizo_skill",
+"owner": "Clipizo",
+"url": "https://github.com/Clipizo/textizo_skill",
+"summary": "Textizo AI skill: lets an AI agent make presets for Textizo, the Clipizo text animator for DaVinci Resolve",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "tavaresrm/kit-edicao-video",
+"name": "kit-edicao-video",
+"owner": "tavaresrm",
+"url": "https://github.com/tavaresrm/kit-edicao-video",
+"summary": "Kit de edição de vídeo com Claude, DaVinci Resolve Studio e Canva: método, skills e motor para cada criador montar os próprios presets.",
+"source": "GitHub search, pushed 2026-10-29",
+"lane": "Post-production"
+},
+{
+"id": "aeonhem/claude-highlight-reel",
+"name": "claude-highlight-reel",
+"owner": "aeonhem",
+"url": "https://github.com/aeonhem/claude-highlight-reel",
+"summary": "Claude Code skill that turns OBS Call of Duty recordings into a YouTube highlight video, a Short and thumbnails, built as DaVinci Resolve timelines",
+"source": "GitHub search, pushed 2026-10-29",
+"lane": "Post-production"
+},
+{
+"id": "gustavopascaner/edicion",
+"name": "edicion",
+"owner": "gustavopascaner",
+"url": "https://github.com/gustavopascaner/edicion",
+"summary": "Skill de edición de video para Claude Code y Codex: motion graphics, subtítulos, SFX y XML para Premiere",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "biraribeiros/decupagem-cortes",
+"name": "decupagem-cortes",
+"owner": "biraribeiros",
+"url": "https://github.com/biraribeiros/decupagem-cortes",
+"summary": "Skill para Claude: decupagem editorial de vídeos longos em cortes curtos completos, com minutagem exata, lettering e exportação para Premiere/DaVinci (EDL, SRT)",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "hanzouchiha96/Reels-Killeer",
+"name": "Reels-Killeer",
+"owner": "hanzouchiha96",
+"url": "https://github.com/hanzouchiha96/Reels-Killeer",
+"summary": "CapCut + Premiere level skill for Claude. Auto viral hooks, dynamic captions, zooms, sound effects.Bikin video editing motion killer buat Reels, Shorts, TikTok.",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "edunascimentt/editassist",
+"name": "editassist",
+"owner": "edunascimentt",
+"url": "https://github.com/edunascimentt/editassist",
+"summary": "AI video editor driven by Claude Code / Codex: skills + an ffmpeg/Whisper CLI that deliver Resolve, Premiere and After Effects projects",
+"source": "GitHub search, pushed 2026-10-29",
+"lane": "Post-production"
+},
+{
+"id": "jakob2912/claude-premiere-pro-skills",
+"name": "claude-premiere-pro-skills",
+"owner": "jakob2912",
+"url": "https://github.com/jakob2912/claude-premiere-pro-skills",
+"summary": "Claude Code plugin: Claude edits Reels, TikToks and Shorts in Adobe Premiere Pro (MCP bridge, HyperFrames, −14 LUFS master), and a critic agent scores every cut until 8/10.",
+"source": "GitHub search, pushed 2026-10-29",
+"lane": "Post-production"
+},
+{
+"id": "julianogarrett/denoise-reels-felipe",
+"name": "denoise-reels-felipe",
+"owner": "julianogarrett",
+"url": "https://github.com/julianogarrett/denoise-reels-felipe",
+"summary": "Skill de Claude Code da deNoise: Reels do Felipe no Premiere Pro (MCP Bridge)",
+"source": "GitHub search, pushed 2026-10-28",
+"lane": "Post-production"
+},
+{
+"id": "amit-voais/bizzbell",
+"name": "bizzbell",
+"owner": "amit-voais",
+"url": "https://github.com/amit-voais/bizzbell",
+"summary": "Open-source AI video and ad maker skill for Claude Code and Codex. One Hidrogen API key: research, story, per-second screenplay, characters, AI video + HyperFrames, 95% quality gate at every layer.",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "mcm369568095-hash/yemo-ai-drama-prompter",
+"name": "yemo-ai-drama-prompter",
+"owner": "mcm369568095-hash",
+"url": "https://github.com/mcm369568095-hash/yemo-ai-drama-prompter",
+"summary": "夜秣AI短剧生成器：一句话主题 → 60 集短剧 → 全套可分镜的 AI 视频提示词。九阶段全流程：选题 · 改编 · 人物定稿 · 集纲卡点 · 剧本 · 审稿去 AI 味 · 分镜派发 · 多模型提示词（Seedance / MiniMax / 可灵）· 出片。WorkBuddy 技能。",
+"source": "GitHub search, pushed 2026-10-30",
+"lane": "AI filmmaking"
+},
+{
+"id": "Ductoii/sf-board-port-skill",
+"name": "sf-board-port-skill",
+"owner": "Ductoii",
+"url": "https://github.com/Ductoii/sf-board-port-skill",
+"summary": "Portable Codex skill for screenplay-to-SF Board prompt projects, continuity and cinematic pacing",
+"source": "GitHub search, pushed 2026-10-27",
+"lane": "AI filmmaking"
+},
+{
+"id": "DeepHiveAI/rooyun-skill",
+"name": "rooyun-skill",
+"owner": "DeepHiveAI",
+"url": "https://github.com/DeepHiveAI/rooyun-skill",
+"summary": "RooYun Skill & MCP：让 Claude Code / Codex / Cursor 一句话驱动 AI 漫剧、AI 短剧创作画布",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "AI filmmaking"
+},
+{
+"id": "mozgii/mozgii-library-skills-hyperframes",
+"name": "mozgii-library-skills-hyperframes",
+"owner": "mozgii",
+"url": "https://github.com/mozgii/mozgii-library-skills-hyperframes",
+"summary": "35 skills for making video with HyperFrames HTML, GSAP and the web animation stack, from storyboard to delivery.",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "azrianobr/dramazing",
+"name": "dramazing",
+"owner": "azrianobr",
+"url": "https://github.com/azrianobr/dramazing",
+"summary": "An AI-assistant skill that turns a short story (Chinese, English or Korean) into an episodic AI drama: script, storyboard, first frames, video, subtitles. Image and video tools are pluggable.",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "ADC1920/AI-Short-Drama-Studio",
+"name": "AI-Short-Drama-Studio",
+"owner": "ADC1920",
+"url": "https://github.com/ADC1920/AI-Short-Drama-Studio",
+"summary": "AI 短剧与短视频工作室技能（Claude Code / ZCode / Codex Agent Skill）：五工位流水线（剧本台→角色与场景台→分镜台→出片台→后期台/发布台），一项目一目录、产物驱动进度、改稿按层回流；支持多集短剧与单条 60 秒内短视频双形态，即梦 Seedance 出片。含十九个工程脚本、十六篇工艺文档与最小多集样例。AI short-drama & short-vide",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "AI filmmaking"
+},
+{
+"id": "ottolsq/vigen",
+"name": "vigen",
+"owner": "ottolsq",
+"url": "https://github.com/ottolsq/vigen",
+"summary": "Claude Code skill that turns a one-line idea into a complete AI video production plan: storyboard, shot design and copy-ready prompts for gpt-image / happyhorse-i2v / cosyvoice, with character, scene",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "byte4day/claude-video-skill",
+"name": "claude-video-skill",
+"owner": "byte4day",
+"url": "https://github.com/byte4day/claude-video-skill",
+"summary": "Claude Code plugin: product/game → researched storyboard → Remotion or Three.js → QA → MP4",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "tiianprb0/motion-studio-review",
+"name": "motion-studio-review",
+"owner": "tiianprb0",
+"url": "https://github.com/tiianprb0/motion-studio-review",
+"summary": "Motion Studio review packet: profiles, skills, storyboards, and project notes.",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "advolc/ai-video-prompts",
+"name": "ai-video-prompts",
+"owner": "advolc",
+"url": "https://github.com/advolc/ai-video-prompts",
+"summary": "AI视频工业化导演系统：灵感孵化、武指因果、电影级台词、微相心理学与纯文本提示词直出。支持国漫、科幻等全题材。",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "Yamazaki7/baokuan-storyboard-skill",
+"name": "baokuan-storyboard-skill",
+"owner": "Yamazaki7",
+"url": "https://github.com/Yamazaki7/baokuan-storyboard-skill",
+"summary": "爆款短剧拆分 Skill — 竖屏短剧分镜工业化拆分工作流",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "AI filmmaking"
+},
+{
+"id": "ELBOUKHARIAyoub/frame-to-figma-skills",
+"name": "frame-to-figma-skills",
+"owner": "ELBOUKHARIAyoub",
+"url": "https://github.com/ELBOUKHARIAyoub/frame-to-figma-skills",
+"summary": "Claude Code skill: clone a PNG/screenshot/video into an editable, layered Figma file, with Smart Animate motion",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "Omar-Tnzxo/ice-motion-director",
+"name": "ice-motion-director",
+"owner": "Omar-Tnzxo",
+"url": "https://github.com/Omar-Tnzxo/ice-motion-director",
+"summary": "Motion design and video editing director for coding agents: one prompt or step by step, from brief to rendered film. Agent Skills for Claude Code, Codex, Cursor, Gemini and 40+ agents.",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "mohamedishagg/reel-studio",
+"name": "reel-studio",
+"owner": "mohamedishagg",
+"url": "https://github.com/mohamedishagg/reel-studio",
+"summary": "Claude Code skill: create videos with AI models and edit reels (captions, silence cuts, custom SFX, hooks, CTA)",
+"source": "GitHub search, pushed 2026-11-01",
+"lane": "Post-production"
+},
+{
+"id": "Sosavskaii/skills-montage-claude",
+"name": "skills-montage-claude",
+"owner": "Sosavskaii",
+"url": "https://github.com/Sosavskaii/skills-montage-claude",
+"summary": "3 skills Claude gratuits pour monter tes vidéos : short-editing, clips, steal",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "FaryalRazaBhatti/claude-video-editing-skills",
+"name": "claude-video-editing-skills",
+"owner": "FaryalRazaBhatti",
+"url": "https://github.com/FaryalRazaBhatti/claude-video-editing-skills",
+"summary": "(no description on the list or repo)",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "andyhuo520/digital-human-koubo",
+"name": "digital-human-koubo",
+"owner": "andyhuo520",
+"url": "https://github.com/andyhuo520/digital-human-koubo",
+"summary": "AI digital-human talking-head videos from one photo: Renoise MCP generation + 5 editing styles + 48 creator-grade packaging components. Agent skill for Claude Code / Codex / OpenClaw / WorkBuddy …",
+"source": "GitHub search, pushed 2026-10-31",
+"lane": "Post-production"
+},
+{
+"id": "cueframe-ai/cueframe-mcp",
+"name": "cueframe-mcp",
+"owner": "cueframe-ai",
+"url": "https://github.com/cueframe-ai/cueframe-mcp",
+"summary": "Video editing MCP and agent skills for Claude Code, Codex, Cursor and ChatGPT. Compose, caption, preview and render video; TypeScript SDK and CLI.",
+"source": "GitHub search, pushed 2026-10-31",
 "lane": "Post-production"
 }
 ]
